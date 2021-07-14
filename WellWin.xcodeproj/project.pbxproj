@@ -8,11 +8,42 @@
 
 /* Begin PBXBuildFile section */
 		D1E7F938269E1B2400405788 /* WellWinApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F937269E1B2400405788 /* WellWinApp.swift */; };
-		D1E7F93A269E1B2400405788 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F939269E1B2400405788 /* ContentView.swift */; };
 		D1E7F93C269E1B2500405788 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1E7F93B269E1B2500405788 /* Assets.xcassets */; };
 		D1E7F93F269E1B2500405788 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1E7F93E269E1B2500405788 /* Preview Assets.xcassets */; };
 		D1E7F94A269E1B2500405788 /* WellWinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F949269E1B2500405788 /* WellWinTests.swift */; };
 		D1E7F955269E1B2500405788 /* WellWinUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F954269E1B2500405788 /* WellWinUITests.swift */; };
+		D1E7F967269E1B8100405788 /* ResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F966269E1B8100405788 /* ResultViewModel.swift */; };
+		D1E7F969269E1B8F00405788 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F968269E1B8F00405788 /* ResultView.swift */; };
+		D1E7F974269E1C9E00405788 /* ResultData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F973269E1C9E00405788 /* ResultData.swift */; };
+		D1E7F976269E1CE100405788 /* MoneyManagementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F975269E1CE100405788 /* MoneyManagementView.swift */; };
+		D1E7F978269E1CF600405788 /* MoneyManagementObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F977269E1CF600405788 /* MoneyManagementObject.swift */; };
+		D1E7F97A269E1D0D00405788 /* MoneyManagementModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F979269E1D0D00405788 /* MoneyManagementModel.swift */; };
+		D1E7F97C269E1D2300405788 /* MoneyManagementViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F97B269E1D2300405788 /* MoneyManagementViewModel.swift */; };
+		D1E7F97E269EF1E300405788 /* TeamsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F97D269EF1E300405788 /* TeamsView.swift */; };
+		D1E7F980269EF1EE00405788 /* TeamsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F97F269EF1EE00405788 /* TeamsViewModel.swift */; };
+		D1E7F982269EF1FC00405788 /* TeamsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F981269EF1FC00405788 /* TeamsModel.swift */; };
+		D1E7F984269EF20800405788 /* TeamsObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F983269EF20800405788 /* TeamsObject.swift */; };
+		D1E7F986269EF22800405788 /* RefereesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F985269EF22800405788 /* RefereesView.swift */; };
+		D1E7F988269EF23800405788 /* RefereesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F987269EF23800405788 /* RefereesViewModel.swift */; };
+		D1E7F98A269EF24300405788 /* RefereesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F989269EF24300405788 /* RefereesModel.swift */; };
+		D1E7F98C269EF24C00405788 /* RefereesObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F98B269EF24C00405788 /* RefereesObject.swift */; };
+		D1E7F98E269EF25F00405788 /* GoalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F98D269EF25F00405788 /* GoalsView.swift */; };
+		D1E7F990269EF26900405788 /* GoalsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F98F269EF26900405788 /* GoalsViewModel.swift */; };
+		D1E7F992269EF27400405788 /* GoalsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F991269EF27400405788 /* GoalsModel.swift */; };
+		D1E7F994269EF27F00405788 /* GoalsObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F993269EF27F00405788 /* GoalsObject.swift */; };
+		D1E7F998269EF5E600405788 /* StrategyScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F997269EF5E600405788 /* StrategyScreen.swift */; };
+		D1E7F99A269EF5FF00405788 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F999269EF5FF00405788 /* MainScreen.swift */; };
+		D1E7F99C269EF68E00405788 /* Betting.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F99B269EF68E00405788 /* Betting.swift */; };
+		D1E7F99F269EF6F600405788 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F99E269EF6F600405788 /* Router.swift */; };
+		D1E7F9A1269EF8E500405788 /* AppInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F9A0269EF8E500405788 /* AppInitializer.swift */; };
+		D1E7F9A3269EF9AB00405788 /* ParsingConditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F9A2269EF9AB00405788 /* ParsingConditions.swift */; };
+		D1E7F9A5269EF9CB00405788 /* ArchiveParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F9A4269EF9CB00405788 /* ArchiveParser.swift */; };
+		D1E7F9AB269F65AC00405788 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F9AA269F65AC00405788 /* Networking.swift */; };
+		D1E7F9AD269F65D400405788 /* URLPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F9AC269F65D400405788 /* URLPath.swift */; };
+		D1E7F9AF269F660C00405788 /* ArchiveViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F9AE269F660C00405788 /* ArchiveViewModel.swift */; };
+		D1E7F9B1269F662F00405788 /* GamesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F9B0269F662F00405788 /* GamesViewModel.swift */; };
+		D1E7F9B3269F665B00405788 /* Archive.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F9B2269F665B00405788 /* Archive.swift */; };
+		D1E7F9B5269F668500405788 /* Games.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F9B4269F668500405788 /* Games.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +66,6 @@
 /* Begin PBXFileReference section */
 		D1E7F934269E1B2400405788 /* WellWin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WellWin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1E7F937269E1B2400405788 /* WellWinApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WellWinApp.swift; sourceTree = "<group>"; };
-		D1E7F939269E1B2400405788 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D1E7F93B269E1B2500405788 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D1E7F93E269E1B2500405788 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D1E7F940269E1B2500405788 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -45,6 +75,38 @@
 		D1E7F950269E1B2500405788 /* WellWinUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WellWinUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1E7F954269E1B2500405788 /* WellWinUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WellWinUITests.swift; sourceTree = "<group>"; };
 		D1E7F956269E1B2500405788 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D1E7F966269E1B8100405788 /* ResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewModel.swift; sourceTree = "<group>"; };
+		D1E7F968269E1B8F00405788 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		D1E7F973269E1C9E00405788 /* ResultData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultData.swift; sourceTree = "<group>"; };
+		D1E7F975269E1CE100405788 /* MoneyManagementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyManagementView.swift; sourceTree = "<group>"; };
+		D1E7F977269E1CF600405788 /* MoneyManagementObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyManagementObject.swift; sourceTree = "<group>"; };
+		D1E7F979269E1D0D00405788 /* MoneyManagementModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyManagementModel.swift; sourceTree = "<group>"; };
+		D1E7F97B269E1D2300405788 /* MoneyManagementViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyManagementViewModel.swift; sourceTree = "<group>"; };
+		D1E7F97D269EF1E300405788 /* TeamsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsView.swift; sourceTree = "<group>"; };
+		D1E7F97F269EF1EE00405788 /* TeamsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsViewModel.swift; sourceTree = "<group>"; };
+		D1E7F981269EF1FC00405788 /* TeamsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsModel.swift; sourceTree = "<group>"; };
+		D1E7F983269EF20800405788 /* TeamsObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsObject.swift; sourceTree = "<group>"; };
+		D1E7F985269EF22800405788 /* RefereesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefereesView.swift; sourceTree = "<group>"; };
+		D1E7F987269EF23800405788 /* RefereesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefereesViewModel.swift; sourceTree = "<group>"; };
+		D1E7F989269EF24300405788 /* RefereesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefereesModel.swift; sourceTree = "<group>"; };
+		D1E7F98B269EF24C00405788 /* RefereesObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefereesObject.swift; sourceTree = "<group>"; };
+		D1E7F98D269EF25F00405788 /* GoalsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsView.swift; sourceTree = "<group>"; };
+		D1E7F98F269EF26900405788 /* GoalsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsViewModel.swift; sourceTree = "<group>"; };
+		D1E7F991269EF27400405788 /* GoalsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsModel.swift; sourceTree = "<group>"; };
+		D1E7F993269EF27F00405788 /* GoalsObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsObject.swift; sourceTree = "<group>"; };
+		D1E7F997269EF5E600405788 /* StrategyScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrategyScreen.swift; sourceTree = "<group>"; };
+		D1E7F999269EF5FF00405788 /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
+		D1E7F99B269EF68E00405788 /* Betting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Betting.swift; sourceTree = "<group>"; };
+		D1E7F99E269EF6F600405788 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		D1E7F9A0269EF8E500405788 /* AppInitializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInitializer.swift; sourceTree = "<group>"; };
+		D1E7F9A2269EF9AB00405788 /* ParsingConditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParsingConditions.swift; sourceTree = "<group>"; };
+		D1E7F9A4269EF9CB00405788 /* ArchiveParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveParser.swift; sourceTree = "<group>"; };
+		D1E7F9AA269F65AC00405788 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		D1E7F9AC269F65D400405788 /* URLPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLPath.swift; sourceTree = "<group>"; };
+		D1E7F9AE269F660C00405788 /* ArchiveViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveViewModel.swift; sourceTree = "<group>"; };
+		D1E7F9B0269F662F00405788 /* GamesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesViewModel.swift; sourceTree = "<group>"; };
+		D1E7F9B2269F665B00405788 /* Archive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Archive.swift; sourceTree = "<group>"; };
+		D1E7F9B4269F668500405788 /* Games.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Games.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,10 +157,16 @@
 		D1E7F936269E1B2400405788 /* WellWin */ = {
 			isa = PBXGroup;
 			children = (
-				D1E7F937269E1B2400405788 /* WellWinApp.swift */,
-				D1E7F939269E1B2400405788 /* ContentView.swift */,
-				D1E7F93B269E1B2500405788 /* Assets.xcassets */,
-				D1E7F940269E1B2500405788 /* Info.plist */,
+				D1E7F996269EF57200405788 /* App */,
+				D1E7F99D269EF6CE00405788 /* Routing */,
+				D1E7F962269E1B3300405788 /* Screens */,
+				D1E7F96A269E1BE500405788 /* Modules */,
+				D1E7F96F269E1C3E00405788 /* ParsingConditions */,
+				D1E7F970269E1C4E00405788 /* ArchiveParser */,
+				D1E7F971269E1C6900405788 /* Betting */,
+				D1E7F972269E1C7800405788 /* ResultData */,
+				D1E7F9A6269F547300405788 /* Networking */,
+				D1E7F995269EF52C00405788 /* Resources */,
 				D1E7F93D269E1B2500405788 /* Preview Content */,
 			);
 			path = WellWin;
@@ -128,6 +196,191 @@
 				D1E7F956269E1B2500405788 /* Info.plist */,
 			);
 			path = WellWinUITests;
+			sourceTree = "<group>";
+		};
+		D1E7F962269E1B3300405788 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				D1E7F965269E1B6000405788 /* MainScreen */,
+				D1E7F964269E1B4B00405788 /* StrategyScreen */,
+				D1E7F963269E1B3E00405788 /* ResultScreen */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		D1E7F963269E1B3E00405788 /* ResultScreen */ = {
+			isa = PBXGroup;
+			children = (
+				D1E7F968269E1B8F00405788 /* ResultView.swift */,
+				D1E7F966269E1B8100405788 /* ResultViewModel.swift */,
+			);
+			path = ResultScreen;
+			sourceTree = "<group>";
+		};
+		D1E7F964269E1B4B00405788 /* StrategyScreen */ = {
+			isa = PBXGroup;
+			children = (
+				D1E7F997269EF5E600405788 /* StrategyScreen.swift */,
+			);
+			path = StrategyScreen;
+			sourceTree = "<group>";
+		};
+		D1E7F965269E1B6000405788 /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				D1E7F999269EF5FF00405788 /* MainScreen.swift */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		D1E7F96A269E1BE500405788 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				D1E7F96E269E1C1D00405788 /* MoneyManagementModule */,
+				D1E7F96D269E1C0F00405788 /* TeamsModule */,
+				D1E7F96C269E1C0200405788 /* RefereesModule */,
+				D1E7F96B269E1BEE00405788 /* GoalsModule */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		D1E7F96B269E1BEE00405788 /* GoalsModule */ = {
+			isa = PBXGroup;
+			children = (
+				D1E7F98D269EF25F00405788 /* GoalsView.swift */,
+				D1E7F98F269EF26900405788 /* GoalsViewModel.swift */,
+				D1E7F991269EF27400405788 /* GoalsModel.swift */,
+				D1E7F993269EF27F00405788 /* GoalsObject.swift */,
+			);
+			path = GoalsModule;
+			sourceTree = "<group>";
+		};
+		D1E7F96C269E1C0200405788 /* RefereesModule */ = {
+			isa = PBXGroup;
+			children = (
+				D1E7F985269EF22800405788 /* RefereesView.swift */,
+				D1E7F987269EF23800405788 /* RefereesViewModel.swift */,
+				D1E7F989269EF24300405788 /* RefereesModel.swift */,
+				D1E7F98B269EF24C00405788 /* RefereesObject.swift */,
+			);
+			path = RefereesModule;
+			sourceTree = "<group>";
+		};
+		D1E7F96D269E1C0F00405788 /* TeamsModule */ = {
+			isa = PBXGroup;
+			children = (
+				D1E7F97D269EF1E300405788 /* TeamsView.swift */,
+				D1E7F97F269EF1EE00405788 /* TeamsViewModel.swift */,
+				D1E7F981269EF1FC00405788 /* TeamsModel.swift */,
+				D1E7F983269EF20800405788 /* TeamsObject.swift */,
+			);
+			path = TeamsModule;
+			sourceTree = "<group>";
+		};
+		D1E7F96E269E1C1D00405788 /* MoneyManagementModule */ = {
+			isa = PBXGroup;
+			children = (
+				D1E7F975269E1CE100405788 /* MoneyManagementView.swift */,
+				D1E7F97B269E1D2300405788 /* MoneyManagementViewModel.swift */,
+				D1E7F979269E1D0D00405788 /* MoneyManagementModel.swift */,
+				D1E7F977269E1CF600405788 /* MoneyManagementObject.swift */,
+			);
+			path = MoneyManagementModule;
+			sourceTree = "<group>";
+		};
+		D1E7F96F269E1C3E00405788 /* ParsingConditions */ = {
+			isa = PBXGroup;
+			children = (
+				D1E7F9A2269EF9AB00405788 /* ParsingConditions.swift */,
+			);
+			path = ParsingConditions;
+			sourceTree = "<group>";
+		};
+		D1E7F970269E1C4E00405788 /* ArchiveParser */ = {
+			isa = PBXGroup;
+			children = (
+				D1E7F9A4269EF9CB00405788 /* ArchiveParser.swift */,
+			);
+			path = ArchiveParser;
+			sourceTree = "<group>";
+		};
+		D1E7F971269E1C6900405788 /* Betting */ = {
+			isa = PBXGroup;
+			children = (
+				D1E7F99B269EF68E00405788 /* Betting.swift */,
+			);
+			path = Betting;
+			sourceTree = "<group>";
+		};
+		D1E7F972269E1C7800405788 /* ResultData */ = {
+			isa = PBXGroup;
+			children = (
+				D1E7F973269E1C9E00405788 /* ResultData.swift */,
+			);
+			path = ResultData;
+			sourceTree = "<group>";
+		};
+		D1E7F995269EF52C00405788 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D1E7F93B269E1B2500405788 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D1E7F996269EF57200405788 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				D1E7F9A0269EF8E500405788 /* AppInitializer.swift */,
+				D1E7F937269E1B2400405788 /* WellWinApp.swift */,
+				D1E7F940269E1B2500405788 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		D1E7F99D269EF6CE00405788 /* Routing */ = {
+			isa = PBXGroup;
+			children = (
+				D1E7F99E269EF6F600405788 /* Router.swift */,
+			);
+			path = Routing;
+			sourceTree = "<group>";
+		};
+		D1E7F9A6269F547300405788 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				D1E7F9A7269F656300405788 /* APIs */,
+				D1E7F9A9269F658300405788 /* ViewModels */,
+				D1E7F9A8269F657200405788 /* Models */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		D1E7F9A7269F656300405788 /* APIs */ = {
+			isa = PBXGroup;
+			children = (
+				D1E7F9AA269F65AC00405788 /* Networking.swift */,
+				D1E7F9AC269F65D400405788 /* URLPath.swift */,
+			);
+			path = APIs;
+			sourceTree = "<group>";
+		};
+		D1E7F9A8269F657200405788 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D1E7F9B4269F668500405788 /* Games.swift */,
+				D1E7F9B2269F665B00405788 /* Archive.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D1E7F9A9269F658300405788 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				D1E7F9B0269F662F00405788 /* GamesViewModel.swift */,
+				D1E7F9AE269F660C00405788 /* ArchiveViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +512,39 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D1E7F93A269E1B2400405788 /* ContentView.swift in Sources */,
+				D1E7F990269EF26900405788 /* GoalsViewModel.swift in Sources */,
+				D1E7F98A269EF24300405788 /* RefereesModel.swift in Sources */,
+				D1E7F9A1269EF8E500405788 /* AppInitializer.swift in Sources */,
+				D1E7F9AF269F660C00405788 /* ArchiveViewModel.swift in Sources */,
+				D1E7F99C269EF68E00405788 /* Betting.swift in Sources */,
+				D1E7F992269EF27400405788 /* GoalsModel.swift in Sources */,
+				D1E7F97C269E1D2300405788 /* MoneyManagementViewModel.swift in Sources */,
+				D1E7F988269EF23800405788 /* RefereesViewModel.swift in Sources */,
+				D1E7F98E269EF25F00405788 /* GoalsView.swift in Sources */,
+				D1E7F9A3269EF9AB00405788 /* ParsingConditions.swift in Sources */,
+				D1E7F9B3269F665B00405788 /* Archive.swift in Sources */,
+				D1E7F986269EF22800405788 /* RefereesView.swift in Sources */,
+				D1E7F980269EF1EE00405788 /* TeamsViewModel.swift in Sources */,
+				D1E7F982269EF1FC00405788 /* TeamsModel.swift in Sources */,
+				D1E7F974269E1C9E00405788 /* ResultData.swift in Sources */,
+				D1E7F9B5269F668500405788 /* Games.swift in Sources */,
+				D1E7F998269EF5E600405788 /* StrategyScreen.swift in Sources */,
+				D1E7F978269E1CF600405788 /* MoneyManagementObject.swift in Sources */,
+				D1E7F97E269EF1E300405788 /* TeamsView.swift in Sources */,
+				D1E7F97A269E1D0D00405788 /* MoneyManagementModel.swift in Sources */,
+				D1E7F99A269EF5FF00405788 /* MainScreen.swift in Sources */,
+				D1E7F9AD269F65D400405788 /* URLPath.swift in Sources */,
+				D1E7F99F269EF6F600405788 /* Router.swift in Sources */,
+				D1E7F976269E1CE100405788 /* MoneyManagementView.swift in Sources */,
+				D1E7F969269E1B8F00405788 /* ResultView.swift in Sources */,
+				D1E7F967269E1B8100405788 /* ResultViewModel.swift in Sources */,
+				D1E7F98C269EF24C00405788 /* RefereesObject.swift in Sources */,
+				D1E7F994269EF27F00405788 /* GoalsObject.swift in Sources */,
+				D1E7F9B1269F662F00405788 /* GamesViewModel.swift in Sources */,
 				D1E7F938269E1B2400405788 /* WellWinApp.swift in Sources */,
+				D1E7F9A5269EF9CB00405788 /* ArchiveParser.swift in Sources */,
+				D1E7F984269EF20800405788 /* TeamsObject.swift in Sources */,
+				D1E7F9AB269F65AC00405788 /* Networking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,7 +705,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"WellWin/Preview Content\"";
 				DEVELOPMENT_TEAM = 249UEHKB7H;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = WellWin/Info.plist;
+				INFOPLIST_FILE = WellWin/App/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -430,7 +714,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.icloud.dudarevmail.WellWin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -443,7 +727,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"WellWin/Preview Content\"";
 				DEVELOPMENT_TEAM = 249UEHKB7H;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = WellWin/Info.plist;
+				INFOPLIST_FILE = WellWin/App/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -452,7 +736,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.icloud.dudarevmail.WellWin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
