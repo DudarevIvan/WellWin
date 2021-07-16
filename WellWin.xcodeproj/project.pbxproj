@@ -12,8 +12,7 @@
 		D1E7F93F269E1B2500405788 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1E7F93E269E1B2500405788 /* Preview Assets.xcassets */; };
 		D1E7F94A269E1B2500405788 /* WellWinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F949269E1B2500405788 /* WellWinTests.swift */; };
 		D1E7F955269E1B2500405788 /* WellWinUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F954269E1B2500405788 /* WellWinUITests.swift */; };
-		D1E7F967269E1B8100405788 /* ResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F966269E1B8100405788 /* ResultViewModel.swift */; };
-		D1E7F969269E1B8F00405788 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F968269E1B8F00405788 /* ResultView.swift */; };
+		D1E7F969269E1B8F00405788 /* ResultScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F968269E1B8F00405788 /* ResultScreen.swift */; };
 		D1E7F974269E1C9E00405788 /* ResultData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F973269E1C9E00405788 /* ResultData.swift */; };
 		D1E7F976269E1CE100405788 /* MoneyManagementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F975269E1CE100405788 /* MoneyManagementView.swift */; };
 		D1E7F978269E1CF600405788 /* MoneyManagementObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F977269E1CF600405788 /* MoneyManagementObject.swift */; };
@@ -44,6 +43,9 @@
 		D1E7F9B1269F662F00405788 /* GamesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F9B0269F662F00405788 /* GamesViewModel.swift */; };
 		D1E7F9B3269F665B00405788 /* Archive.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F9B2269F665B00405788 /* Archive.swift */; };
 		D1E7F9B5269F668500405788 /* Games.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F9B4269F668500405788 /* Games.swift */; };
+		D1E7F9B926A1617600405788 /* MainScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F9B826A1617600405788 /* MainScreenViewModel.swift */; };
+		D1E7F9BB26A1618C00405788 /* StrategyScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F9BA26A1618C00405788 /* StrategyScreenViewModel.swift */; };
+		D1E7F9BD26A1628900405788 /* ResultScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F9BC26A1628900405788 /* ResultScreenViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,8 +77,7 @@
 		D1E7F950269E1B2500405788 /* WellWinUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WellWinUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1E7F954269E1B2500405788 /* WellWinUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WellWinUITests.swift; sourceTree = "<group>"; };
 		D1E7F956269E1B2500405788 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D1E7F966269E1B8100405788 /* ResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewModel.swift; sourceTree = "<group>"; };
-		D1E7F968269E1B8F00405788 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		D1E7F968269E1B8F00405788 /* ResultScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultScreen.swift; sourceTree = "<group>"; };
 		D1E7F973269E1C9E00405788 /* ResultData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultData.swift; sourceTree = "<group>"; };
 		D1E7F975269E1CE100405788 /* MoneyManagementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyManagementView.swift; sourceTree = "<group>"; };
 		D1E7F977269E1CF600405788 /* MoneyManagementObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyManagementObject.swift; sourceTree = "<group>"; };
@@ -107,6 +108,9 @@
 		D1E7F9B0269F662F00405788 /* GamesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesViewModel.swift; sourceTree = "<group>"; };
 		D1E7F9B2269F665B00405788 /* Archive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Archive.swift; sourceTree = "<group>"; };
 		D1E7F9B4269F668500405788 /* Games.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Games.swift; sourceTree = "<group>"; };
+		D1E7F9B826A1617600405788 /* MainScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewModel.swift; sourceTree = "<group>"; };
+		D1E7F9BA26A1618C00405788 /* StrategyScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrategyScreenViewModel.swift; sourceTree = "<group>"; };
+		D1E7F9BC26A1628900405788 /* ResultScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultScreenViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +164,7 @@
 				D1E7F996269EF57200405788 /* App */,
 				D1E7F99D269EF6CE00405788 /* Routing */,
 				D1E7F962269E1B3300405788 /* Screens */,
+				D1E7F9B626A1610900405788 /* ScreensViewModels */,
 				D1E7F96A269E1BE500405788 /* Modules */,
 				D1E7F96F269E1C3E00405788 /* ParsingConditions */,
 				D1E7F970269E1C4E00405788 /* ArchiveParser */,
@@ -211,8 +216,7 @@
 		D1E7F963269E1B3E00405788 /* ResultScreen */ = {
 			isa = PBXGroup;
 			children = (
-				D1E7F968269E1B8F00405788 /* ResultView.swift */,
-				D1E7F966269E1B8100405788 /* ResultViewModel.swift */,
+				D1E7F968269E1B8F00405788 /* ResultScreen.swift */,
 			);
 			path = ResultScreen;
 			sourceTree = "<group>";
@@ -383,6 +387,16 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		D1E7F9B626A1610900405788 /* ScreensViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				D1E7F9B826A1617600405788 /* MainScreenViewModel.swift */,
+				D1E7F9BA26A1618C00405788 /* StrategyScreenViewModel.swift */,
+				D1E7F9BC26A1628900405788 /* ResultScreenViewModel.swift */,
+			);
+			path = ScreensViewModels;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -522,7 +536,9 @@
 				D1E7F988269EF23800405788 /* RefereesViewModel.swift in Sources */,
 				D1E7F98E269EF25F00405788 /* GoalsView.swift in Sources */,
 				D1E7F9A3269EF9AB00405788 /* ParsingConditions.swift in Sources */,
+				D1E7F9BB26A1618C00405788 /* StrategyScreenViewModel.swift in Sources */,
 				D1E7F9B3269F665B00405788 /* Archive.swift in Sources */,
+				D1E7F9B926A1617600405788 /* MainScreenViewModel.swift in Sources */,
 				D1E7F986269EF22800405788 /* RefereesView.swift in Sources */,
 				D1E7F980269EF1EE00405788 /* TeamsViewModel.swift in Sources */,
 				D1E7F982269EF1FC00405788 /* TeamsModel.swift in Sources */,
@@ -536,10 +552,10 @@
 				D1E7F9AD269F65D400405788 /* URLPath.swift in Sources */,
 				D1E7F99F269EF6F600405788 /* Router.swift in Sources */,
 				D1E7F976269E1CE100405788 /* MoneyManagementView.swift in Sources */,
-				D1E7F969269E1B8F00405788 /* ResultView.swift in Sources */,
-				D1E7F967269E1B8100405788 /* ResultViewModel.swift in Sources */,
+				D1E7F969269E1B8F00405788 /* ResultScreen.swift in Sources */,
 				D1E7F98C269EF24C00405788 /* RefereesObject.swift in Sources */,
 				D1E7F994269EF27F00405788 /* GoalsObject.swift in Sources */,
+				D1E7F9BD26A1628900405788 /* ResultScreenViewModel.swift in Sources */,
 				D1E7F9B1269F662F00405788 /* GamesViewModel.swift in Sources */,
 				D1E7F938269E1B2400405788 /* WellWinApp.swift in Sources */,
 				D1E7F9A5269EF9CB00405788 /* ArchiveParser.swift in Sources */,

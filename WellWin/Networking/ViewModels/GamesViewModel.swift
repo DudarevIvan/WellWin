@@ -15,7 +15,7 @@ public final class GamesViewModel: ObservableObject {
    
    // Games
    @Published public var games: Games = .init()
-   @Published public var indexEndpoint: Int = 1 // Football
+   @Published public var indexEndpoint: Int = .init(1) // Football
    
    // Save Published
    private var cancellableSet: Set<AnyCancellable> = []
