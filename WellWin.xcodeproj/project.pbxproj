@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D104789626A8777B002BDC69 /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = D104789526A8777B002BDC69 /* LineChart.swift */; };
+		D104789826A8A06B002BDC69 /* ChartsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D104789726A8A06B002BDC69 /* ChartsView.swift */; };
 		D1B4DEA026A44149009F82E5 /* CountryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B4DE9F26A44149009F82E5 /* CountryView.swift */; };
 		D1E7F938269E1B2400405788 /* WellWinApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F937269E1B2400405788 /* WellWinApp.swift */; };
 		D1E7F93C269E1B2500405788 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1E7F93B269E1B2500405788 /* Assets.xcassets */; };
@@ -69,6 +70,7 @@
 
 /* Begin PBXFileReference section */
 		D104789526A8777B002BDC69 /* LineChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChart.swift; sourceTree = "<group>"; };
+		D104789726A8A06B002BDC69 /* ChartsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsView.swift; sourceTree = "<group>"; };
 		D1B4DE9F26A44149009F82E5 /* CountryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryView.swift; sourceTree = "<group>"; };
 		D1E7F934269E1B2400405788 /* WellWin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WellWin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1E7F937269E1B2400405788 /* WellWinApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WellWinApp.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				D104789526A8777B002BDC69 /* LineChart.swift */,
+				D104789726A8A06B002BDC69 /* ChartsView.swift */,
 			);
 			path = ResultScreenViews;
 			sourceTree = "<group>";
@@ -561,6 +564,7 @@
 				D1E7F9A1269EF8E500405788 /* AppInitializer.swift in Sources */,
 				D1E7F9AF269F660C00405788 /* ArchiveViewModel.swift in Sources */,
 				D1E7F99C269EF68E00405788 /* Betting.swift in Sources */,
+				D104789826A8A06B002BDC69 /* ChartsView.swift in Sources */,
 				D1E7F992269EF27400405788 /* GoalsModel.swift in Sources */,
 				D1E7F97C269E1D2300405788 /* MoneyManagementViewModel.swift in Sources */,
 				D1E7F988269EF23800405788 /* RefereesViewModel.swift in Sources */,

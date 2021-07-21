@@ -9,12 +9,16 @@ import SwiftUI
 
 struct LineChart: View {
    
-   var data: Array<UnitPoint> = .init()
+   @State private var on = true
    
-   @State var on = true
+   init(data: Array<UnitPoint>, lineColor: Color = .blue) {
+      self.data = data
+      self.lineColor = lineColor
+   }
    
-   let xStepValue: CGFloat = 1
-   let yStepValue: CGFloat = 3
+   private let data: Array<UnitPoint>
+   
+   private let lineColor: Color
    
    private var maxYValue: CGFloat {
       abs(data.max { abs($0.y) < abs($1.y) }?.y ?? 0)
@@ -24,43 +28,7 @@ struct LineChart: View {
       abs(data.max { abs($0.x) < abs($1.x) }?.x ?? 0)
    }
    
-   private var minXValue: CGFloat {
-      abs(data.min { abs($0.x) > abs($1.x) }?.x ?? 0)
-   }
-   
-//   private var xStepsCount: Int {
-//      Int(self.maxXValue / self.xStepValue)
-//   }
-//
-//   private var yStepsCount: Int {
-//      Int(self.maxYValue / self.yStepValue)
-//   }
-   
    var body: some View {
-      ScrollView(.vertical) {
-         chartBody
-            .padding(.top)
-            .frame(maxWidth: .infinity, minHeight: 200, idealHeight: 200, maxHeight: 200, alignment: .center)
-         Rectangle()
-            .fill()
-            .foregroundColor(.gray)
-            .frame(maxWidth: .infinity, minHeight: 1, idealHeight: 1, maxHeight: 1)
-         HStack {
-            Text("0")
-            Spacer()
-            Text(String(Int(data.last!.x)))
-         }
-         .foregroundColor(.gray)
-         .padding(.horizontal, 4)
-         Spacer()
-      }.onAppear() {
-         withAnimation(.easeInOut(duration: 1)) {
-            self.on.toggle()
-         }
-      }
-   }
-   
-   private var chartBody: some View {
       GeometryReader { geometry in
          Path { path in
             path.move(to: .init(x: 0, y: geometry.size.height / 2))
@@ -82,16 +50,20 @@ struct LineChart: View {
          }
          .trim(to: on ? 0 : 1)
          .stroke(
-            Color("green"),
+            lineColor,
             style: StrokeStyle(lineWidth: 2)
          )
+      }
+      .onAppear() {
+         withAnimation(.easeInOut(duration: 1)) {
+            self.on.toggle()
+         }
       }
    }
 }
 
 
 struct LineChart_Previews: PreviewProvider {
-   
    static var previews: some View {
       LineChart(data: [UnitPoint(x: 2, y: 4),
                        UnitPoint(x: 5, y: 8),
@@ -99,6 +71,7 @@ struct LineChart_Previews: PreviewProvider {
                        UnitPoint(x: 9, y: -8),
                        UnitPoint(x: 11, y: -4),
                        UnitPoint(x: 19, y: 28),
-      ])
+      ], lineColor: Color("green"))
    }
 }
+
