@@ -27,7 +27,7 @@ public struct Networking {
    }
    
    
-   // Fetch games
+   // Fetch games(countries, leagues, seasons)
    public func fetchGames(endPoint: GamesEndPoint) -> AnyPublisher<Games, Never> {
       guard let url = urlPath.gamesURL(for: endPoint) else {
          return Just(Games()).eraseToAnyPublisher()

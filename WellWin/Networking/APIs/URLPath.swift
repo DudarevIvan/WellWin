@@ -11,7 +11,7 @@ public struct URLPath {
    
    public static let shared = URLPath()
    
-   // Flags url
+   // Flags url(optional, not used now)
    public let flagsURL: String = "https://www/wellwin-app.com/data/v1/shared/flags/flags.json"
    
    // Base url
@@ -37,14 +37,14 @@ public struct URLPath {
 }
 
 
-// Expandable enum for the future
-public enum GamesEndPoint {
+// Path to games (EndPoints)
+public enum GamesEndPoint: String, CaseIterable {
    
-   case football
-   case basketball
-   case tennis
-   case volleyball
-   case hockey
+   case football = "Football"
+   case basketball = "Basketball"
+   case tennis = "Tennis"
+   case volleyball = "Volleyball"
+   case hockey = "Hockey"
    
    public init(index: Int = 1) {
       switch index {

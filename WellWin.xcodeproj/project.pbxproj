@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D104789626A8777B002BDC69 /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = D104789526A8777B002BDC69 /* LineChart.swift */; };
+		D1B4DEA026A44149009F82E5 /* CountryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B4DE9F26A44149009F82E5 /* CountryView.swift */; };
 		D1E7F938269E1B2400405788 /* WellWinApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F937269E1B2400405788 /* WellWinApp.swift */; };
 		D1E7F93C269E1B2500405788 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1E7F93B269E1B2500405788 /* Assets.xcassets */; };
 		D1E7F93F269E1B2500405788 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1E7F93E269E1B2500405788 /* Preview Assets.xcassets */; };
@@ -66,6 +68,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D104789526A8777B002BDC69 /* LineChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChart.swift; sourceTree = "<group>"; };
+		D1B4DE9F26A44149009F82E5 /* CountryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryView.swift; sourceTree = "<group>"; };
 		D1E7F934269E1B2400405788 /* WellWin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WellWin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1E7F937269E1B2400405788 /* WellWinApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WellWinApp.swift; sourceTree = "<group>"; };
 		D1E7F93B269E1B2500405788 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -138,6 +142,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D104789426A87756002BDC69 /* ResultScreenViews */ = {
+			isa = PBXGroup;
+			children = (
+				D104789526A8777B002BDC69 /* LineChart.swift */,
+			);
+			path = ResultScreenViews;
+			sourceTree = "<group>";
+		};
+		D1B4DE9926A16627009F82E5 /* ScreensView */ = {
+			isa = PBXGroup;
+			children = (
+				D1B4DE9A26A1663A009F82E5 /* MainScreeViews */,
+				D104789426A87756002BDC69 /* ResultScreenViews */,
+			);
+			path = ScreensView;
+			sourceTree = "<group>";
+		};
+		D1B4DE9A26A1663A009F82E5 /* MainScreeViews */ = {
+			isa = PBXGroup;
+			children = (
+				D1B4DE9F26A44149009F82E5 /* CountryView.swift */,
+			);
+			path = MainScreeViews;
+			sourceTree = "<group>";
+		};
 		D1E7F92B269E1B2400405788 = {
 			isa = PBXGroup;
 			children = (
@@ -164,6 +193,7 @@
 				D1E7F996269EF57200405788 /* App */,
 				D1E7F99D269EF6CE00405788 /* Routing */,
 				D1E7F962269E1B3300405788 /* Screens */,
+				D1B4DE9926A16627009F82E5 /* ScreensView */,
 				D1E7F9B626A1610900405788 /* ScreensViewModels */,
 				D1E7F96A269E1BE500405788 /* Modules */,
 				D1E7F96F269E1C3E00405788 /* ParsingConditions */,
@@ -548,6 +578,7 @@
 				D1E7F978269E1CF600405788 /* MoneyManagementObject.swift in Sources */,
 				D1E7F97E269EF1E300405788 /* TeamsView.swift in Sources */,
 				D1E7F97A269E1D0D00405788 /* MoneyManagementModel.swift in Sources */,
+				D104789626A8777B002BDC69 /* LineChart.swift in Sources */,
 				D1E7F99A269EF5FF00405788 /* MainScreen.swift in Sources */,
 				D1E7F9AD269F65D400405788 /* URLPath.swift in Sources */,
 				D1E7F99F269EF6F600405788 /* Router.swift in Sources */,
@@ -555,6 +586,7 @@
 				D1E7F969269E1B8F00405788 /* ResultScreen.swift in Sources */,
 				D1E7F98C269EF24C00405788 /* RefereesObject.swift in Sources */,
 				D1E7F994269EF27F00405788 /* GoalsObject.swift in Sources */,
+				D1B4DEA026A44149009F82E5 /* CountryView.swift in Sources */,
 				D1E7F9BD26A1628900405788 /* ResultScreenViewModel.swift in Sources */,
 				D1E7F9B1269F662F00405788 /* GamesViewModel.swift in Sources */,
 				D1E7F938269E1B2400405788 /* WellWinApp.swift in Sources */,

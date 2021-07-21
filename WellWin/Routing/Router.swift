@@ -9,6 +9,6 @@ import Foundation
 
 final class Router {
    
-   public init() {
-   }
+   public static let shared: Router = .init()
+   
 }

@@ -16,7 +16,7 @@ final class AppInitializer {
    private let resultData: ResultData
    
    public init() {
-      self.router = .init()
+      self.router = .shared
       self.parsingConditions = .init()
       self.archiveParser = .init()
       self.betting = .init()

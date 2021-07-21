@@ -9,5 +9,9 @@ import SwiftUI
 
 final class StrategyScreenViewModel: ObservableObject {
    
+   //let strategies: Array<AnyView> = .init()
    
+   init() {
+      
+   }
 }
