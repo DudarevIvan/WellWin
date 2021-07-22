@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ResultScreen: View {
+   
+   @ObservedObject var resultViewModel: ResultViewModel = .init()
+   
    var body: some View {
       ZStack {
          Color("black")
@@ -25,7 +28,7 @@ struct ResultScreen: View {
             .foregroundColor(.white)
             //.padding(.horizontal)
             .padding()
-            ChartsView()
+            ChartsView(mainChartData: resultViewModel.resultModel.mainChartData, roiChartData: resultViewModel.resultModel.roiChartData)
                .padding(.vertical, 40)
             Spacer()
          }

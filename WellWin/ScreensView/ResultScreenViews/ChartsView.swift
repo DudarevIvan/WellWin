@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct ChartsView: View {
+   
+   var mainChartData: Array<UnitPoint> = .init()
+   var roiChartData: Array<UnitPoint> = .init()
+   
    var body: some View {
       GeometryReader { geometry in
          ZStack {
@@ -53,25 +57,13 @@ struct ChartsView: View {
                   VStack(spacing: 46) {
                      ForEach(0..<5) { line in
                         Line()
-                           .stroke(style: StrokeStyle(lineWidth: 1, dash: [5]))
+                           .stroke(style: StrokeStyle(lineWidth: 1, dash: [3]))
                            .frame(height: 1)
                            .foregroundColor(Color("lightGray"))
                      }
                   }
-                  LineChart(data: [UnitPoint(x: 1, y: 1),
-                                   UnitPoint(x: 2, y: 3),
-                                   UnitPoint(x: 3, y: -1),
-                                   UnitPoint(x: 4, y: -3),
-                                   UnitPoint(x: 5, y: -1),
-                                   UnitPoint(x: 6, y: -3),
-                  ], lineColor: Color("pink"))
-                  LineChart(data: [UnitPoint(x: 1, y: 3),
-                                   UnitPoint(x: 2, y: 8),
-                                   UnitPoint(x: 3, y: -4),
-                                   UnitPoint(x: 4, y: -8),
-                                   UnitPoint(x: 5, y: -4),
-                                   UnitPoint(x: 6, y: -55),
-                  ], lineColor: Color("green"))
+                  LineChart(data: roiChartData, lineColor: Color("pink"))
+                  LineChart(data: mainChartData, lineColor: Color("green"))
                }
                .padding(10)
                //.padding(.top, 80)
