@@ -7,31 +7,21 @@
 
 import SwiftUI
 
-struct ResultScreen: View {
+struct ResultScreen: View, NavigationTitle {
    
    @ObservedObject var resultViewModel: ResultViewModel = .init()
+   @State private(set) var title: String = "Result"
    
    var body: some View {
       ZStack {
          Color("black")
             .ignoresSafeArea()
          VStack {
-            HStack {
-               Image(systemName: "chevron.backward")
-                  .font(.title3)
-                  .padding(.trailing, 10)
-               Text("Result")
-                  .bold()
-                  .font(.title2)
-               Spacer()
-            }
-            .foregroundColor(.white)
-            //.padding(.horizontal)
-            .padding()
             ChartsView(mainChartData: resultViewModel.resultModel.mainChartData, roiChartData: resultViewModel.resultModel.roiChartData)
                .padding(.vertical, 40)
             Spacer()
          }
+         .padding(.top)
       }
       .navigationBarBackButtonHidden(true)
    }

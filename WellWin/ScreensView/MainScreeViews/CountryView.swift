@@ -16,9 +16,9 @@ struct CountryView: View {
    }
    
    var body: some View {
-      Button(action: {
-         
-      }, label: {
+//      Button(action: {
+//         
+//      }, label: {
          HStack {
             Image(country)
                .resizable()
@@ -37,7 +37,7 @@ struct CountryView: View {
          .clipShape(RoundedRectangle(cornerRadius: 6))
          //.shadow(color: .gray, radius: 6, x: 1, y: 2)
          .padding(.horizontal)
-      })
+      //})
    }
 }
 
