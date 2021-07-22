@@ -14,12 +14,15 @@ struct ResultScreen: View {
             .ignoresSafeArea()
          VStack {
             HStack {
+               Image(systemName: "chevron.backward")
+                  .font(.title3)
+                  .padding(.trailing, 10)
                Text("Result")
                   .bold()
-                  .foregroundColor(.white)
-                  .font(.largeTitle)
+                  .font(.title2)
                Spacer()
             }
+            .foregroundColor(.white)
             //.padding(.horizontal)
             .padding()
             ChartsView()
@@ -27,6 +30,7 @@ struct ResultScreen: View {
             Spacer()
          }
       }
+      .navigationBarBackButtonHidden(true)
    }
 }
 

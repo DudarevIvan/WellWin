@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D104789626A8777B002BDC69 /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = D104789526A8777B002BDC69 /* LineChart.swift */; };
 		D104789826A8A06B002BDC69 /* ChartsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D104789726A8A06B002BDC69 /* ChartsView.swift */; };
+		D104789A26A93A9F002BDC69 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = D104789926A93A9F002BDC69 /* Line.swift */; };
 		D1B4DEA026A44149009F82E5 /* CountryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B4DE9F26A44149009F82E5 /* CountryView.swift */; };
 		D1E7F938269E1B2400405788 /* WellWinApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F937269E1B2400405788 /* WellWinApp.swift */; };
 		D1E7F93C269E1B2500405788 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1E7F93B269E1B2500405788 /* Assets.xcassets */; };
@@ -71,6 +72,7 @@
 /* Begin PBXFileReference section */
 		D104789526A8777B002BDC69 /* LineChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChart.swift; sourceTree = "<group>"; };
 		D104789726A8A06B002BDC69 /* ChartsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsView.swift; sourceTree = "<group>"; };
+		D104789926A93A9F002BDC69 /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
 		D1B4DE9F26A44149009F82E5 /* CountryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryView.swift; sourceTree = "<group>"; };
 		D1E7F934269E1B2400405788 /* WellWin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WellWin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1E7F937269E1B2400405788 /* WellWinApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WellWinApp.swift; sourceTree = "<group>"; };
@@ -147,8 +149,9 @@
 		D104789426A87756002BDC69 /* ResultScreenViews */ = {
 			isa = PBXGroup;
 			children = (
-				D104789526A8777B002BDC69 /* LineChart.swift */,
 				D104789726A8A06B002BDC69 /* ChartsView.swift */,
+				D104789526A8777B002BDC69 /* LineChart.swift */,
+				D104789926A93A9F002BDC69 /* Line.swift */,
 			);
 			path = ResultScreenViews;
 			sourceTree = "<group>";
@@ -592,6 +595,7 @@
 				D1E7F994269EF27F00405788 /* GoalsObject.swift in Sources */,
 				D1B4DEA026A44149009F82E5 /* CountryView.swift in Sources */,
 				D1E7F9BD26A1628900405788 /* ResultScreenViewModel.swift in Sources */,
+				D104789A26A93A9F002BDC69 /* Line.swift in Sources */,
 				D1E7F9B1269F662F00405788 /* GamesViewModel.swift in Sources */,
 				D1E7F938269E1B2400405788 /* WellWinApp.swift in Sources */,
 				D1E7F9A5269EF9CB00405788 /* ArchiveParser.swift in Sources */,

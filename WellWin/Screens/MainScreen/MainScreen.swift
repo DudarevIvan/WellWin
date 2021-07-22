@@ -13,23 +13,29 @@ struct MainScreen: View {
    //@ObservedObject var mainScreenViewModel: MainScreenViewModel = .init()
    
    var body: some View {
-      //NavigationView {
-      ZStack {
-         Color(.systemGray6)
-         VStack {
-            if let countries = gamesViewModel.games.countries {
-               ScrollView(.vertical, showsIndicators: false) {
-                  ForEach(countries) { country in
-                     CountryView(country: country.name!)
+      NavigationView {
+         ZStack {
+            Color("black")
+               .ignoresSafeArea()
+            VStack {
+               if let countries = gamesViewModel.games.countries {
+                  ScrollView(.vertical, showsIndicators: false) {
+                     ForEach(countries) { country in
+                        NavigationLink(
+                           destination: ResultScreen(),
+                           label: {
+                              Text(country.name!)
+                              //CountryView(country: country.name!)
+                           })
+                     }
                   }
                }
+               Spacer()
             }
-            Spacer()
          }
+         //.navigationBarHidden(true)
+         //.foregroundColor(Color("black"))
       }
-      //.navigationBarTitle("WELLWIN", displayMode: .inline)
-      //}
-      .ignoresSafeArea()
    }
 }
 

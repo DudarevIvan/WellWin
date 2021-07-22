@@ -25,7 +25,8 @@ struct ChartsView: View {
                            .foregroundColor(.white)
                            .font(.title2)
                         Text("100")
-                           .foregroundColor(.green)
+                           .bold()
+                           .foregroundColor(Color("green2"))
                            .font(.title3)
                      }
                   }
@@ -39,7 +40,8 @@ struct ChartsView: View {
                            .foregroundColor(.white)
                            .font(.title2)
                         Text("10")
-                           .foregroundColor(.green)
+                           .bold()
+                           .foregroundColor(Color("green2"))
                            .font(.title3)
                      }
                   }
@@ -50,8 +52,9 @@ struct ChartsView: View {
                ZStack {
                   VStack(spacing: 46) {
                      ForEach(0..<5) { line in
-                        Rectangle()
-                           .frame( maxWidth: .infinity, minHeight: 1, idealHeight: 2, maxHeight: 1)
+                        Line()
+                           .stroke(style: StrokeStyle(lineWidth: 1, dash: [5]))
+                           .frame(height: 1)
                            .foregroundColor(Color("lightGray"))
                      }
                   }

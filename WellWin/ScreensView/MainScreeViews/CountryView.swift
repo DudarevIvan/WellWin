@@ -32,10 +32,10 @@ struct CountryView: View {
                .padding(.trailing, 4)
          }
          .padding(4)
-         .foregroundColor(.black)
-         .background(Color.white)
+         .foregroundColor(Color("green"))
+         .background(Color("gray"))
          .clipShape(RoundedRectangle(cornerRadius: 6))
-         .shadow(color: .gray, radius: 6, x: 1, y: 2)
+         //.shadow(color: .gray, radius: 6, x: 1, y: 2)
          .padding(.horizontal)
       })
    }
