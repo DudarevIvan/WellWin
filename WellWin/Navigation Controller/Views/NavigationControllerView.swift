@@ -34,7 +34,7 @@ public struct NavigationControllerView<Content: View & NavigationTitle>: View {
                .padding(.horizontal, 15)
                .padding(.bottom)
                .padding(.top, UIApplication.shared.windows.first?.safeAreaInsets.top)
-               .background(Color("gray"))
+               .background(Color("black"))
                .environmentObject(viewModel)
             if isRootView {
                content

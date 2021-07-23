@@ -16,9 +16,11 @@ struct ResultScreen: View, NavigationTitle {
       ZStack {
          Color("black")
             .ignoresSafeArea()
-         VStack {
+         VStack(alignment: .leading) {
             ChartsView(mainChartData: resultViewModel.resultModel.mainChartData, roiChartData: resultViewModel.resultModel.roiChartData)
-               .padding(.vertical, 40)
+               //.padding(.top, 40)
+            Text("In detail")
+               .font(.largeTitle)
             Spacer()
          }
          .padding(.top)

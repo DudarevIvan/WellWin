@@ -18,6 +18,8 @@ struct StrategyScreen: View, NavigationTitle {
          VStack {
             NavigationPushButton(destination: ResultScreen()) {
                Text("Go to result")
+                  .foregroundColor(Color("green"))
+                  .padding()
             }
             Spacer()
          }
