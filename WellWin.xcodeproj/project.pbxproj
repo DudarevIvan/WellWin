@@ -17,6 +17,7 @@
 		D120A69F26A9DF4E0020D750 /* PushButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D120A69E26A9DF4E0020D750 /* PushButton.swift */; };
 		D120A6A126A9DF680020D750 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D120A6A026A9DF680020D750 /* NavigationBar.swift */; };
 		D120A6A426A9E00B0020D750 /* CLSScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D120A6A326A9E00B0020D750 /* CLSScreen.swift */; };
+		D120A6A626ABCFB60020D750 /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D120A6A526ABCFB60020D750 /* StatisticsView.swift */; };
 		D1B4DEA026A44149009F82E5 /* CountryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B4DE9F26A44149009F82E5 /* CountryView.swift */; };
 		D1E7F938269E1B2400405788 /* WellWinApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F937269E1B2400405788 /* WellWinApp.swift */; };
 		D1E7F93C269E1B2500405788 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1E7F93B269E1B2500405788 /* Assets.xcassets */; };
@@ -87,6 +88,7 @@
 		D120A69E26A9DF4E0020D750 /* PushButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushButton.swift; sourceTree = "<group>"; };
 		D120A6A026A9DF680020D750 /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 		D120A6A326A9E00B0020D750 /* CLSScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLSScreen.swift; sourceTree = "<group>"; };
+		D120A6A526ABCFB60020D750 /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
 		D1B4DE9F26A44149009F82E5 /* CountryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryView.swift; sourceTree = "<group>"; };
 		D1E7F934269E1B2400405788 /* WellWin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WellWin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1E7F937269E1B2400405788 /* WellWinApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WellWinApp.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 				D104789726A8A06B002BDC69 /* ChartsView.swift */,
 				D104789526A8777B002BDC69 /* LineChart.swift */,
 				D104789926A93A9F002BDC69 /* Line.swift */,
+				D120A6A526ABCFB60020D750 /* StatisticsView.swift */,
 			);
 			path = ResultScreenViews;
 			sourceTree = "<group>";
@@ -651,6 +654,7 @@
 				D1E7F97E269EF1E300405788 /* TeamsView.swift in Sources */,
 				D1E7F97A269E1D0D00405788 /* MoneyManagementModel.swift in Sources */,
 				D104789626A8777B002BDC69 /* LineChart.swift in Sources */,
+				D120A6A626ABCFB60020D750 /* StatisticsView.swift in Sources */,
 				D1E7F99A269EF5FF00405788 /* MainScreen.swift in Sources */,
 				D1E7F9AD269F65D400405788 /* URLPath.swift in Sources */,
 				D1E7F99F269EF6F600405788 /* Router.swift in Sources */,

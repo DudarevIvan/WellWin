@@ -14,14 +14,28 @@ struct ResultScreen: View, NavigationTitle {
    
    var body: some View {
       ZStack {
-         Color("black")
+         Color.white
             .ignoresSafeArea()
          VStack(alignment: .leading) {
             ChartsView(mainChartData: resultViewModel.resultModel.mainChartData, roiChartData: resultViewModel.resultModel.roiChartData)
                //.padding(.top, 40)
-            Text("In detail")
-               .font(.largeTitle)
-            Spacer()
+            
+            // Change to single view
+            HStack {
+               Text("Statistics")
+               Spacer()
+               Text("Overview")
+               Spacer()
+               Text("Overview")
+            }
+            .font(.title3)
+            .padding()
+            //.padding(.top, 40)
+            
+            // Change
+            ForEach(1..<6) { index in
+            StatisticsView()
+            }
          }
          .padding(.top)
       }

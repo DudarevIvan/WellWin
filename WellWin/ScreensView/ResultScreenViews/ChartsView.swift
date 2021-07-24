@@ -13,10 +13,10 @@ struct ChartsView: View {
    var roiChartData: Array<UnitPoint> = .init()
    
    var body: some View {
-      GeometryReader { geometry in
+      //GeometryReader { geometry in
          ZStack {
-            RoundedRectangle(cornerRadius: 20.0)
-               .foregroundColor(Color("gray"))
+//            RoundedRectangle(cornerRadius: 20.0)
+//               .foregroundColor(Color("gray"))
             VStack {
                HStack(spacing: 40) {
                   HStack {
@@ -26,7 +26,7 @@ struct ChartsView: View {
                      VStack(alignment: .leading) {
                         Text("Profit")
                            .bold()
-                           .foregroundColor(.white)
+                           .foregroundColor(.black)
                            .font(.title2)
                         Text("100")
                            .bold()
@@ -41,7 +41,7 @@ struct ChartsView: View {
                      VStack(alignment: .leading) {
                         Text("ROI")
                            .bold()
-                           .foregroundColor(.white)
+                           .foregroundColor(.black)
                            .font(.title2)
                         Text("10")
                            .bold()
@@ -84,8 +84,8 @@ struct ChartsView: View {
                .font(.caption)
             }
          }
-         .frame(height: geometry.size.height * 0.40)
-      }
+         //.frame(height: 200)
+      //}
    }
 }
 
