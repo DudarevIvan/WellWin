@@ -7,6 +7,9 @@
 
 import Foundation
  
-final class TeamsObject {
+struct TeamsObject: Object {
    
+   var name: String = ""
+   var priority: Priority = .hight
+   var selectionСriteria: Array<Criterion> = .init()
 }

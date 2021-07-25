@@ -33,7 +33,7 @@ struct ResultScreen: View, NavigationTitle {
             //.padding(.top, 40)
             
             // Change
-            ForEach(1..<6) { index in
+            ForEach(0..<6) { index in
             StatisticsView()
             }
          }
