@@ -7,6 +7,9 @@
 
 import Foundation
 
-final class RefereesObject {
+struct RefereesObject: Object {
    
+   var name: Array<String> = .init(arrayLiteral: "referee")
+   var priority: Priority = .hight
+   var selectionСriteria: Array<Criterion> = .init()
 }

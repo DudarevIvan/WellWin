@@ -9,7 +9,7 @@ import Foundation
  
 struct TeamsObject: Object {
    
-   var name: String = ""
+   var name: Array<String> = .init(arrayLiteral: "ht", "at")
    var priority: Priority = .hight
    var selectionСriteria: Array<Criterion> = .init()
 }

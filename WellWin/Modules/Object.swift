@@ -9,7 +9,7 @@ import Foundation
 
 protocol Object {
    
-   var name: String { get }
+   var name: Array<String> { get }
    var priority: Priority { get }
    var selectionСriteria: Array<Criterion> { get }
 }
