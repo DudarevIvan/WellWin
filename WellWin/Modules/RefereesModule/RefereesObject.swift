@@ -7,7 +7,11 @@
 
 import Foundation
 
-struct RefereesObject: Object {
+final class RefereesObject: Object {
+   
+   static let shared: RefereesObject = .init()
+   
+   private init() {}
    
    var name: Array<String> = .init(arrayLiteral: "referee")
    var priority: Priority = .hight

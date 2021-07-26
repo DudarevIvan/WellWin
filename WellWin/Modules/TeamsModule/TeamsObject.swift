@@ -7,7 +7,11 @@
 
 import Foundation
  
-struct TeamsObject: Object {
+final class TeamsObject: Object {
+   
+   static let shared: TeamsObject = .init()
+   
+   private init() {}
    
    var name: Array<String> = .init(arrayLiteral: "ht", "at")
    var priority: Priority = .hight

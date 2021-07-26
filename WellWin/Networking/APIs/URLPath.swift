@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct URLPath {
+public class URLPath {
    
    public static let shared = URLPath()
    

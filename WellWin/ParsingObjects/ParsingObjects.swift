@@ -1,5 +1,5 @@
 //
-//  ParsingConditions.swift
+//  ParsingObjects.swift
 //  WellWin
 //
 //  Created by Ivan Dudarev on 7/14/21.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class ParsingConditions {
+final class ParsingObjects {
    
    private let moneyManagementObject: MoneyManagementObject
    private let teamsObject: TeamsObject
@@ -15,9 +15,9 @@ final class ParsingConditions {
    private let goalsObject: GoalsObject
    
    init() {
-      self.moneyManagementObject = .init()
-      self.teamsObject = .init()
-      self.refereesObject = .init()
-      self.goalsObject = .init()
+      self.moneyManagementObject = .shared
+      self.teamsObject = .shared
+      self.refereesObject = .shared
+      self.goalsObject = .shared
    }
 }

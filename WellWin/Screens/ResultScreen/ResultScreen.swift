@@ -18,24 +18,25 @@ struct ResultScreen: View, NavigationTitle {
             .ignoresSafeArea()
          VStack(alignment: .leading) {
             ChartsView(mainChartData: resultViewModel.resultModel.mainChartData, roiChartData: resultViewModel.resultModel.roiChartData)
-               //.padding(.top, 40)
+            //.padding(.top, 40)
             
             // Change to single view
             HStack {
                Text("Statistics")
                Spacer()
-               Text("Overview")
+               Text("Win")
                Spacer()
-               Text("Overview")
+               Text("Loss")
             }
-            .font(.title3)
+            .font(.subheadline.bold())
             .padding()
             //.padding(.top, 40)
             
             // Change
             ForEach(0..<6) { index in
-            StatisticsView()
+               StatisticsView()
             }
+            Spacer()
          }
          .padding(.top)
       }

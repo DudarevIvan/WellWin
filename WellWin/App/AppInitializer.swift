@@ -10,14 +10,14 @@ import Foundation
 final class AppInitializer {
    
    private let router: Router
-   private let parsingConditions: ParsingConditions
+   private let parsingObjects: ParsingObjects
    private let archiveParser: ArchiveParser
    private let betting: Betting
    private let resultData: ResultData
    
    public init() {
       self.router = .shared
-      self.parsingConditions = .init()
+      self.parsingObjects = .init()
       self.archiveParser = .init()
       self.betting = .init()
       self.resultData = .shared

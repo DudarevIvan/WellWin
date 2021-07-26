@@ -16,7 +16,7 @@ struct StrategyScreen: View, NavigationTitle {
          Color("black")
             .ignoresSafeArea()
          VStack {
-            NavigationPushButton(destination: ResultScreen()) {
+            NavigationLink(destination: ResultScreen()) {
                Text("Go to result")
                   .foregroundColor(Color("green"))
                   .padding()

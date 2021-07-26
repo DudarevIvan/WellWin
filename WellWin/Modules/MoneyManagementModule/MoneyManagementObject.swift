@@ -9,4 +9,7 @@ import Foundation
 
 final class MoneyManagementObject {
    
+   static let shared: MoneyManagementObject = .init()
+   
+   private init() {}
 }

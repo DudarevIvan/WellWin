@@ -9,7 +9,7 @@ import Foundation
 import Combine
 import SwiftUI
 
-public struct Networking {
+public class Networking {
    
    public static let shared: Networking = .init()
    

@@ -21,7 +21,7 @@ struct CLSScreen: View, NavigationTitle  {
             if let countries = gamesViewModel.games.countries {
                ScrollView(.vertical, showsIndicators: false) {
                   ForEach(countries) { country in
-                     NavigationPushButton(destination: StrategyScreen()) {
+                     NavigationLink(destination: StrategyScreen()) {
                         CountryView(country: country.name!)
                      }
                   }
