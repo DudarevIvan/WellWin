@@ -229,18 +229,18 @@
 		D1B4DE9926A16627009F82E5 /* ScreensView */ = {
 			isa = PBXGroup;
 			children = (
-				D1B4DE9A26A1663A009F82E5 /* MainScreeViews */,
+				D1B4DE9A26A1663A009F82E5 /* CLSScreeViews */,
 				D104789426A87756002BDC69 /* ResultScreenViews */,
 			);
 			path = ScreensView;
 			sourceTree = "<group>";
 		};
-		D1B4DE9A26A1663A009F82E5 /* MainScreeViews */ = {
+		D1B4DE9A26A1663A009F82E5 /* CLSScreeViews */ = {
 			isa = PBXGroup;
 			children = (
 				D1B4DE9F26A44149009F82E5 /* CountryView.swift */,
 			);
-			path = MainScreeViews;
+			path = CLSScreeViews;
 			sourceTree = "<group>";
 		};
 		D1E7F92B269E1B2400405788 = {

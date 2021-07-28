@@ -15,7 +15,7 @@ struct CLSScreen: View, NavigationTitle  {
    
    var body: some View {
       ZStack {
-         Color("black")
+         Color.white
             .ignoresSafeArea()
          VStack {
             if let countries = gamesViewModel.games.countries {
