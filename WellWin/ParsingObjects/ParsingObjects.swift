@@ -20,4 +20,8 @@ final class ParsingObjects {
       self.refereesObject = .shared
       self.goalsObject = .shared
    }
+   
+   private func parsingCondition() {
+      
+   }
 }
