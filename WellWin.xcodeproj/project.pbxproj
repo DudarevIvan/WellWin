@@ -10,6 +10,7 @@
 		D104789626A8777B002BDC69 /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = D104789526A8777B002BDC69 /* LineChart.swift */; };
 		D104789826A8A06B002BDC69 /* ChartsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D104789726A8A06B002BDC69 /* ChartsView.swift */; };
 		D104789A26A93A9F002BDC69 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = D104789926A93A9F002BDC69 /* Line.swift */; };
+		D120313A26B4507A00B1908F /* TeamsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D120313926B4507A00B1908F /* TeamsScreen.swift */; };
 		D120A69626A9DEB40020D750 /* NavigationControllerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D120A69526A9DEB40020D750 /* NavigationControllerModel.swift */; };
 		D120A69826A9DED80020D750 /* NavigationControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D120A69726A9DED80020D750 /* NavigationControllerViewModel.swift */; };
 		D120A69A26A9DF0A0020D750 /* NavigationControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D120A69926A9DF0A0020D750 /* NavigationControllerView.swift */; };
@@ -85,6 +86,7 @@
 		D104789526A8777B002BDC69 /* LineChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChart.swift; sourceTree = "<group>"; };
 		D104789726A8A06B002BDC69 /* ChartsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsView.swift; sourceTree = "<group>"; };
 		D104789926A93A9F002BDC69 /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
+		D120313926B4507A00B1908F /* TeamsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsScreen.swift; sourceTree = "<group>"; };
 		D120A69526A9DEB40020D750 /* NavigationControllerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerModel.swift; sourceTree = "<group>"; };
 		D120A69726A9DED80020D750 /* NavigationControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerViewModel.swift; sourceTree = "<group>"; };
 		D120A69926A9DF0A0020D750 /* NavigationControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerView.swift; sourceTree = "<group>"; };
@@ -333,6 +335,7 @@
 			isa = PBXGroup;
 			children = (
 				D1E7F997269EF5E600405788 /* StrategyScreen.swift */,
+				D120313926B4507A00B1908F /* TeamsScreen.swift */,
 			);
 			path = StrategyScreen;
 			sourceTree = "<group>";
@@ -664,6 +667,7 @@
 				D1E7F9B5269F668500405788 /* Games.swift in Sources */,
 				D1E7F998269EF5E600405788 /* StrategyScreen.swift in Sources */,
 				D1E7F978269E1CF600405788 /* MoneyManagementObject.swift in Sources */,
+				D120313A26B4507A00B1908F /* TeamsScreen.swift in Sources */,
 				D1E7F97E269EF1E300405788 /* TeamsView.swift in Sources */,
 				D1E7F97A269E1D0D00405788 /* MoneyManagementModel.swift in Sources */,
 				D104789626A8777B002BDC69 /* LineChart.swift in Sources */,

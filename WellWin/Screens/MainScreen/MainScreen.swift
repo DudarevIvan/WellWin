@@ -10,6 +10,6 @@ import SwiftUI
 struct MainScreen: View {
    
    var body: some View {
-      NavigationControllerView({CLSScreen()}, .none)
+      NavigationControllerView({CLSScreen()}, .custom(.asymmetric(insertion: .slide, removal: .slide)))
    }
 }

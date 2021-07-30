@@ -10,6 +10,7 @@ import SwiftUI
 struct CLSScreen: View, NavigationTitle  {
    
    @State private(set) var title: String = "Wellwin"
+   @State private var showSeasons = false
    
    @ObservedObject var gamesViewModel: GamesViewModel = .init()
    
@@ -20,8 +21,21 @@ struct CLSScreen: View, NavigationTitle  {
          VStack {
             if let countries = gamesViewModel.games.countries {
                ScrollView(.vertical, showsIndicators: false) {
+                  
                   ForEach(countries) { country in
-                     NavigationLink(destination: StrategyScreen()) {
+                     if let leagues = countries[country.id!].leagues {
+                        ForEach(leagues) { league in
+                           NavigationLink(destination: StrategyScreen(pathArchive: "")) {
+                              CountryView(country: country.name!)
+                           }
+                           Divider()
+                        }
+                        .background(Color.white)
+                     }
+                  }
+                  
+                  ForEach(countries) { country in
+                     NavigationLink(destination: StrategyScreen(pathArchive: "")) {
                         CountryView(country: country.name!)
                      }
                   }

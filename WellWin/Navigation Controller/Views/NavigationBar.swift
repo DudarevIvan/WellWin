@@ -60,10 +60,10 @@ public struct NavigationBar: View {
                      .foregroundColor(.black).opacity(0.8)
                })
             } else if title == "Result" {
-               Text("Result")
-                  .fontWeight(.heavy)
-                  .offset(x: (isRoot ?  0 : -20))
-               Spacer()
+//               Text("Result")
+//                  .fontWeight(.heavy)
+//                  .offset(x: (isRoot ?  0 : -20))
+//               Spacer()
             }
          }
          .foregroundColor(.black)
