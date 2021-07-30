@@ -23,10 +23,16 @@ public struct NavigationBar: View {
          HStack(alignment: .center) {
             if !isRoot {
                NavigationPopButton() {
-                  Text("Back")
-                     .fontWeight(.semibold)
-                  //Image(systemName: "chevron.backward")
-                  //.font(Font.headline.weight(.heavy))
+                  HStack {
+                     Image("backBlack")
+                        .resizable()
+                        .frame(width: 26.0, height: 14.0)
+                        .foregroundColor(.black)
+                     Text("BACK")
+                        .font(.caption)
+                        .fontWeight(.bold)
+                        .foregroundColor(.black).opacity(0.8)
+                  }
                }
             }
             Spacer()
