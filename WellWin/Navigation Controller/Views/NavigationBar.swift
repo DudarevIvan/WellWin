@@ -26,7 +26,7 @@ public struct NavigationBar: View {
                   HStack {
                      Image("backBlack")
                         .resizable()
-                        .frame(width: 26.0, height: 14.0)
+                        .frame(width: 26.0, height: 12.0)
                         .foregroundColor(.black)
                      Text("BACK")
                         .font(.caption)
@@ -42,11 +42,14 @@ public struct NavigationBar: View {
                   .offset(x: (isRoot ?  0 : -20))
                Spacer()
             } else if title == "Strategy" {
-            Text("Clear")
-               .fontWeight(.semibold)
-               .padding(.horizontal)
-               Text("Save")
-                  .fontWeight(.semibold)
+               Text("CLEAR")
+                  .font(.caption)
+                  .fontWeight(.bold)
+                  .foregroundColor(.black).opacity(0.8)
+               Text("SAVE")
+                  .font(.caption)
+                  .fontWeight(.bold)
+                  .foregroundColor(.black).opacity(0.8)
             } else if title == "Result" {
                Text("Result")
                   .fontWeight(.heavy)
@@ -54,7 +57,7 @@ public struct NavigationBar: View {
                Spacer()
             }
          }
-         .foregroundColor(.white)
+         .foregroundColor(.black)
          .animation(.none)
       }
       .padding(.top, 10)
