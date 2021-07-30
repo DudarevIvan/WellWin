@@ -14,6 +14,8 @@ struct CLSScreen: View, NavigationTitle  {
    
    @ObservedObject var gamesViewModel: GamesViewModel = .init()
    
+   @ObservedObject private var router: Router = .shared
+   
    var body: some View {
       ZStack {
          Color.white
@@ -25,22 +27,23 @@ struct CLSScreen: View, NavigationTitle  {
                   ForEach(countries) { country in
                      if let leagues = countries[country.id!].leagues {
                         ForEach(leagues) { league in
-                           NavigationLink(destination: StrategyScreen(pathArchive: "")) {
                               CountryView(country: country.name!)
-                           }
+                                 .onTapGesture {
+                                    self.showSeasons.toggle()
+                                 }.sheet(isPresented: $showSeasons, onDismiss: {
+                                    print(self.showSeasons)
+                                 }) {
+                                    SeasonsScreen()
+                                 }
                            Divider()
                         }
                         .background(Color.white)
                      }
                   }
-                  
-                  ForEach(countries) { country in
-                     NavigationLink(destination: StrategyScreen(pathArchive: "")) {
-                        CountryView(country: country.name!)
-                     }
-                  }
                }
                .padding(.top)
+               .overlay(NavigationLink(isActive: router.isStrategy, destination: StrategyScreen(pathArchive: "")) { Text("") }
+               )
             }
             Spacer()
          }

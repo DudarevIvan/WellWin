@@ -7,8 +7,13 @@
 
 import Foundation
 
-final class Router {
+final class Router: ObservableObject {
    
    public static let shared: Router = .init()
+   
+   private init() {}
+   
+   
+   @Published var isStrategy: Bool = false
    
 }

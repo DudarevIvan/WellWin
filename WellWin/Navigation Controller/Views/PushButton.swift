@@ -13,14 +13,20 @@ public struct NavigationLink<Label, Destination>: View where Label: View, Destin
    
    public let label: () -> Label
    public let destination: Destination
+   public let isActive: Bool
    
-   public init(destination: Destination, @ViewBuilder label: @escaping () -> Label) {
+   public init(isActive: Bool = false, destination: Destination, @ViewBuilder label: @escaping () -> Label) {
+      self.isActive = isActive
       self.label = label
       self.destination = destination
    }
    
    public var body: some View {
       label()
+         .onAppear() {
+            if isActive { viewModel.push(destination) }
+         }
+            
          .onTapGesture {
             viewModel.push(destination)
          }
