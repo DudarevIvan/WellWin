@@ -38,18 +38,27 @@ public struct NavigationBar: View {
             Spacer()
             if title == "Wellwin" {
                Text(title)
-                  .fontWeight(.heavy)
+                  .fontWeight(.light)
                   .offset(x: (isRoot ?  0 : -20))
                Spacer()
             } else if title == "Strategy" {
-               Text("CLEAR")
-                  .font(.caption)
-                  .fontWeight(.bold)
-                  .foregroundColor(.black).opacity(0.8)
-               Text("SAVE")
-                  .font(.caption)
-                  .fontWeight(.bold)
-                  .foregroundColor(.black).opacity(0.8)
+               Button(action: {
+                  
+               }, label: {
+                  Text("CLEAR")
+                     .font(.caption)
+                     .fontWeight(.bold)
+                     .foregroundColor(.black).opacity(0.8)
+                     .padding(.trailing)
+               })
+               Button(action: {
+                  
+               }, label: {
+                  Text("SAVE")
+                     .font(.caption)
+                     .fontWeight(.bold)
+                     .foregroundColor(.black).opacity(0.8)
+               })
             } else if title == "Result" {
                Text("Result")
                   .fontWeight(.heavy)
