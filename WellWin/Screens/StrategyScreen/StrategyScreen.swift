@@ -38,7 +38,7 @@ struct StrategyScreen: View, NavigationTitle {
          }
       }
       .onAppear() {
-         self.archiveViewModel.pathArchive = pathArchive
+         //self.archiveViewModel.pathArchive = pathArchive
       }
    }
 }

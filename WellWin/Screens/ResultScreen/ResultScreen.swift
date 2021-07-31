@@ -11,6 +11,9 @@ struct ResultScreen: View, NavigationTitle {
    
    @ObservedObject var resultViewModel: ResultViewModel = .init()
    @State private(set) var title: String = "Result"
+   @State private var selectedTab: String = "Statistics"
+   // TabButton animation
+   @Namespace var animation
    
    var body: some View {
       ZStack {
@@ -22,15 +25,13 @@ struct ResultScreen: View, NavigationTitle {
             
             // Change to single view
             HStack {
-               Text("Statistics")
-               Spacer()
-               Text("Win")
-               Spacer()
-               Text("Loss")
+               TabButton(isSelected: $selectedTab, animation: animation, text: "Statistics")
+               TabButton(isSelected: $selectedTab, animation: animation, text: "Win")
+               TabButton(isSelected: $selectedTab, animation: animation, text: "Loss")
             }
             .font(.subheadline.bold())
+            .frame(height: 50, alignment: .bottom)
             .padding()
-            //.padding(.top, 40)
             
             // Change
             ForEach(0..<6) { index in

@@ -17,7 +17,7 @@ struct SeasonsScreen: View {
       VStack {
          Button(action: {
             router.isStrategy = true
-            self.presentation.wrappedValue.dismiss()
+            //self.presentation.wrappedValue.dismiss()
          }, label: {
             Text("Button1")
          })

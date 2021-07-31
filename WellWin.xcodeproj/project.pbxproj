@@ -12,6 +12,7 @@
 		D104789A26A93A9F002BDC69 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = D104789926A93A9F002BDC69 /* Line.swift */; };
 		D120313A26B4507A00B1908F /* TeamsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D120313926B4507A00B1908F /* TeamsScreen.swift */; };
 		D120313C26B458FB00B1908F /* SeasonsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D120313B26B458FB00B1908F /* SeasonsScreen.swift */; };
+		D120313E26B5D26D00B1908F /* TabButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D120313D26B5D26D00B1908F /* TabButton.swift */; };
 		D120A69626A9DEB40020D750 /* NavigationControllerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D120A69526A9DEB40020D750 /* NavigationControllerModel.swift */; };
 		D120A69826A9DED80020D750 /* NavigationControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D120A69726A9DED80020D750 /* NavigationControllerViewModel.swift */; };
 		D120A69A26A9DF0A0020D750 /* NavigationControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D120A69926A9DF0A0020D750 /* NavigationControllerView.swift */; };
@@ -89,6 +90,7 @@
 		D104789926A93A9F002BDC69 /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
 		D120313926B4507A00B1908F /* TeamsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsScreen.swift; sourceTree = "<group>"; };
 		D120313B26B458FB00B1908F /* SeasonsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonsScreen.swift; sourceTree = "<group>"; };
+		D120313D26B5D26D00B1908F /* TabButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabButton.swift; sourceTree = "<group>"; };
 		D120A69526A9DEB40020D750 /* NavigationControllerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerModel.swift; sourceTree = "<group>"; };
 		D120A69726A9DED80020D750 /* NavigationControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerViewModel.swift; sourceTree = "<group>"; };
 		D120A69926A9DF0A0020D750 /* NavigationControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerView.swift; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 				D104789526A8777B002BDC69 /* LineChart.swift */,
 				D104789926A93A9F002BDC69 /* Line.swift */,
 				D120A6A526ABCFB60020D750 /* StatisticsView.swift */,
+				D120313D26B5D26D00B1908F /* TabButton.swift */,
 			);
 			path = ResultScreenViews;
 			sourceTree = "<group>";
@@ -653,6 +656,7 @@
 				D1E7F99C269EF68E00405788 /* Betting.swift in Sources */,
 				D104789826A8A06B002BDC69 /* ChartsView.swift in Sources */,
 				D1E7F992269EF27400405788 /* GoalsModel.swift in Sources */,
+				D120313E26B5D26D00B1908F /* TabButton.swift in Sources */,
 				D120A6AA26AD27480020D750 /* Condition.swift in Sources */,
 				D1E7F97C269E1D2300405788 /* MoneyManagementViewModel.swift in Sources */,
 				D120A6A426A9E00B0020D750 /* CLSScreen.swift in Sources */,

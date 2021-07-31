@@ -42,8 +42,8 @@ struct CLSScreen: View, NavigationTitle  {
                   }
                }
                .padding(.top)
-               .overlay(NavigationLink(isActive: router.isStrategy, destination: StrategyScreen(pathArchive: "")) { Text("") }
-               )
+//               .overlay(NavigationLink(isActive: router.isStrategy, destination: StrategyScreen(pathArchive: "")) { Text("") }
+//               )
             }
             Spacer()
          }
