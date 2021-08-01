@@ -20,7 +20,7 @@ struct SeasonsContentView: View {
          }
          .frame(height: 40)
          .frame(maxWidth: .infinity)
-         .background(Color.white.opacity(0.00001))
+         .foregroundColor(.black.opacity(0.1))
          
          HStack {
             Text("Seasons")
@@ -34,6 +34,7 @@ struct SeasonsContentView: View {
             ForEach(seasons) { season in
                HStack {
                   Text(season.season ?? "")
+                     .bold()
                      .font(.subheadline)
                   Spacer()
                   Image(systemName: "circle")
