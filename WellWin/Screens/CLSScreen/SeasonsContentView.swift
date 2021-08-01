@@ -13,37 +13,48 @@ struct SeasonsContentView: View {
    
    var body: some View {
       VStack {
+         
+         ZStack {
+            Capsule()
+               .frame(width: 40, height: 6)
+         }
+         .frame(height: 40)
+         .frame(maxWidth: .infinity)
+         .background(Color.white.opacity(0.00001))
+         
          HStack {
             Text("Seasons")
                .bold()
                .font(.title3)
             Spacer()
          }
-         .padding()
-         .padding(.top, 10)
-         .foregroundColor(.black)
+         .padding(.horizontal)
          
-         ForEach(seasons) { season in
-            HStack {
-               Text(season.season ?? "")
-               Spacer()
-               Image(systemName: "circle")
+         ScrollView(.vertical, showsIndicators: false) {
+            ForEach(seasons) { season in
+               HStack {
+                  Text(season.season ?? "")
+                     .font(.subheadline)
+                  Spacer()
+                  Image(systemName: "circle")
+               }
             }
+            .padding(.horizontal)
+            .padding(.top, 14)
+            Spacer()
          }
-         .padding(5)
-         .foregroundColor(.black)
-         Spacer()
       }
       .frame(maxWidth: .infinity)
-      .frame(height: 400)
+      .frame(height: 360)
       .background(
          ZStack(alignment: .bottom) {
             RoundedRectangle(cornerRadius: 20.0)
             Rectangle()
-               .frame(height: 400 / 2)
+               .frame(height: 360 / 2)
          }
+         .foregroundColor(.white)
       )
-      .foregroundColor(.white)
+      .foregroundColor(.black)
    }
 }
 
