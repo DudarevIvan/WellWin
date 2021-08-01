@@ -11,6 +11,7 @@ struct CLSScreen: View, NavigationTitle  {
    
    @State private(set) var title: String = "Wellwin"
    @State var showSeasons = false
+   @State var seasons: Array<Seasons> = .init()
    
    @ObservedObject var gamesViewModel: GamesViewModel = .init()
    
@@ -27,11 +28,14 @@ struct CLSScreen: View, NavigationTitle  {
                   ForEach(countries) { country in
                      if let leagues = countries[country.id!].leagues {
                         ForEach(leagues) { league in
+                           VStack{
                               CountryView(country: country.name!)
                                  .onTapGesture {
+                                    self.seasons = league.seasons!
                                     self.showSeasons = true
                                  }
                            Divider()
+                           }
                         }
                         .background(Color.white)
                      }
@@ -40,7 +44,7 @@ struct CLSScreen: View, NavigationTitle  {
                .padding(.top)
             }
          }
-         SeasonsScreen(isShowing: $showSeasons)
+         SeasonsScreen(isShowing: $showSeasons, seasons: $seasons)
       }
    }
 }

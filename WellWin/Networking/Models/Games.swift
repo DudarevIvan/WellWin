@@ -54,13 +54,13 @@ public struct Leagues: Codable, Identifiable {
 public struct Seasons: Codable, Identifiable {
    
    public var id: Int?
-   public var name: String?
+   public var season: String?
    public let numberOfGames: Int?
    public var archive: String?
    
-   public init(id: Int?, name: String?, numberOfGames: Int?, archive: String?) {
+   public init(id: Int?, season: String?, numberOfGames: Int?, archive: String?) {
       self.id = id
-      self.name = name
+      self.season = season
       self.numberOfGames = numberOfGames
       self.archive = archive
    }
