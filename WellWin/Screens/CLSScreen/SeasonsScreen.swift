@@ -9,30 +9,32 @@ import SwiftUI
 
 struct SeasonsScreen: View {
    
-   @Environment(\.presentationMode) var presentation
+   @Binding var isShowing: Bool
    
-   private var router: Router = .shared
+   //private var router: Router = .shared
    
-    var body: some View {
-      VStack {
-         Button(action: {
-            router.isStrategy = true
-            //self.presentation.wrappedValue.dismiss()
-         }, label: {
-            Text("Button1")
-         })
-         Button(action: {
-            router.isStrategy = true
-            self.presentation.wrappedValue.dismiss()
-         }, label: {
-            Text("Button2")
-         })
+   var body: some View {
+      ZStack(alignment: .bottom) {
+         if isShowing {
+            Color.black
+               .opacity(0.2)
+               .ignoresSafeArea()
+               .onTapGesture {
+                  isShowing = false
+               }
+            SeasonsContentView()
+               .transition(.move(edge: .bottom))
+         }
       }
-    }
+      .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
+      .ignoresSafeArea()
+      .animation(.easeInOut)
+   }
 }
 
 struct SeasonsScreen_Previews: PreviewProvider {
-    static var previews: some View {
-        SeasonsScreen()
-    }
+   static var previews: some View {
+      //SeasonsScreen(isShowing: .constant(true))
+      CLSScreen()
+   }
 }

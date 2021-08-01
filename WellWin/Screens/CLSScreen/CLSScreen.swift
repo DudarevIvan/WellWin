@@ -10,7 +10,7 @@ import SwiftUI
 struct CLSScreen: View, NavigationTitle  {
    
    @State private(set) var title: String = "Wellwin"
-   @State private var showSeasons = false
+   @State var showSeasons = false
    
    @ObservedObject var gamesViewModel: GamesViewModel = .init()
    
@@ -29,11 +29,7 @@ struct CLSScreen: View, NavigationTitle  {
                         ForEach(leagues) { league in
                               CountryView(country: country.name!)
                                  .onTapGesture {
-                                    self.showSeasons.toggle()
-                                 }.sheet(isPresented: $showSeasons, onDismiss: {
-                                    print(self.showSeasons)
-                                 }) {
-                                    SeasonsScreen()
+                                    self.showSeasons = true
                                  }
                            Divider()
                         }
@@ -42,11 +38,9 @@ struct CLSScreen: View, NavigationTitle  {
                   }
                }
                .padding(.top)
-//               .overlay(NavigationLink(isActive: router.isStrategy, destination: StrategyScreen(pathArchive: "")) { Text("") }
-//               )
             }
-            Spacer()
          }
+         SeasonsScreen(isShowing: $showSeasons)
       }
    }
 }

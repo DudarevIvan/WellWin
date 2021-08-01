@@ -13,6 +13,7 @@
 		D120313A26B4507A00B1908F /* TeamsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D120313926B4507A00B1908F /* TeamsScreen.swift */; };
 		D120313C26B458FB00B1908F /* SeasonsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D120313B26B458FB00B1908F /* SeasonsScreen.swift */; };
 		D120313E26B5D26D00B1908F /* TabButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D120313D26B5D26D00B1908F /* TabButton.swift */; };
+		D120314026B6998000B1908F /* SeasonsContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D120313F26B6998000B1908F /* SeasonsContentView.swift */; };
 		D120A69626A9DEB40020D750 /* NavigationControllerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D120A69526A9DEB40020D750 /* NavigationControllerModel.swift */; };
 		D120A69826A9DED80020D750 /* NavigationControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D120A69726A9DED80020D750 /* NavigationControllerViewModel.swift */; };
 		D120A69A26A9DF0A0020D750 /* NavigationControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D120A69926A9DF0A0020D750 /* NavigationControllerView.swift */; };
@@ -91,6 +92,7 @@
 		D120313926B4507A00B1908F /* TeamsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsScreen.swift; sourceTree = "<group>"; };
 		D120313B26B458FB00B1908F /* SeasonsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonsScreen.swift; sourceTree = "<group>"; };
 		D120313D26B5D26D00B1908F /* TabButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabButton.swift; sourceTree = "<group>"; };
+		D120313F26B6998000B1908F /* SeasonsContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonsContentView.swift; sourceTree = "<group>"; };
 		D120A69526A9DEB40020D750 /* NavigationControllerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerModel.swift; sourceTree = "<group>"; };
 		D120A69726A9DED80020D750 /* NavigationControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerViewModel.swift; sourceTree = "<group>"; };
 		D120A69926A9DF0A0020D750 /* NavigationControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerView.swift; sourceTree = "<group>"; };
@@ -230,6 +232,7 @@
 			children = (
 				D120A6A326A9E00B0020D750 /* CLSScreen.swift */,
 				D120313B26B458FB00B1908F /* SeasonsScreen.swift */,
+				D120313F26B6998000B1908F /* SeasonsContentView.swift */,
 			);
 			path = CLSScreen;
 			sourceTree = "<group>";
@@ -650,6 +653,7 @@
 				D1E7F990269EF26900405788 /* GoalsViewModel.swift in Sources */,
 				D1E7F98A269EF24300405788 /* RefereesModel.swift in Sources */,
 				D1E7F9A1269EF8E500405788 /* AppInitializer.swift in Sources */,
+				D120314026B6998000B1908F /* SeasonsContentView.swift in Sources */,
 				D120A69826A9DED80020D750 /* NavigationControllerViewModel.swift in Sources */,
 				D1E7F9AF269F660C00405788 /* ArchiveViewModel.swift in Sources */,
 				D120A6A126A9DF680020D750 /* NavigationBar.swift in Sources */,
