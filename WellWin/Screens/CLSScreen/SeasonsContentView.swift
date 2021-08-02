@@ -11,39 +11,56 @@ struct SeasonsContentView: View {
    
    @Binding var seasons: Array<Seasons>
    
+   @State var seasonID: Int?
+   
+   @State var edges: UIEdgeInsets? = UIApplication.shared.windows.first?.safeAreaInsets
+   
+   private let screenWidth = UIScreen.main.bounds.size.width
+   private let screenHeight = UIScreen.main.bounds.size.height
+   
    var body: some View {
       VStack {
          
          ZStack {
             Capsule()
-               .frame(width: 40, height: 6)
+               .frame(width: 50, height: 5)
          }
-         .frame(height: 40)
+         .frame(height: 20)
          .frame(maxWidth: .infinity)
-         .foregroundColor(.black.opacity(0.1))
+         .foregroundColor(.black.opacity(0.2))
          
          HStack {
             Text("Seasons")
-               .bold()
-               .font(.title3)
+               .font(.title2)
+               .fontWeight(.bold)
             Spacer()
          }
          .padding(.horizontal)
          
+         //Divider()
+         
          ScrollView(.vertical, showsIndicators: false) {
             ForEach(seasons) { season in
-               HStack {
-                  Text(season.season ?? "")
-                     .bold()
-                     .font(.subheadline)
-                  Spacer()
-                  Image(systemName: "circle")
-               }
+               SeasonsCheckBoxView(chosenSeason: $seasonID, season: season)
+                  .padding(.vertical, 7)
             }
             .padding(.horizontal)
-            .padding(.top, 14)
-            Spacer()
          }
+         // Apply button
+         Button(action: {
+            
+         }, label: {
+            Text("Apply")
+               .bold()
+         })
+         .foregroundColor(.white)
+         .padding(.horizontal, screenWidth * 0.41)
+         .padding(.vertical, 10)
+         .background(seasonID == nil ? Color.gray : Color.blue)
+         .cornerRadius(6)
+         .padding(.bottom, 14)
+         .padding(.horizontal, 10)
+         .disabled(seasonID == nil ? true : false)
       }
       .frame(maxWidth: .infinity)
       .frame(height: 360)

@@ -26,6 +26,7 @@
 		D120A6AA26AD27480020D750 /* Condition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D120A6A926AD27480020D750 /* Condition.swift */; };
 		D120A6AC26AD27D40020D750 /* Priority.swift in Sources */ = {isa = PBXBuildFile; fileRef = D120A6AB26AD27D40020D750 /* Priority.swift */; };
 		D120A6AE26AD292F0020D750 /* Criterion.swift in Sources */ = {isa = PBXBuildFile; fileRef = D120A6AD26AD292F0020D750 /* Criterion.swift */; };
+		D14781C226B87CCF00CA0A66 /* SeasonsCheckBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14781C126B87CCF00CA0A66 /* SeasonsCheckBoxView.swift */; };
 		D1B4DEA026A44149009F82E5 /* CountryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B4DE9F26A44149009F82E5 /* CountryView.swift */; };
 		D1E7F938269E1B2400405788 /* WellWinApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F937269E1B2400405788 /* WellWinApp.swift */; };
 		D1E7F93C269E1B2500405788 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1E7F93B269E1B2500405788 /* Assets.xcassets */; };
@@ -105,6 +106,7 @@
 		D120A6A926AD27480020D750 /* Condition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Condition.swift; sourceTree = "<group>"; };
 		D120A6AB26AD27D40020D750 /* Priority.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Priority.swift; sourceTree = "<group>"; };
 		D120A6AD26AD292F0020D750 /* Criterion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Criterion.swift; sourceTree = "<group>"; };
+		D14781C126B87CCF00CA0A66 /* SeasonsCheckBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonsCheckBoxView.swift; sourceTree = "<group>"; };
 		D1B4DE9F26A44149009F82E5 /* CountryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryView.swift; sourceTree = "<group>"; };
 		D1E7F934269E1B2400405788 /* WellWin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WellWin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1E7F937269E1B2400405788 /* WellWinApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WellWinApp.swift; sourceTree = "<group>"; };
@@ -233,6 +235,7 @@
 				D120A6A326A9E00B0020D750 /* CLSScreen.swift */,
 				D120313B26B458FB00B1908F /* SeasonsScreen.swift */,
 				D120313F26B6998000B1908F /* SeasonsContentView.swift */,
+				D14781C126B87CCF00CA0A66 /* SeasonsCheckBoxView.swift */,
 			);
 			path = CLSScreen;
 			sourceTree = "<group>";
@@ -684,6 +687,7 @@
 				D104789626A8777B002BDC69 /* LineChart.swift in Sources */,
 				D120A6A626ABCFB60020D750 /* StatisticsView.swift in Sources */,
 				D1E7F99A269EF5FF00405788 /* MainScreen.swift in Sources */,
+				D14781C226B87CCF00CA0A66 /* SeasonsCheckBoxView.swift in Sources */,
 				D1E7F9AD269F65D400405788 /* URLPath.swift in Sources */,
 				D1E7F99F269EF6F600405788 /* Router.swift in Sources */,
 				D120A6AC26AD27D40020D750 /* Priority.swift in Sources */,
