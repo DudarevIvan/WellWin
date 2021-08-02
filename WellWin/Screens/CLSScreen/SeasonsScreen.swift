@@ -10,6 +10,7 @@ import SwiftUI
 struct SeasonsScreen: View {
    
    @Binding var isShowing: Bool
+   @Binding var go: Bool
    @Binding var seasons: Array<Seasons>
    
    //private var router: Router = .shared
@@ -23,7 +24,7 @@ struct SeasonsScreen: View {
                .onTapGesture {
                   isShowing = false
                }
-            SeasonsContentView(seasons: self.$seasons, isShowing: $isShowing)
+            SeasonsContentView(seasons: self.$seasons, isShowing: $isShowing, go: $go)
                .transition(.move(edge: .bottom))
             
          }

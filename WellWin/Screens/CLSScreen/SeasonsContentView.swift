@@ -11,6 +11,9 @@ struct SeasonsContentView: View {
    
    @Binding var seasons: Array<Seasons>
    @Binding var isShowing: Bool
+   @Binding var go: Bool
+   
+   @ObservedObject var archiveViewModel: ArchiveViewModel = ArchiveViewModel.shared
    
    @State var seasonID: Int?
    
@@ -49,12 +52,15 @@ struct SeasonsContentView: View {
          }
          // Apply button
          Button(action: {
+            archiveViewModel.pathArchive = self.seasons[seasonID!].archive!
+            go = true
             isShowing = false
          }, label: {
             Text("Apply")
                .bold()
          })
          .foregroundColor(.white)
+         .contentShape(Rectangle())
          .padding(.horizontal, screenWidth * 0.41)
          .padding(.vertical, 10)
          .background(seasonID == nil ? Color.gray : Color.blue)

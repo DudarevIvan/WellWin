@@ -11,29 +11,29 @@ struct StrategyScreen: View, NavigationTitle {
    
    @State private(set) var title: String = "Strategy"
    
-   @ObservedObject var archiveViewModel: ArchiveViewModel = .init()
+   //@ObservedObject var archiveViewModel: ArchiveViewModel = .init()
    
-   private let pathArchive: String
-      
-   init(pathArchive: String) {
-      self.pathArchive = pathArchive
-   }
+//   private let pathArchive: String
+//
+//   init(pathArchive: String) {
+//      self.pathArchive = pathArchive
+//   }
    
    var body: some View {
       ZStack {
          Color.white
             .ignoresSafeArea()
          VStack {
-            NavigationLink(destination: TeamsScreen()) {
-               Text("Teams")
-                  .foregroundColor(Color("green"))
-                  .padding()
-            }
-            NavigationLink(destination: ResultScreen()) {
-               Text("Go to result")
-                  .foregroundColor(Color("green"))
-                  .padding()
-            }
+//            NavigationLink(destination: TeamsScreen()) {
+//               Text("Teams")
+//                  .foregroundColor(Color("green"))
+//                  .padding()
+//            }
+//            NavigationLink(destination: ResultScreen()) {
+//               Text("Go to result")
+//                  .foregroundColor(Color("green"))
+//                  .padding()
+//            }
             Spacer()
          }
       }
@@ -45,6 +45,6 @@ struct StrategyScreen: View, NavigationTitle {
 
 struct StrategyScreen_Previews: PreviewProvider {
    static var previews: some View {
-      StrategyScreen(pathArchive: "")
+      StrategyScreen()
    }
 }

@@ -10,8 +10,7 @@ import Combine
 
 public final class ArchiveViewModel: ObservableObject {
    
-   // Networking
-   private var networking = Networking.shared
+   public static let shared: ArchiveViewModel = .init()
    
    // Archive
    @Published public var archive: Archive = .init()
@@ -25,10 +24,10 @@ public final class ArchiveViewModel: ObservableObject {
       }
    }
    
-   public init() {
+   private init() {
       $pathArchive
          .flatMap { (pathArchive) -> AnyPublisher<Archive, Never> in
-            self.networking.fetchArchive(for: pathArchive)
+            Networking.shared.fetchArchive(for: pathArchive)
          }
          .assign(to: \.archive, on: self)
          .store(in: &self.cancellableSet)

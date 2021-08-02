@@ -12,10 +12,10 @@ struct CLSScreen: View, NavigationTitle  {
    @State private(set) var title: String = "Wellwin"
    @State var showSeasons = false
    @State var seasons: Array<Seasons> = .init()
+   @State var go: Bool = false
    
    @ObservedObject var gamesViewModel: GamesViewModel = .init()
-   
-   @ObservedObject var archiveViewModel: ArchiveViewModel = .init()
+   @ObservedObject var archiveViewModel: ArchiveViewModel = ArchiveViewModel.shared
    
    @ObservedObject private var router: Router = .shared
    
@@ -46,7 +46,8 @@ struct CLSScreen: View, NavigationTitle  {
                .padding(.top)
             }
          }
-         SeasonsScreen(isShowing: $showSeasons, seasons: $seasons)
+         NavigationLink(isActive: go && archiveViewModel.archive.at != nil, destination: ResultScreen()) { Text("jhj")}
+         SeasonsScreen(isShowing: $showSeasons, go: $go, seasons: $seasons)
       }
    }
 }

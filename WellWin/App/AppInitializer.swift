@@ -9,6 +9,7 @@ import Foundation
 
 final class AppInitializer {
    
+   private let archiveViewModel: ArchiveViewModel
    private let router: Router
    private let parsingObjects: ParsingObjects
    private let archiveParser: ArchiveParser
@@ -16,6 +17,7 @@ final class AppInitializer {
    private let resultData: ResultData
    
    public init() {
+      self.archiveViewModel = .shared
       self.router = .shared
       self.parsingObjects = .init()
       self.archiveParser = .init()
