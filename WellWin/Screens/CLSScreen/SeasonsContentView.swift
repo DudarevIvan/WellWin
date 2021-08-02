@@ -10,6 +10,7 @@ import SwiftUI
 struct SeasonsContentView: View {
    
    @Binding var seasons: Array<Seasons>
+   @Binding var isShowing: Bool
    
    @State var seasonID: Int?
    
@@ -48,7 +49,7 @@ struct SeasonsContentView: View {
          }
          // Apply button
          Button(action: {
-            
+            isShowing = false
          }, label: {
             Text("Apply")
                .bold()

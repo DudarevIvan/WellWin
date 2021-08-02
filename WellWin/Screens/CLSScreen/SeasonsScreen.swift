@@ -23,7 +23,7 @@ struct SeasonsScreen: View {
                .onTapGesture {
                   isShowing = false
                }
-            SeasonsContentView(seasons: self.$seasons)
+            SeasonsContentView(seasons: self.$seasons, isShowing: $isShowing)
                .transition(.move(edge: .bottom))
             
          }

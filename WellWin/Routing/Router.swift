@@ -14,6 +14,6 @@ final class Router: ObservableObject {
    private init() {}
    
    
-   @Published var isStrategy: Bool = false
+   //@Published var isStrategy: Bool = false
    
 }

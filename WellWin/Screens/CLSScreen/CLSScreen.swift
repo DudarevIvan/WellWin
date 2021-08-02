@@ -15,6 +15,8 @@ struct CLSScreen: View, NavigationTitle  {
    
    @ObservedObject var gamesViewModel: GamesViewModel = .init()
    
+   @ObservedObject var archiveViewModel: ArchiveViewModel = .init()
+   
    @ObservedObject private var router: Router = .shared
    
    var body: some View {

@@ -27,6 +27,7 @@ struct SeasonsCheckBoxView: View {
                .foregroundColor(.blue)
          }
       }
+      .contentShape(Rectangle())
       .onTapGesture {
          if chosenSeason == season.id {
             chosenSeason = nil
