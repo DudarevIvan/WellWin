@@ -23,9 +23,10 @@ public struct NavigationLink<Label, Destination>: View where Label: View, Destin
    
    //@ViewBuilder
    public var body: some View {
-      if isActive { viewModel.push(destination) }
-      
       return label()
+         .onChange(of: isActive, perform: { value in
+            viewModel.push(destination)
+         })
          .onTapGesture {
             viewModel.push(destination)
          }

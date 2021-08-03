@@ -46,7 +46,7 @@ struct SeasonsContentView: View {
          ScrollView(.vertical, showsIndicators: false) {
             ForEach(seasons) { season in
                SeasonsCheckBoxView(chosenSeason: $seasonID, season: season)
-                  .padding(.vertical, 7)
+                  .padding(.vertical, 6)
             }
             .padding(.horizontal)
          }
@@ -65,9 +65,12 @@ struct SeasonsContentView: View {
          .padding(.vertical, 10)
          .background(seasonID == nil ? Color.gray : Color.blue)
          .cornerRadius(6)
-         .padding(.bottom, 14)
+         .padding(.bottom, 20)
+         //.padding(.bottom, edges?.bottom)
          .padding(.horizontal, 10)
          .disabled(seasonID == nil ? true : false)
+         
+         Spacer()
       }
       .frame(maxWidth: .infinity)
       .frame(height: 360)

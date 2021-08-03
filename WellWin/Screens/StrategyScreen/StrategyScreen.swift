@@ -11,7 +11,7 @@ struct StrategyScreen: View, NavigationTitle {
    
    @State private(set) var title: String = "Strategy"
    
-   //@ObservedObject var archiveViewModel: ArchiveViewModel = .init()
+   @State var archiveViewModel: ArchiveViewModel = .shared
    
 //   private let pathArchive: String
 //
@@ -24,21 +24,16 @@ struct StrategyScreen: View, NavigationTitle {
          Color.white
             .ignoresSafeArea()
          VStack {
-//            NavigationLink(destination: TeamsScreen()) {
-//               Text("Teams")
-//                  .foregroundColor(Color("green"))
-//                  .padding()
-//            }
-//            NavigationLink(destination: ResultScreen()) {
-//               Text("Go to result")
-//                  .foregroundColor(Color("green"))
-//                  .padding()
-//            }
+            if archiveViewModel.archive.at != nil {
+               Text(archiveViewModel.archive.at!.first!)
+            }
+            NavigationLink(destination: ResultScreen()) {
+               Text("Go to result")
+                  .foregroundColor(Color("green"))
+                  .padding()
+            }
             Spacer()
          }
-      }
-      .onAppear() {
-         //self.archiveViewModel.pathArchive = pathArchive
       }
    }
 }

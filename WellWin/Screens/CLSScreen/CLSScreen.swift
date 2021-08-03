@@ -12,7 +12,7 @@ struct CLSScreen: View, NavigationTitle  {
    @State private(set) var title: String = "Wellwin"
    @State var showSeasons = false
    @State var seasons: Array<Seasons> = .init()
-   @State var go: Bool = false
+   @State var active: Bool = false
    
    @ObservedObject var gamesViewModel: GamesViewModel = .init()
    @ObservedObject var archiveViewModel: ArchiveViewModel = ArchiveViewModel.shared
@@ -24,6 +24,11 @@ struct CLSScreen: View, NavigationTitle  {
          Color.white
             .ignoresSafeArea()
          VStack {
+            Button(action: {
+               active = true
+            }, label: {
+               /*@START_MENU_TOKEN@*/Text("Button")/*@END_MENU_TOKEN@*/
+            })
             if let countries = gamesViewModel.games.countries {
                ScrollView(.vertical, showsIndicators: false) {
                   
@@ -46,8 +51,11 @@ struct CLSScreen: View, NavigationTitle  {
                .padding(.top)
             }
          }
-         NavigationLink(isActive: go && archiveViewModel.archive.at != nil, destination: ResultScreen()) { Text("jhj")}
-         SeasonsScreen(isShowing: $showSeasons, go: $go, seasons: $seasons)
+         NavigationLink(isActive: active && archiveViewModel.archive.country != nil, destination: StrategyScreen()) { Text("") }
+         SeasonsScreen(isShowing: $showSeasons, go: $active, seasons: $seasons)
+      }
+      .onAppear() {
+         archiveViewModel.archive = .init()
       }
    }
 }
