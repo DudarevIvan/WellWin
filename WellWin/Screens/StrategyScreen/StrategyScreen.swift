@@ -23,29 +23,30 @@ struct StrategyScreen: View, NavigationTitle {
       ZStack {
          Color.white
             .ignoresSafeArea()
-         ScrollView(.vertical, showsIndicators: false) {
-            //VStack {
-            MoneyManagementReview()
-               .padding(.horizontal)
-               //.padding(.bottom, 5)
-               .padding(.top)
-            TeamsReview(isChange: false)
-               .padding(.horizontal)
-               .padding(.bottom, 5)
-            TeamsReview(isChange: false)
-               .padding(.horizontal)
-               .padding(.bottom, 5)
-            TeamsReview(isChange: false)
-               .padding(.horizontal)
-               .padding(.bottom, 5)
+         VStack {
+            ScrollView(.vertical, showsIndicators: false) {
+               MoneyManagementReview()
+                  .padding(.horizontal)
+                  //.padding(.bottom, 5)
+                  .padding(.top)
+               TeamsReview(isChange: false)
+                  .padding(.horizontal)
+                  .padding(.bottom, 5)
+               RefereesReview(isChange: false)
+                  .padding(.horizontal)
+                  .padding(.bottom, 5)
+               GoalsReview(isChange: false)
+                  .padding(.horizontal)
+                  .padding(.bottom, 5)
+               Spacer()
+            }
             Spacer()
-            //}
+            NavigationLinkCustom(destination: ResultScreen()) {
+               Text("Go to result")
+                  .foregroundColor(Color("green"))
+                  .padding()
+            }
          }
-      }
-      NavigationLinkCustom(destination: ResultScreen()) {
-         Text("Go to result")
-            .foregroundColor(Color("green"))
-            .padding()
       }
    }
 }
