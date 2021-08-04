@@ -7,14 +7,27 @@
 
 import SwiftUI
 
-struct MoneyManagementView: View {
+struct MoneyManagementView: View, NavigationTitle {
+   
+   let title: String = "Money Managemen"
+   @Binding var isChange: Bool
+   
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+      VStack {
+         Text(isChange.description)
+         Spacer()
+         Button(action: {
+            self.isChange = true
+         }, label: {
+            Text("Change strategy")
+         })
+         Spacer()
+      }
     }
 }
 
 struct MoneyManagementView_Previews: PreviewProvider {
     static var previews: some View {
-        MoneyManagementView()
+      MoneyManagementView(isChange: .constant(true))
     }
 }

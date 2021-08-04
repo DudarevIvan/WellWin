@@ -14,7 +14,7 @@ struct WellWinApp: App {
    
    var body: some Scene {
       WindowGroup {
-         MainScreen()
+         MainView()
             .preferredColorScheme(.light)
       }
    }

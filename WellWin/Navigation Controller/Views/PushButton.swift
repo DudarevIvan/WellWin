@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-public struct NavigationLink<Label, Destination>: View where Label: View, Destination: View & NavigationTitle {
+public struct NavigationLinkCustom<Label, Destination>: View where Label: View, Destination: View & NavigationTitle {
    
    @EnvironmentObject public var viewModel: NavigationControllerViewModel
    

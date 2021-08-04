@@ -7,12 +7,15 @@
 
 import SwiftUI
 
-struct TeamsView: View {
+struct TeamsView: View, NavigationTitle {
+   
+   let title: String = "Teams"
+   
     var body: some View {
+      VStack {
         Text("Teams")
-         .navigationTitle("Teams")
-         .navigationBarItems(leading: Text("Back"))
-         .navigationBarItems(trailing: Text("Clear"))
+         Spacer()
+      }
     }
 }
 

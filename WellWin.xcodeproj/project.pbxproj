@@ -28,6 +28,8 @@
 		D120A6AE26AD292F0020D750 /* Criterion.swift in Sources */ = {isa = PBXBuildFile; fileRef = D120A6AD26AD292F0020D750 /* Criterion.swift */; };
 		D14781C226B87CCF00CA0A66 /* SeasonsCheckBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14781C126B87CCF00CA0A66 /* SeasonsCheckBoxView.swift */; };
 		D1B4DEA026A44149009F82E5 /* CountryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B4DE9F26A44149009F82E5 /* CountryView.swift */; };
+		D1E44CAF26B919D600437F33 /* StrategyViewsDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E44CAE26B919D600437F33 /* StrategyViewsDescription.swift */; };
+		D1E44CB126B91AA100437F33 /* StrategyViewsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E44CB026B91AA100437F33 /* StrategyViewsFactory.swift */; };
 		D1E7F938269E1B2400405788 /* WellWinApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F937269E1B2400405788 /* WellWinApp.swift */; };
 		D1E7F93C269E1B2500405788 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1E7F93B269E1B2500405788 /* Assets.xcassets */; };
 		D1E7F93F269E1B2500405788 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1E7F93E269E1B2500405788 /* Preview Assets.xcassets */; };
@@ -52,7 +54,7 @@
 		D1E7F992269EF27400405788 /* GoalsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F991269EF27400405788 /* GoalsModel.swift */; };
 		D1E7F994269EF27F00405788 /* GoalsObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F993269EF27F00405788 /* GoalsObject.swift */; };
 		D1E7F998269EF5E600405788 /* StrategyScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F997269EF5E600405788 /* StrategyScreen.swift */; };
-		D1E7F99A269EF5FF00405788 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F999269EF5FF00405788 /* MainScreen.swift */; };
+		D1E7F99A269EF5FF00405788 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F999269EF5FF00405788 /* MainView.swift */; };
 		D1E7F99C269EF68E00405788 /* Betting.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F99B269EF68E00405788 /* Betting.swift */; };
 		D1E7F99F269EF6F600405788 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F99E269EF6F600405788 /* Router.swift */; };
 		D1E7F9A1269EF8E500405788 /* AppInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F9A0269EF8E500405788 /* AppInitializer.swift */; };
@@ -108,6 +110,8 @@
 		D120A6AD26AD292F0020D750 /* Criterion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Criterion.swift; sourceTree = "<group>"; };
 		D14781C126B87CCF00CA0A66 /* SeasonsCheckBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonsCheckBoxView.swift; sourceTree = "<group>"; };
 		D1B4DE9F26A44149009F82E5 /* CountryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryView.swift; sourceTree = "<group>"; };
+		D1E44CAE26B919D600437F33 /* StrategyViewsDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrategyViewsDescription.swift; sourceTree = "<group>"; };
+		D1E44CB026B91AA100437F33 /* StrategyViewsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrategyViewsFactory.swift; sourceTree = "<group>"; };
 		D1E7F934269E1B2400405788 /* WellWin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WellWin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1E7F937269E1B2400405788 /* WellWinApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WellWinApp.swift; sourceTree = "<group>"; };
 		D1E7F93B269E1B2500405788 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -138,7 +142,7 @@
 		D1E7F991269EF27400405788 /* GoalsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsModel.swift; sourceTree = "<group>"; };
 		D1E7F993269EF27F00405788 /* GoalsObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsObject.swift; sourceTree = "<group>"; };
 		D1E7F997269EF5E600405788 /* StrategyScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrategyScreen.swift; sourceTree = "<group>"; };
-		D1E7F999269EF5FF00405788 /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
+		D1E7F999269EF5FF00405788 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		D1E7F99B269EF68E00405788 /* Betting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Betting.swift; sourceTree = "<group>"; };
 		D1E7F99E269EF6F600405788 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		D1E7F9A0269EF8E500405788 /* AppInitializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInitializer.swift; sourceTree = "<group>"; };
@@ -348,6 +352,8 @@
 			children = (
 				D1E7F997269EF5E600405788 /* StrategyScreen.swift */,
 				D120313926B4507A00B1908F /* TeamsScreen.swift */,
+				D1E44CAE26B919D600437F33 /* StrategyViewsDescription.swift */,
+				D1E44CB026B91AA100437F33 /* StrategyViewsFactory.swift */,
 			);
 			path = StrategyScreen;
 			sourceTree = "<group>";
@@ -355,7 +361,7 @@
 		D1E7F965269E1B6000405788 /* MainScreen */ = {
 			isa = PBXGroup;
 			children = (
-				D1E7F999269EF5FF00405788 /* MainScreen.swift */,
+				D1E7F999269EF5FF00405788 /* MainView.swift */,
 			);
 			path = MainScreen;
 			sourceTree = "<group>";
@@ -663,6 +669,7 @@
 				D1E7F99C269EF68E00405788 /* Betting.swift in Sources */,
 				D104789826A8A06B002BDC69 /* ChartsView.swift in Sources */,
 				D1E7F992269EF27400405788 /* GoalsModel.swift in Sources */,
+				D1E44CB126B91AA100437F33 /* StrategyViewsFactory.swift in Sources */,
 				D120313E26B5D26D00B1908F /* TabButton.swift in Sources */,
 				D120A6AA26AD27480020D750 /* Condition.swift in Sources */,
 				D1E7F97C269E1D2300405788 /* MoneyManagementViewModel.swift in Sources */,
@@ -674,6 +681,7 @@
 				D1E7F9BB26A1618C00405788 /* StrategyScreenViewModel.swift in Sources */,
 				D1E7F9B3269F665B00405788 /* Archive.swift in Sources */,
 				D1E7F9B926A1617600405788 /* MainScreenViewModel.swift in Sources */,
+				D1E44CAF26B919D600437F33 /* StrategyViewsDescription.swift in Sources */,
 				D1E7F986269EF22800405788 /* RefereesView.swift in Sources */,
 				D1E7F980269EF1EE00405788 /* TeamsViewModel.swift in Sources */,
 				D1E7F982269EF1FC00405788 /* TeamsModel.swift in Sources */,
@@ -686,7 +694,7 @@
 				D1E7F97A269E1D0D00405788 /* MoneyManagementModel.swift in Sources */,
 				D104789626A8777B002BDC69 /* LineChart.swift in Sources */,
 				D120A6A626ABCFB60020D750 /* StatisticsView.swift in Sources */,
-				D1E7F99A269EF5FF00405788 /* MainScreen.swift in Sources */,
+				D1E7F99A269EF5FF00405788 /* MainView.swift in Sources */,
 				D14781C226B87CCF00CA0A66 /* SeasonsCheckBoxView.swift in Sources */,
 				D1E7F9AD269F65D400405788 /* URLPath.swift in Sources */,
 				D1E7F99F269EF6F600405788 /* Router.swift in Sources */,

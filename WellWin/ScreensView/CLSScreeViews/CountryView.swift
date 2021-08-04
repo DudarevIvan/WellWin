@@ -9,41 +9,44 @@ import SwiftUI
 
 struct CountryView: View {
    
-   private var country: String
+   private let country: String
+   private let league: String
    
-   init(country: String) {
+   init(country: String, league: String) {
       self.country = country
+      self.league = league
    }
    
    var body: some View {
-//      Button(action: {
-//         
-//      }, label: {
-         HStack {
-            Image(country)
-               .resizable()
-               .scaledToFit()
-               .frame(width: 40)
-               .clipShape(RoundedRectangle(cornerRadius: 6))
-               .shadow(radius: 1)
-               .padding(4)
+      HStack {
+         Image(country)
+            .resizable()
+            .scaledToFit()
+            .frame(width: 34)
+            .clipShape(RoundedRectangle(cornerRadius: 4))
+            .shadow(radius: 1)
+            .padding(4)
+         VStack(alignment: .leading) {
             Text(country)
-            Spacer()
-            Image(systemName: "chevron.forward")
-               .padding(.trailing, 4)
+               .font(.headline)
+            Text(league)
+               .font(.footnote)
+               .foregroundColor(.gray)
          }
-         .padding(4)
-         .foregroundColor(Color("green"))
-         .background(Color.white)
-         .clipShape(RoundedRectangle(cornerRadius: 6))
-         //.shadow(color: .gray, radius: 6, x: 1, y: 2)
-         .padding(.horizontal)
-      //})
+         Spacer()
+         Image(systemName: "chevron.forward")
+            .padding(.trailing, 4)
+      }
+      .padding(4)
+      .foregroundColor(.primary)
+      .background(Color.white)
+      .clipShape(RoundedRectangle(cornerRadius: 6))
+      .padding(.horizontal)
    }
 }
 
 struct CountryView_Previews: PreviewProvider {
    static var previews: some View {
-      CountryView(country: "England")
+      CountryView(country: "England", league: "Liga One")
    }
 }

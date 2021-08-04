@@ -24,11 +24,6 @@ struct CLSScreen: View, NavigationTitle  {
          Color.white
             .ignoresSafeArea()
          VStack {
-            Button(action: {
-               active = true
-            }, label: {
-               /*@START_MENU_TOKEN@*/Text("Button")/*@END_MENU_TOKEN@*/
-            })
             if let countries = gamesViewModel.games.countries {
                ScrollView(.vertical, showsIndicators: false) {
                   
@@ -36,7 +31,7 @@ struct CLSScreen: View, NavigationTitle  {
                      if let leagues = countries[country.id!].leagues {
                         ForEach(leagues) { league in
                            VStack{
-                              CountryView(country: country.name!)
+                              CountryView(country: country.name!, league: league.name!)
                                  .onTapGesture {
                                     self.seasons = league.seasons!
                                     self.showSeasons = true
@@ -51,7 +46,7 @@ struct CLSScreen: View, NavigationTitle  {
                .padding(.top)
             }
          }
-         NavigationLink(isActive: active && archiveViewModel.archive.country != nil, destination: StrategyScreen()) { Text("") }
+         NavigationLinkCustom(isActive: active && archiveViewModel.archive.country != nil, destination: StrategyScreen()) { Text("") }
          SeasonsScreen(isShowing: $showSeasons, go: $active, seasons: $seasons)
       }
       .onAppear() {

@@ -13,27 +13,39 @@ struct StrategyScreen: View, NavigationTitle {
    
    @State var archiveViewModel: ArchiveViewModel = .shared
    
-//   private let pathArchive: String
-//
-//   init(pathArchive: String) {
-//      self.pathArchive = pathArchive
-//   }
+   //   private let pathArchive: String
+   //
+   //   init(pathArchive: String) {
+   //      self.pathArchive = pathArchive
+   //   }
    
    var body: some View {
       ZStack {
          Color.white
             .ignoresSafeArea()
-         VStack {
-            if archiveViewModel.archive.at != nil {
-               Text(archiveViewModel.archive.at!.first!)
-            }
-            NavigationLink(destination: ResultScreen()) {
-               Text("Go to result")
-                  .foregroundColor(Color("green"))
-                  .padding()
-            }
+         ScrollView(.vertical, showsIndicators: false) {
+            //VStack {
+            MoneyManagementReview()
+               .padding(.horizontal)
+               //.padding(.bottom, 5)
+               .padding(.top)
+            TeamsReview(isChange: false)
+               .padding(.horizontal)
+               .padding(.bottom, 5)
+            TeamsReview(isChange: false)
+               .padding(.horizontal)
+               .padding(.bottom, 5)
+            TeamsReview(isChange: false)
+               .padding(.horizontal)
+               .padding(.bottom, 5)
             Spacer()
+            //}
          }
+      }
+      NavigationLinkCustom(destination: ResultScreen()) {
+         Text("Go to result")
+            .foregroundColor(Color("green"))
+            .padding()
       }
    }
 }
