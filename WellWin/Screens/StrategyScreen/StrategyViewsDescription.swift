@@ -11,34 +11,40 @@ struct ContainerViews {
    
    let archiveViewModel: ArchiveViewModel = .shared
    
-   enum Conteiner: String, CaseIterable {
-      case ht
-      case at
-      case referee
-      case htGoalsCount1half, atGoalsCount1half, htGoalsCount2half, atGoalsCount2half, htGoalsCountFt, atGoalsCountFt
-      
-      func matching() -> AnyView {
-         switch self {
-            case .at, .ht:
-               return AnyView(TeamsReview())
-            case .referee:
-               return AnyView(RefereesReview())
-            case .htGoalsCount1half, .atGoalsCount1half,
-                 .htGoalsCount2half, .atGoalsCount2half,
-                 .htGoalsCountFt, .atGoalsCountFt:
-               return AnyView(GoalsReview())
-         }
-      }
-   }
    
    
    
-   func getViews() {
+   
+   func getViews() -> Array<AnyView> {
       let archive: Archive = archiveViewModel.archive
+      var views: Array<AnyView> = .init()
       for (label, value) in Mirror(reflecting: archive).children {
          if Mirror(reflecting: value).children.count != 0 {
-            print(label!)
+            if let conteiner = Conteiner.init(rawValue: label!) {
+               views.append((conteiner.matchingViews(field: label!)))
+            }
          }
+      }
+      return views
+   }
+}
+
+enum Conteiner: String, CaseIterable {
+   case ht
+   case at
+   case referee
+   case htGoalsCount1half, atGoalsCount1half, htGoalsCount2half, atGoalsCount2half, htGoalsCountFt, atGoalsCountFt
+   
+   func matchingViews(field: String) -> AnyView {
+      switch self {
+         case .at, .ht:
+            return AnyView(TeamsReview())
+         case .referee:
+            return AnyView(RefereesReview())
+         case .htGoalsCount1half, .atGoalsCount1half,
+              .htGoalsCount2half, .atGoalsCount2half,
+              .htGoalsCountFt, .atGoalsCountFt:
+            return AnyView(GoalsReview())
       }
    }
 }

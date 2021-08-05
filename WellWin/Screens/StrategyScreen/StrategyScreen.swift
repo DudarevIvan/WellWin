@@ -21,31 +21,32 @@ struct StrategyScreen: View, NavigationTitle {
    
    let containerViews: ContainerViews = .init()
    
+   
    var body: some View {
       ZStack {
          Color.white
             .ignoresSafeArea()
          VStack {
-            VStack {
-//               ForEach(containerViews.getViews()) { view in
-//                  view
-//               }
-            }
-            ScrollView(.vertical, showsIndicators: false) {
-               MoneyManagementReview()
-                  .padding(.horizontal)
-                  //.padding(.bottom, 5)
-                  .padding(.top)
-               TeamsReview(isChange: false)
-                  .padding(.horizontal)
-                  .padding(.bottom, 5)
-               RefereesReview(isChange: false)
-                  .padding(.horizontal)
-                  .padding(.bottom, 5)
-               GoalsReview(isChange: false)
-                  .padding(.horizontal)
-                  .padding(.bottom, 5)
-               Spacer()
+            if archiveViewModel.archive.at != nil {
+               ScrollView(.vertical, showsIndicators: false) {
+                  ForEach(0..<containerViews.getViews().count) { view in
+                     containerViews.getViews()[view]
+                  }
+                  //               MoneyManagementReview()
+                  //                  .padding(.horizontal)
+                  //                  //.padding(.bottom, 5)
+                  //                  .padding(.top)
+                  //               TeamsReview(isChange: false)
+                  //                  .padding(.horizontal)
+                  //                  .padding(.bottom, 5)
+                  //               RefereesReview(isChange: false)
+                  //                  .padding(.horizontal)
+                  //                  .padding(.bottom, 5)
+                  //               GoalsReview(isChange: false)
+                  //                  .padding(.horizontal)
+                  //                  .padding(.bottom, 5)
+                  Spacer()
+               }
             }
             Spacer()
             NavigationLinkCustom(destination: ResultScreen()) {
@@ -54,9 +55,6 @@ struct StrategyScreen: View, NavigationTitle {
                   .padding()
             }
          }
-      }
-      .onAppear() {
-         containerViews.getViews()
       }
    }
 }
