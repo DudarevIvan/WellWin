@@ -7,9 +7,12 @@
 
 import SwiftUI
 
-struct GoalsView: View {
+struct GoalsView: View, NavigationTitle {
+   
+   let title: String = ""
+   
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("Goals view")
     }
 }
 

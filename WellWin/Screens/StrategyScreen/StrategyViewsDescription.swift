@@ -28,19 +28,16 @@ struct ContainerViews {
 
 enum Conteiner: String, CaseIterable {
    case ht
-   case at
    case referee
-   case htGoalsCount1half, atGoalsCount1half, htGoalsCount2half, atGoalsCount2half, htGoalsCountFt, atGoalsCountFt
+   case htGoalsCount1half
    
    func matchingViews(field: String) -> AnyView {
       switch self {
-         case .at, .ht:
+         case .ht:
             return AnyView(TeamsReview())
          case .referee:
             return AnyView(RefereesReview())
-         case .htGoalsCount1half, .atGoalsCount1half,
-              .htGoalsCount2half, .atGoalsCount2half,
-              .htGoalsCountFt, .atGoalsCountFt:
+         case .htGoalsCount1half:
             return AnyView(GoalsReview())
       }
    }
@@ -162,7 +159,7 @@ struct RefereesReview: View, StrategyViewsDescription {
       .onTapGesture {
          activeLink = true
       }
-      NavigationLinkCustom(isActive: activeLink, destination: TeamsView()) { Text("") }
+      NavigationLinkCustom(isActive: activeLink, destination: RefereesView()) { Text("") }
    }
 }
 
@@ -197,6 +194,6 @@ struct GoalsReview: View, StrategyViewsDescription {
       .onTapGesture {
          activeLink = true
       }
-      NavigationLinkCustom(isActive: activeLink, destination: TeamsView()) { Text("") }
+      NavigationLinkCustom(isActive: activeLink, destination: GoalsView()) { Text("") }
    }
 }

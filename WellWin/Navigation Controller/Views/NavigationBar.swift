@@ -38,7 +38,7 @@ public struct NavigationBar: View {
             Spacer()
             if title == "Wellwin" {
                Text(title)
-                  .fontWeight(.black)
+                  .fontWeight(.heavy)
                   .offset(x: (isRoot ?  0 : -20))
                Spacer()
             } else if title == "Strategy" {
