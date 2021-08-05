@@ -31,20 +31,9 @@ struct StrategyScreen: View, NavigationTitle {
                ScrollView(.vertical, showsIndicators: false) {
                   ForEach(0..<containerViews.getViews().count) { view in
                      containerViews.getViews()[view]
+                        .padding(.horizontal)
+                        .padding(.bottom, 5)
                   }
-                  //               MoneyManagementReview()
-                  //                  .padding(.horizontal)
-                  //                  //.padding(.bottom, 5)
-                  //                  .padding(.top)
-                  //               TeamsReview(isChange: false)
-                  //                  .padding(.horizontal)
-                  //                  .padding(.bottom, 5)
-                  //               RefereesReview(isChange: false)
-                  //                  .padding(.horizontal)
-                  //                  .padding(.bottom, 5)
-                  //               GoalsReview(isChange: false)
-                  //                  .padding(.horizontal)
-                  //                  .padding(.bottom, 5)
                   Spacer()
                }
             }

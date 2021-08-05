@@ -11,17 +11,14 @@ struct ContainerViews {
    
    let archiveViewModel: ArchiveViewModel = .shared
    
-   
-   
-   
-   
    func getViews() -> Array<AnyView> {
       let archive: Archive = archiveViewModel.archive
       var views: Array<AnyView> = .init()
       for (label, value) in Mirror(reflecting: archive).children {
          if Mirror(reflecting: value).children.count != 0 {
             if let conteiner = Conteiner.init(rawValue: label!) {
-               views.append((conteiner.matchingViews(field: label!)))
+               let view = conteiner.matchingViews(field: label!)
+               views.append(view)
             }
          }
       }
@@ -56,6 +53,12 @@ protocol StrategyViewsDescription {
    var description: String { get }
    var isChange: Bool { get set }
 }
+
+//extension StrategyViewsDescription {
+//   public static func == (lhs: Self, rhs: Self) -> Bool {
+//      lhs.id == rhs.id
+//   }
+//}
 
 
 struct MoneyManagementReview: View, StrategyViewsDescription {
