@@ -9,7 +9,9 @@ import SwiftUI
 
 struct ContainerViews {
    
-   enum Container: String, CaseIterable {
+   let archiveViewModel: ArchiveViewModel = .shared
+   
+   enum Conteiner: String, CaseIterable {
       case ht
       case at
       case referee
@@ -21,35 +23,24 @@ struct ContainerViews {
                return AnyView(TeamsReview())
             case .referee:
                return AnyView(RefereesReview())
-            case .htGoalsCount1half, .atGoalsCount1half, .htGoalsCount2half, .atGoalsCount2half, .htGoalsCountFt, .atGoalsCountFt:
+            case .htGoalsCount1half, .atGoalsCount1half,
+                 .htGoalsCount2half, .atGoalsCount2half,
+                 .htGoalsCountFt, .atGoalsCountFt:
                return AnyView(GoalsReview())
          }
       }
    }
    
-   //   let views: Array<Item> = [
-   //      MoneyManagementReview() as! Item,
-   //      TeamsReview() as! Item
-   //   ]
-   //
-   //
-   //   //typealias Cont = StrategyViewsDescription & View
-   //
-   //   func getViews() -> Array<Item> {
-   //
-   //      var a: Array<Item> = .init()
-   //      for view in views {
-   //         switch view {
-   //            case let moneyManagement as MoneyManagementReview:
-   //               a.append(moneyManagement as! Item)
-   //            case let teams as TeamsReview:
-   //               a.append(teams as! Item)
-   //            default:
-   //               return a
-   //         }
-   //      }
-   //      return a
-   //   }
+   
+   
+   func getViews() {
+      let archive: Archive = archiveViewModel.archive
+      for (label, value) in Mirror(reflecting: archive).children {
+         if Mirror(reflecting: value).children.count != 0 {
+            print(label!)
+         }
+      }
+   }
 }
 
 

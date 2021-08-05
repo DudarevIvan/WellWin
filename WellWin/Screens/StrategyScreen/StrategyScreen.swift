@@ -19,7 +19,7 @@ struct StrategyScreen: View, NavigationTitle {
    //      self.pathArchive = pathArchive
    //   }
    
-   let containerViews: ContainerViews<StrategyViewsDescription> = .init()
+   let containerViews: ContainerViews = .init()
    
    var body: some View {
       ZStack {
@@ -27,9 +27,9 @@ struct StrategyScreen: View, NavigationTitle {
             .ignoresSafeArea()
          VStack {
             VStack {
-               ForEach(containerViews.getViews()) { view in
-                  view
-               }
+//               ForEach(containerViews.getViews()) { view in
+//                  view
+//               }
             }
             ScrollView(.vertical, showsIndicators: false) {
                MoneyManagementReview()
@@ -54,6 +54,9 @@ struct StrategyScreen: View, NavigationTitle {
                   .padding()
             }
          }
+      }
+      .onAppear() {
+         containerViews.getViews()
       }
    }
 }
