@@ -7,7 +7,53 @@
 
 import SwiftUI
 
-protocol StrategyViewsDescription: Identifiable {
+struct ContainerViews {
+   
+   enum Container: String, CaseIterable {
+      case ht
+      case at
+      case referee
+      case htGoalsCount1half, atGoalsCount1half, htGoalsCount2half, atGoalsCount2half, htGoalsCountFt, atGoalsCountFt
+      
+      func matching() -> AnyView {
+         switch self {
+            case .at, .ht:
+               return AnyView(TeamsReview())
+            case .referee:
+               return AnyView(RefereesReview())
+            case .htGoalsCount1half, .atGoalsCount1half, .htGoalsCount2half, .atGoalsCount2half, .htGoalsCountFt, .atGoalsCountFt:
+               return AnyView(GoalsReview())
+         }
+      }
+   }
+   
+   //   let views: Array<Item> = [
+   //      MoneyManagementReview() as! Item,
+   //      TeamsReview() as! Item
+   //   ]
+   //
+   //
+   //   //typealias Cont = StrategyViewsDescription & View
+   //
+   //   func getViews() -> Array<Item> {
+   //
+   //      var a: Array<Item> = .init()
+   //      for view in views {
+   //         switch view {
+   //            case let moneyManagement as MoneyManagementReview:
+   //               a.append(moneyManagement as! Item)
+   //            case let teams as TeamsReview:
+   //               a.append(teams as! Item)
+   //            default:
+   //               return a
+   //         }
+   //      }
+   //      return a
+   //   }
+}
+
+
+protocol StrategyViewsDescription {
    var id: Int { get }
    var title: String { get }
    var description: String { get }
