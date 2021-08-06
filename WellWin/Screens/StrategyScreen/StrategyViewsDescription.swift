@@ -7,38 +7,41 @@
 
 import SwiftUI
 
-struct ViewsFactory {
+class ViewsFactory: ObservableObject {
    
+   //private let archiveViewModel: ArchiveViewModel = .shared
    private let archiveMirror = Mirror(reflecting: ArchiveViewModel.shared.archive)
    
-   func getViews() -> Array<AnyView> {
-      var views: Array<AnyView> = .init()
-      for (label, value) in archiveMirror.children {
-         print(label!)
+   @Published var views: Array<AnyView> = .init()
+   
+   func getViews() {
+      var buffer: Array<AnyView> = .init()
+      for (label, value) in Mirror(reflecting: archiveViewModel.archive).children {
          if Mirror(reflecting: value).children.count != 0 {
-            if let conteiner = Conteiner.init(rawValue: label!) {
+            if let conteiner = Factory.init(rawValue: label!) {
                let view = conteiner.matchingViews(field: label!)
-               views.append(view)
+               buffer.append(view)
+               print(view)
             }
          }
       }
-      return views
+      self.views = buffer
    }
-}
-
-enum Conteiner: String, CaseIterable {
-   case ht
-   case referee
-   case htGoalsCount1half
    
-   func matchingViews(field: String) -> AnyView {
-      switch self {
-         case .ht:
-            return AnyView(TeamsReview())
-         case .referee:
-            return AnyView(RefereesReview())
-         case .htGoalsCount1half:
-            return AnyView(GoalsReview())
+   private enum Factory: String, CaseIterable {
+      case ht
+      case referee
+      case htGoalsCount1half
+      
+      func matchingViews(field: String) -> AnyView {
+         switch self {
+            case .ht:
+               return AnyView(TeamsReview())
+            case .referee:
+               return AnyView(RefereesReview())
+            case .htGoalsCount1half:
+               return AnyView(GoalsReview())
+         }
       }
    }
 }

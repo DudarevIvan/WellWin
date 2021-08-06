@@ -13,14 +13,8 @@ struct StrategyScreen: View, NavigationTitle {
    
    @State var archiveViewModel: ArchiveViewModel = .shared
    
-   private let viewsFactory: ViewsFactory
-   private let views: Array<AnyView>
-   
-   init() {
-      let factory: ViewsFactory = .init()
-      self.viewsFactory = factory
-      self.views = factory.getViews()
-   }
+   @ObservedObject var viewsFactory: ViewsFactory = .init()
+   //private let views: Array<AnyView> = .init()
    
    var body: some View {
       ZStack {
@@ -29,10 +23,12 @@ struct StrategyScreen: View, NavigationTitle {
          VStack {
             if archiveViewModel.archive.at != nil {
                ScrollView(.vertical, showsIndicators: false) {
-                  ForEach(0..<views.count) { index in      //!!!!!!!!!!!!!!!!!!! повтор 4 раза, дальше больше
-                     views[index]
+                  if !viewsFactory.views.isEmpty {
+                  ForEach(0..<viewsFactory.views.count) { index in
+                     viewsFactory.views[index]
                         .padding(.horizontal)
                         .padding(.bottom, 5)
+                  }
                   }
                   Spacer()
                }
@@ -44,6 +40,9 @@ struct StrategyScreen: View, NavigationTitle {
                   .padding()
             }
          }
+      }
+      .onAppear() {
+         viewsFactory.getViews()
       }
    }
 }
