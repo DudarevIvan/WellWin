@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-struct ContainerViews {
+struct ViewsFactory {
    
-   let archiveViewModel: ArchiveViewModel = .shared
+   private let archiveMirror = Mirror(reflecting: ArchiveViewModel.shared.archive)
    
    func getViews() -> Array<AnyView> {
-      let archive: Archive = archiveViewModel.archive
       var views: Array<AnyView> = .init()
-      for (label, value) in Mirror(reflecting: archive).children {
+      for (label, value) in archiveMirror.children {
+         print(label!)
          if Mirror(reflecting: value).children.count != 0 {
             if let conteiner = Conteiner.init(rawValue: label!) {
                let view = conteiner.matchingViews(field: label!)
