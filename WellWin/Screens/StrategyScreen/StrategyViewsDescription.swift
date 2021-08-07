@@ -9,14 +9,13 @@ import SwiftUI
 
 class ViewsFactory: ObservableObject {
    
-   //private let archiveViewModel: ArchiveViewModel = .shared
-   private let archiveMirror = Mirror(reflecting: ArchiveViewModel.shared.archive)
+   private lazy var archiveMirror = Mirror(reflecting: ArchiveViewModel.shared.archive)
    
    @Published var views: Array<AnyView> = .init()
    
    func getViews() {
       var buffer: Array<AnyView> = .init()
-      for (label, value) in Mirror(reflecting: archiveViewModel.archive).children {
+      for (label, value) in archiveMirror.children {
          if Mirror(reflecting: value).children.count != 0 {
             if let conteiner = Factory.init(rawValue: label!) {
                let view = conteiner.matchingViews(field: label!)
