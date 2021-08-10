@@ -13,46 +13,18 @@ struct ChartsView: View {
    var roiChartData: Array<UnitPoint> = .init()
    
    var body: some View {
-      //GeometryReader { geometry in
       ZStack {
          VStack(spacing: 0) {
             HStack(spacing: 40) {
-               HStack {
-                  RoundedRectangle(cornerRadius: 10)
-                     .fill(Color("green"))
-                     .frame(width: 6, height: 44)
-                  VStack(alignment: .leading) {
-                     Text("Profit")
-                        .bold()
-                        .foregroundColor(.black)
-                        .font(.title2)
-                     Text("100")
-                        .bold()
-                        .foregroundColor(Color("green2"))
-                        .font(.title3)
-                  }
-               }
-               HStack {
-                  RoundedRectangle(cornerRadius: 10)
-                     .fill(Color("pink"))
-                     .frame(width: 6, height: 44)
-                  VStack(alignment: .leading) {
-                     Text("ROI")
-                        .bold()
-                        .foregroundColor(.black)
-                        .font(.title2)
-                     Text("10")
-                        .bold()
-                        .foregroundColor(Color("green2"))
-                        .font(.title3)
-                  }
-               }
                Spacer()
+               DataLabel(label: "PROFIT", data: "20")
+                  .foregroundColor(Color("blue"))
+               DataLabel(label: "ROI", data: "20")
+                  .foregroundColor(Color("green2"))
             }
             .padding(.horizontal)
-            //.padding(.top)
             ZStack {
-               VStack(spacing: 46) {
+               VStack(spacing: 40) {
                   ForEach(0..<5) { line in
                      Line()
                         .stroke(style: StrokeStyle(lineWidth: 1, dash: [3]))
@@ -60,11 +32,12 @@ struct ChartsView: View {
                         .foregroundColor(Color("lightGray"))
                   }
                }
-               LineChart(data: roiChartData, lineColor: Color("pink"))
-               LineChart(data: mainChartData, lineColor: Color("green"))
+               LineChart(data: roiChartData, lineColor: .orange)
+               LineChart(data: mainChartData, lineColor: .blue)
             }
-            //.padding(10)
-            //.padding(.top, 80)
+            .padding([.leading, .top, .leading])
+            .padding(.bottom, 4)
+            .fixedSize(horizontal: false, vertical: true)
             HStack {
                Text("0.0")
                Spacer()
@@ -77,7 +50,6 @@ struct ChartsView: View {
                Text("1.0")
             }
             .foregroundColor(Color("lightGray"))
-            //.padding(.bottom)
             .padding(.horizontal)
             .font(.caption)
          }
@@ -85,8 +57,30 @@ struct ChartsView: View {
    }
 }
 
+struct DataLabel: View {
+   
+   let label: String
+   let data: String
+   
+   var body: some View {
+      HStack {
+         RoundedRectangle(cornerRadius: 10)
+            .fill()
+            .frame(width: 5, height: 40)
+         VStack(alignment: .leading) {
+            Text(label)
+               .font(.headline)
+            Text(data)
+               .foregroundColor(.black.opacity(0.7))
+               .bold()
+               .font(.title2)
+         }
+      }
+   }
+}
+
 struct ChartsView_Previews: PreviewProvider {
    static var previews: some View {
-      ChartsView()
+      ResultScreen()
    }
 }

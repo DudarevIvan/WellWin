@@ -18,25 +18,26 @@ struct ResultScreen: View {
       ZStack {
          Color.white
             .ignoresSafeArea()
-         VStack(alignment: .leading) {
+         VStack(alignment: .center) {
             ChartsView(mainChartData: resultViewModel.resultModel.mainChartData, roiChartData: resultViewModel.resultModel.roiChartData)
-            //.padding(.top, 40)
             
             // Change to single view
             HStack {
                TabButton(isSelected: $selectedTab, animation: animation, text: "Statistics")
                TabButton(isSelected: $selectedTab, animation: animation, text: "Win")
+                  .offset(x: -16)
+                  .frame(maxWidth: .infinity)
                TabButton(isSelected: $selectedTab, animation: animation, text: "Loss")
             }
             .font(.subheadline.bold())
-            .frame(height: 50, alignment: .bottom)
+            .frame(height: 20, alignment: .bottom)
             .padding()
-            
             // Change
-            ForEach(0..<6) { index in
-               StatisticsView()
+            ScrollView(.vertical, showsIndicators: false) {
+               ForEach(0..<6) { index in
+                  StatisticsView()
+               }
             }
-            Spacer()
          }
          .padding(.top)
       }

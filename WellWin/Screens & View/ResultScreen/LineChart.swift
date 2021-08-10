@@ -36,7 +36,7 @@ struct LineChart: View {
             
             self.data.forEach { point in
                let x = (point.x / maxXValue) * geometry.size.width
-               let y = (geometry.size.height / 2) - (point.y / self.maxYValue) * (geometry.size.height / 2)
+               let y = (geometry.size.height / 1.66) - (point.y / self.maxYValue) * (geometry.size.height / 1.68)
                
                let deltaX = x - previousPoint.x
                let curveXOffset = deltaX * 0.4
@@ -65,13 +65,14 @@ struct LineChart: View {
 
 struct LineChart_Previews: PreviewProvider {
    static var previews: some View {
-      LineChart(data: [UnitPoint(x: 2, y: 4),
-                       UnitPoint(x: 5, y: 8),
-                       UnitPoint(x: 6, y: -4),
-                       UnitPoint(x: 9, y: -8),
-                       UnitPoint(x: 11, y: -4),
-                       UnitPoint(x: 19, y: 28),
-      ], lineColor: Color("green"))
+//      LineChart(data: [UnitPoint(x: 2, y: 4),
+//                       UnitPoint(x: 5, y: 8),
+//                       UnitPoint(x: 6, y: -4),
+//                       UnitPoint(x: 9, y: -8),
+//                       UnitPoint(x: 11, y: -4),
+//                       UnitPoint(x: 19, y: 8),
+//      ], lineColor: Color("green"))
+      ResultScreen()
    }
 }
 

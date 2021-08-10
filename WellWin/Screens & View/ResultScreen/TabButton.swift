@@ -14,32 +14,23 @@ struct TabButton: View {
    let text: String
    
    var body: some View {
-      //ScrollViewReader { scrollView in
-         Button(action: {
-            withAnimation(.easeInOut) {
-               isSelected = text
-               //scrollView.scrollTo(isSelected)
-            }
-         }, label: {
-            GeometryReader { geometry in
-               VStack(spacing: 0) {
-                  
-                  Text(text)
-                     .foregroundColor(.black)
-                  ZStack {
-                     if isSelected == text {
-                        Rectangle()
-                           .fill(Color.black)
-                           .matchedGeometryEffect(id: "tabButton", in: animation)
-                     } else {
-                        Rectangle()
-                           .fill(Color.clear)
-                     }
-                  }
+      Button(action: {
+         withAnimation(.easeInOut) {
+            isSelected = text
+         }
+      }, label: {
+         VStack(spacing: 0) {
+            Text(text)
+               .foregroundColor(.black.opacity(0.7))
+            if isSelected == text {
+               Rectangle()
+                  .fill(Color.black)
                   .frame(height: 1)
-               }
+                  .matchedGeometryEffect(id: "tabButton", in: animation)
             }
-         })
-      //}
+         }
+         .frame(maxWidth: .infinity)
+         .fixedSize()
+      })
    }
 }
