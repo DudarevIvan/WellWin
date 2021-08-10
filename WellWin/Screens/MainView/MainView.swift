@@ -1,5 +1,5 @@
 //
-//  CLSScreen.swift
+//  MainView.swift
 //  WellWin
 //
 //  Created by Ivan Dudarev on 7/22/21.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CLSScreen: View, NavigationTitle  {
+struct MainView: View, NavigationTitle  {
    
    @State private(set) var title: String = "Wellwin"
    @State var showSeasons = false
@@ -16,9 +16,7 @@ struct CLSScreen: View, NavigationTitle  {
    
    @ObservedObject var gamesViewModel: GamesViewModel = .init()
    @ObservedObject var archiveViewModel: ArchiveViewModel = ArchiveViewModel.shared
-   
-   @ObservedObject private var router: Router = .shared
-   
+      
    var body: some View {
       ZStack {
          Color.white
@@ -57,6 +55,6 @@ struct CLSScreen: View, NavigationTitle  {
 
 struct CLSScreen_Previews: PreviewProvider {
    static var previews: some View {
-      CLSScreen()
+      MainView()
    }
 }

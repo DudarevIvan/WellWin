@@ -38,6 +38,6 @@ struct SeasonsScreen: View {
 struct SeasonsScreen_Previews: PreviewProvider {
    static var previews: some View {
       //SeasonsScreen(isShowing: .constant(true))
-      CLSScreen()
+      MainView()
    }
 }

@@ -40,9 +40,7 @@ struct SeasonsContentView: View {
             Spacer()
          }
          .padding(.horizontal)
-         
-         //Divider()
-         
+                  
          ScrollView(.vertical, showsIndicators: false) {
             ForEach(seasons) { season in
                SeasonsCheckBoxView(chosenSeason: $seasonID, season: season)
@@ -50,6 +48,7 @@ struct SeasonsContentView: View {
             }
             .padding(.horizontal)
          }
+         
          // Apply button
          Button(action: {
             archiveViewModel.pathArchive = self.seasons[seasonID!].archive!
@@ -58,17 +57,14 @@ struct SeasonsContentView: View {
          }, label: {
             Text("Apply")
                .bold()
-               .padding(.horizontal)
+               .frame(width: screenWidth * 0.94, height: 30)
          })
-         //.contentShape(Rectangle())
-         //.padding(.horizontal, screenWidth * 0.41)
-//         .padding(.vertical, 10)
-//         .padding(.bottom, 20)
-//         .padding(.horizontal, 10)
          .foregroundColor(.white)
-         //.frame(maxWidth: .infinity, idealHeight: 30, maxHeight: 30)
          .background(seasonID == nil ? Color.gray : Color.blue)
          .cornerRadius(6)
+         .padding(.horizontal, 10)
+         .padding(.vertical, 10)
+         .padding(.bottom, 20)
          .disabled(seasonID == nil ? true : false)
          
          Spacer()
@@ -89,7 +85,6 @@ struct SeasonsContentView: View {
 
 struct SeasonsContentView_Previews: PreviewProvider {
    static var previews: some View {
-      //SeasonsContentView()
-      CLSScreen()
+      MainView()
    }
 }

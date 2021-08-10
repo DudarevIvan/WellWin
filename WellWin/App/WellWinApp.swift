@@ -9,12 +9,10 @@ import SwiftUI
 
 @main
 struct WellWinApp: App {
-   
-   private let initializer: AppInitializer = .init()
-   
+      
    var body: some Scene {
       WindowGroup {
-         MainView()
+         NavigationControllerView({MainView()}, .custom(.asymmetric(insertion: .slide, removal: .slide)))
             .preferredColorScheme(.light)
       }
    }

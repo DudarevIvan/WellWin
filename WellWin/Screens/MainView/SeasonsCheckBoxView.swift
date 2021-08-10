@@ -41,6 +41,6 @@ struct SeasonsCheckBoxView: View {
 struct SeasonsCheckBoxView_Previews: PreviewProvider {
    static var previews: some View {
       //SeasonsContentView()
-      CLSScreen()
+      MainView()
    }
 }
