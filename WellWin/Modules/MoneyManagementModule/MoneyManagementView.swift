@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MoneyManagementView: View, NavigationTitle {
+struct MoneyManagementView: View {
    
    let title: String = "Money Managemen"
    @Binding var isChange: Bool

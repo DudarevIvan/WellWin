@@ -9,7 +9,6 @@ import SwiftUI
 
 struct Screen: Identifiable , Equatable {
    
-   let title: String
    let id: String
    let nextScreen: AnyView
    
@@ -38,5 +37,4 @@ public struct ScreenStack {
    mutating func popToPreviousScreen() {
       _ = screens.popLast()
    }
-   
 }

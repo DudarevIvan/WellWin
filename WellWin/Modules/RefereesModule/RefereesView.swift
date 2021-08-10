@@ -7,10 +7,8 @@
 
 import SwiftUI
 
-struct RefereesView: View, NavigationTitle {
-   
-   let title: String = ""
-   
+struct RefereesView: View {
+      
     var body: some View {
         Text("Referees view")
     }

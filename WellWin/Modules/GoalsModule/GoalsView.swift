@@ -7,10 +7,8 @@
 
 import SwiftUI
 
-struct GoalsView: View, NavigationTitle {
-   
-   let title: String = ""
-   
+struct GoalsView: View {
+      
     var body: some View {
         Text("Goals view")
     }

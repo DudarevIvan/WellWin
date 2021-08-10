@@ -7,14 +7,12 @@
 
 import SwiftUI
 
-struct TeamsView: View, NavigationTitle {
+struct TeamsView: View {
    
    @State var isSelected: Array<Bool> = Array(repeating: false, count: ArchiveViewModel.shared.archive.at!.count)
    
    private let screenWidth = UIScreen.main.bounds.size.width
-   
-   let title: String = "Teams"
-   
+      
    let archive: Archive = ArchiveViewModel.shared.archive
    
    let columns = [

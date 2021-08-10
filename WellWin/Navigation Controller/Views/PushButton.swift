@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-public struct NavigationLinkCustom<Label, Destination>: View where Label: View, Destination: View & NavigationTitle {
+public struct NavigationLinkCustom<Label, Destination>: View where Label: View, Destination: View {
    
    @EnvironmentObject public var viewModel: NavigationControllerViewModel
    
@@ -21,7 +21,6 @@ public struct NavigationLinkCustom<Label, Destination>: View where Label: View, 
       self.destination = destination
    }
    
-   //@ViewBuilder
    public var body: some View {
       return label()
          .onChange(of: isActive, perform: { value in

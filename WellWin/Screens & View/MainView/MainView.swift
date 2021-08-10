@@ -7,9 +7,8 @@
 
 import SwiftUI
 
-struct MainView: View, NavigationTitle  {
+struct MainView: View {
    
-   @State private(set) var title: String = "Wellwin"
    @State var showSeasons = false
    @State var seasons: Array<Seasons> = .init()
    @State var active: Bool = false

@@ -168,18 +168,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D104789426A87756002BDC69 /* ResultScreenViews */ = {
-			isa = PBXGroup;
-			children = (
-				D104789726A8A06B002BDC69 /* ChartsView.swift */,
-				D104789526A8777B002BDC69 /* LineChart.swift */,
-				D104789926A93A9F002BDC69 /* Line.swift */,
-				D120A6A526ABCFB60020D750 /* StatisticsView.swift */,
-				D120313D26B5D26D00B1908F /* TabButton.swift */,
-			);
-			path = ResultScreenViews;
-			sourceTree = "<group>";
-		};
 		D120A69126A9DE590020D750 /* Navigation Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -221,28 +209,12 @@
 			isa = PBXGroup;
 			children = (
 				D120A6A326A9E00B0020D750 /* MainView.swift */,
+				D1B4DE9F26A44149009F82E5 /* CountryView.swift */,
 				D120313B26B458FB00B1908F /* SeasonsScreen.swift */,
 				D120313F26B6998000B1908F /* SeasonsContentView.swift */,
 				D14781C126B87CCF00CA0A66 /* SeasonsCheckBoxView.swift */,
 			);
 			path = MainView;
-			sourceTree = "<group>";
-		};
-		D1B4DE9926A16627009F82E5 /* ScreensView */ = {
-			isa = PBXGroup;
-			children = (
-				D1B4DE9A26A1663A009F82E5 /* CLSScreeViews */,
-				D104789426A87756002BDC69 /* ResultScreenViews */,
-			);
-			path = ScreensView;
-			sourceTree = "<group>";
-		};
-		D1B4DE9A26A1663A009F82E5 /* CLSScreeViews */ = {
-			isa = PBXGroup;
-			children = (
-				D1B4DE9F26A44149009F82E5 /* CountryView.swift */,
-			);
-			path = CLSScreeViews;
 			sourceTree = "<group>";
 		};
 		D1E7F92B269E1B2400405788 = {
@@ -269,8 +241,7 @@
 			isa = PBXGroup;
 			children = (
 				D1E7F996269EF57200405788 /* App */,
-				D1E7F962269E1B3300405788 /* Screens */,
-				D1B4DE9926A16627009F82E5 /* ScreensView */,
+				D1E7F962269E1B3300405788 /* Screens & View */,
 				D1E7F9B626A1610900405788 /* ScreensViewModels */,
 				D120A69126A9DE590020D750 /* Navigation Controller */,
 				D1E7F96A269E1BE500405788 /* Modules */,
@@ -308,20 +279,25 @@
 			path = WellWinUITests;
 			sourceTree = "<group>";
 		};
-		D1E7F962269E1B3300405788 /* Screens */ = {
+		D1E7F962269E1B3300405788 /* Screens & View */ = {
 			isa = PBXGroup;
 			children = (
 				D120A6A226A9DFEB0020D750 /* MainView */,
 				D1E7F964269E1B4B00405788 /* StrategyScreen */,
 				D1E7F963269E1B3E00405788 /* ResultScreen */,
 			);
-			path = Screens;
+			path = "Screens & View";
 			sourceTree = "<group>";
 		};
 		D1E7F963269E1B3E00405788 /* ResultScreen */ = {
 			isa = PBXGroup;
 			children = (
 				D1E7F968269E1B8F00405788 /* ResultScreen.swift */,
+				D104789726A8A06B002BDC69 /* ChartsView.swift */,
+				D104789526A8777B002BDC69 /* LineChart.swift */,
+				D104789926A93A9F002BDC69 /* Line.swift */,
+				D120A6A526ABCFB60020D750 /* StatisticsView.swift */,
+				D120313D26B5D26D00B1908F /* TabButton.swift */,
 			);
 			path = ResultScreen;
 			sourceTree = "<group>";

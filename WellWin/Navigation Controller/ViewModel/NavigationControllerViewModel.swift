@@ -40,9 +40,9 @@ public final class NavigationControllerViewModel: ObservableObject {
       self.easing = easing
    }
    
-   func push<S: View & NavigationTitle>(_ screenView: S) {
+   func push<S: View>(_ screenView: S) {
       withAnimation(easing) {
-         let screen: Screen = .init(title: screenView.title, id: UUID().uuidString, nextScreen: AnyView(screenView))
+         let screen: Screen = .init(id: UUID().uuidString, nextScreen: AnyView(screenView))
          screenStack.push(screen)
       }
    }

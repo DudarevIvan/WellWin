@@ -7,15 +7,11 @@
 
 import SwiftUI
 
-public protocol NavigationTitle: View {
-   var title: String { get }
-}
-
 public struct NavigationBar: View {
    
    @EnvironmentObject var viewModel: NavigationControllerViewModel
    
-   var title: String
+   private let title: String = "WellWin"
    var isRoot: Bool
    
    public var body: some View {
@@ -36,34 +32,10 @@ public struct NavigationBar: View {
                }
             }
             Spacer()
-            if title == "Wellwin" {
+            if isRoot {
                Text(title)
-                  .fontWeight(.heavy)
-                  .offset(x: (isRoot ?  0 : -20))
+                  .fontWeight(.medium)
                Spacer()
-            } else if title == "Strategy" {
-               Button(action: {
-                  
-               }, label: {
-                  Text("CLEAR")
-                     .font(.caption)
-                     .fontWeight(.bold)
-                     .foregroundColor(.black).opacity(0.8)
-                     .padding(.trailing)
-               })
-               Button(action: {
-                  
-               }, label: {
-                  Text("SAVE")
-                     .font(.caption)
-                     .fontWeight(.bold)
-                     .foregroundColor(.black).opacity(0.8)
-               })
-            } else if title == "Result" {
-//               Text("Result")
-//                  .fontWeight(.heavy)
-//                  .offset(x: (isRoot ?  0 : -20))
-//               Spacer()
             }
          }
          .foregroundColor(.black)

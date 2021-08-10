@@ -7,10 +7,8 @@
 
 import SwiftUI
 
-struct StrategyScreen: View, NavigationTitle {
-   
-   @State private(set) var title: String = "Strategy"
-   
+struct StrategyScreen: View {
+      
    @State var archiveViewModel: ArchiveViewModel = .shared
    
    @ObservedObject var viewsFactory: ViewsFactory = .init()

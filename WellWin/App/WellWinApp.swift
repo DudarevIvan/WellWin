@@ -12,7 +12,7 @@ struct WellWinApp: App {
       
    var body: some Scene {
       WindowGroup {
-         NavigationControllerView({MainView()}, .custom(.asymmetric(insertion: .slide, removal: .slide)))
+         NavigationControllerView({MainView()}, .none)
             .preferredColorScheme(.light)
       }
    }

@@ -7,10 +7,9 @@
 
 import SwiftUI
 
-struct ResultScreen: View, NavigationTitle {
+struct ResultScreen: View {
    
    @ObservedObject var resultViewModel: ResultViewModel = .init()
-   @State private(set) var title: String = "Result"
    @State private var selectedTab: String = "Statistics"
    // TabButton animation
    @Namespace var animation

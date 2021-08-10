@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-public struct NavigationControllerView<Content: View & NavigationTitle>: View {
+public struct NavigationControllerView<Content: View>: View {
    
    @ObservedObject var viewModel: NavigationControllerViewModel
    
@@ -30,11 +30,10 @@ public struct NavigationControllerView<Content: View & NavigationTitle>: View {
       let isRootView = viewModel.currentScreen == nil
       return ZStack {
          VStack(spacing: 0) {
-            NavigationBar(title: isRootView ? content.title : viewModel.currentScreen!.title, isRoot: isRootView)
+            NavigationBar(isRoot: isRootView)
                .padding(.horizontal, 15)
                .padding(.bottom)
                .padding(.top, UIApplication.shared.windows.first?.safeAreaInsets.top)
-               //.background(Color("black"))
                .environmentObject(viewModel)
             if isRootView {
                content
