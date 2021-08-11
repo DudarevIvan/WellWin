@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct RefereesView: View {
+struct Referees: View {
       
     var body: some View {
         Text("Referees view")
@@ -16,6 +16,6 @@ struct RefereesView: View {
 
 struct RefereesView_Previews: PreviewProvider {
     static var previews: some View {
-        RefereesView()
+        Referees()
     }
 }

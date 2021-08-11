@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TeamsView: View {
+struct Teams: View {
    
    @State var isSelected: Array<Bool> = Array(repeating: false, count: ArchiveViewModel.shared.archive.at!.count)
    
@@ -59,6 +59,6 @@ struct TeamsView: View {
 
 struct TeamsView_Previews: PreviewProvider {
    static var previews: some View {
-      TeamsView()
+      Teams()
    }
 }

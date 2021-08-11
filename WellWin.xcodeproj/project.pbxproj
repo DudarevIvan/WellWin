@@ -7,33 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D104789626A8777B002BDC69 /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = D104789526A8777B002BDC69 /* LineChart.swift */; };
-		D104789826A8A06B002BDC69 /* ChartsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D104789726A8A06B002BDC69 /* ChartsView.swift */; };
+		D104789626A8777B002BDC69 /* Line Chart.swift in Sources */ = {isa = PBXBuildFile; fileRef = D104789526A8777B002BDC69 /* Line Chart.swift */; };
+		D104789826A8A06B002BDC69 /* Charts View.swift in Sources */ = {isa = PBXBuildFile; fileRef = D104789726A8A06B002BDC69 /* Charts View.swift */; };
 		D104789A26A93A9F002BDC69 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = D104789926A93A9F002BDC69 /* Line.swift */; };
-		D120313C26B458FB00B1908F /* SeasonsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D120313B26B458FB00B1908F /* SeasonsScreen.swift */; };
-		D120313E26B5D26D00B1908F /* TabButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D120313D26B5D26D00B1908F /* TabButton.swift */; };
-		D120314026B6998000B1908F /* SeasonsContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D120313F26B6998000B1908F /* SeasonsContentView.swift */; };
+		D1123A5A26C38DF1000A9FF1 /* Description Views.json in Resources */ = {isa = PBXBuildFile; fileRef = D1123A5926C38DF1000A9FF1 /* Description Views.json */; };
+		D120313C26B458FB00B1908F /* Seasons Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D120313B26B458FB00B1908F /* Seasons Screen.swift */; };
+		D120313E26B5D26D00B1908F /* Tab Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = D120313D26B5D26D00B1908F /* Tab Button.swift */; };
+		D120314026B6998000B1908F /* Seasons Content View.swift in Sources */ = {isa = PBXBuildFile; fileRef = D120313F26B6998000B1908F /* Seasons Content View.swift */; };
 		D120A69626A9DEB40020D750 /* NavigationControllerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D120A69526A9DEB40020D750 /* NavigationControllerModel.swift */; };
 		D120A69826A9DED80020D750 /* NavigationControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D120A69726A9DED80020D750 /* NavigationControllerViewModel.swift */; };
 		D120A69A26A9DF0A0020D750 /* NavigationControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D120A69926A9DF0A0020D750 /* NavigationControllerView.swift */; };
 		D120A69D26A9DF310020D750 /* PopButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D120A69C26A9DF310020D750 /* PopButton.swift */; };
 		D120A69F26A9DF4E0020D750 /* PushButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D120A69E26A9DF4E0020D750 /* PushButton.swift */; };
 		D120A6A126A9DF680020D750 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D120A6A026A9DF680020D750 /* NavigationBar.swift */; };
-		D120A6A426A9E00B0020D750 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D120A6A326A9E00B0020D750 /* MainView.swift */; };
-		D120A6A626ABCFB60020D750 /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D120A6A526ABCFB60020D750 /* StatisticsView.swift */; };
+		D120A6A426A9E00B0020D750 /* Main View.swift in Sources */ = {isa = PBXBuildFile; fileRef = D120A6A326A9E00B0020D750 /* Main View.swift */; };
+		D120A6A626ABCFB60020D750 /* Statistics View.swift in Sources */ = {isa = PBXBuildFile; fileRef = D120A6A526ABCFB60020D750 /* Statistics View.swift */; };
 		D120A6A826AD26980020D750 /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = D120A6A726AD26980020D750 /* Object.swift */; };
 		D120A6AA26AD27480020D750 /* Condition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D120A6A926AD27480020D750 /* Condition.swift */; };
 		D120A6AC26AD27D40020D750 /* Priority.swift in Sources */ = {isa = PBXBuildFile; fileRef = D120A6AB26AD27D40020D750 /* Priority.swift */; };
 		D120A6AE26AD292F0020D750 /* Criterion.swift in Sources */ = {isa = PBXBuildFile; fileRef = D120A6AD26AD292F0020D750 /* Criterion.swift */; };
-		D14781C226B87CCF00CA0A66 /* SeasonsCheckBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14781C126B87CCF00CA0A66 /* SeasonsCheckBoxView.swift */; };
-		D1B4DEA026A44149009F82E5 /* CountryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B4DE9F26A44149009F82E5 /* CountryView.swift */; };
-		D1E44CAF26B919D600437F33 /* StrategyViewsDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E44CAE26B919D600437F33 /* StrategyViewsDescription.swift */; };
+		D14781C226B87CCF00CA0A66 /* Seasons CheckBox View.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14781C126B87CCF00CA0A66 /* Seasons CheckBox View.swift */; };
+		D1B4DEA026A44149009F82E5 /* Country View.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B4DE9F26A44149009F82E5 /* Country View.swift */; };
+		D1E44CAF26B919D600437F33 /* Views Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E44CAE26B919D600437F33 /* Views Factory.swift */; };
 		D1E7F938269E1B2400405788 /* WellWinApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F937269E1B2400405788 /* WellWinApp.swift */; };
 		D1E7F93C269E1B2500405788 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1E7F93B269E1B2500405788 /* Assets.xcassets */; };
 		D1E7F93F269E1B2500405788 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1E7F93E269E1B2500405788 /* Preview Assets.xcassets */; };
 		D1E7F94A269E1B2500405788 /* WellWinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F949269E1B2500405788 /* WellWinTests.swift */; };
 		D1E7F955269E1B2500405788 /* WellWinUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F954269E1B2500405788 /* WellWinUITests.swift */; };
-		D1E7F969269E1B8F00405788 /* ResultScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F968269E1B8F00405788 /* ResultScreen.swift */; };
+		D1E7F969269E1B8F00405788 /* Result Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F968269E1B8F00405788 /* Result Screen.swift */; };
 		D1E7F974269E1C9E00405788 /* ResultData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F973269E1C9E00405788 /* ResultData.swift */; };
 		D1E7F976269E1CE100405788 /* MoneyManagementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F975269E1CE100405788 /* MoneyManagementView.swift */; };
 		D1E7F978269E1CF600405788 /* MoneyManagementObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F977269E1CF600405788 /* MoneyManagementObject.swift */; };
@@ -51,14 +52,14 @@
 		D1E7F990269EF26900405788 /* GoalsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F98F269EF26900405788 /* GoalsViewModel.swift */; };
 		D1E7F992269EF27400405788 /* GoalsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F991269EF27400405788 /* GoalsModel.swift */; };
 		D1E7F994269EF27F00405788 /* GoalsObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F993269EF27F00405788 /* GoalsObject.swift */; };
-		D1E7F998269EF5E600405788 /* StrategyScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F997269EF5E600405788 /* StrategyScreen.swift */; };
+		D1E7F998269EF5E600405788 /* Strategy Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F997269EF5E600405788 /* Strategy Screen.swift */; };
 		D1E7F9AB269F65AC00405788 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F9AA269F65AC00405788 /* Networking.swift */; };
 		D1E7F9AD269F65D400405788 /* URLPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F9AC269F65D400405788 /* URLPath.swift */; };
 		D1E7F9AF269F660C00405788 /* ArchiveViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F9AE269F660C00405788 /* ArchiveViewModel.swift */; };
 		D1E7F9B1269F662F00405788 /* GamesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F9B0269F662F00405788 /* GamesViewModel.swift */; };
 		D1E7F9B3269F665B00405788 /* Archive.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F9B2269F665B00405788 /* Archive.swift */; };
 		D1E7F9B5269F668500405788 /* Games.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F9B4269F668500405788 /* Games.swift */; };
-		D1E7F9B926A1617600405788 /* MainScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F9B826A1617600405788 /* MainScreenViewModel.swift */; };
+		D1E7F9B926A1617600405788 /* Main Screen View Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F9B826A1617600405788 /* Main Screen View Model.swift */; };
 		D1E7F9BB26A1618C00405788 /* StrategyScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F9BA26A1618C00405788 /* StrategyScreenViewModel.swift */; };
 		D1E7F9BD26A1628900405788 /* ResultScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F9BC26A1628900405788 /* ResultScreenViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -81,27 +82,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D104789526A8777B002BDC69 /* LineChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChart.swift; sourceTree = "<group>"; };
-		D104789726A8A06B002BDC69 /* ChartsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsView.swift; sourceTree = "<group>"; };
+		D104789526A8777B002BDC69 /* Line Chart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Line Chart.swift"; sourceTree = "<group>"; };
+		D104789726A8A06B002BDC69 /* Charts View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Charts View.swift"; sourceTree = "<group>"; };
 		D104789926A93A9F002BDC69 /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
-		D120313B26B458FB00B1908F /* SeasonsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonsScreen.swift; sourceTree = "<group>"; };
-		D120313D26B5D26D00B1908F /* TabButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabButton.swift; sourceTree = "<group>"; };
-		D120313F26B6998000B1908F /* SeasonsContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonsContentView.swift; sourceTree = "<group>"; };
+		D1123A5926C38DF1000A9FF1 /* Description Views.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Description Views.json"; sourceTree = "<group>"; };
+		D120313B26B458FB00B1908F /* Seasons Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Seasons Screen.swift"; sourceTree = "<group>"; };
+		D120313D26B5D26D00B1908F /* Tab Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tab Button.swift"; sourceTree = "<group>"; };
+		D120313F26B6998000B1908F /* Seasons Content View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Seasons Content View.swift"; sourceTree = "<group>"; };
 		D120A69526A9DEB40020D750 /* NavigationControllerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerModel.swift; sourceTree = "<group>"; };
 		D120A69726A9DED80020D750 /* NavigationControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerViewModel.swift; sourceTree = "<group>"; };
 		D120A69926A9DF0A0020D750 /* NavigationControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerView.swift; sourceTree = "<group>"; };
 		D120A69C26A9DF310020D750 /* PopButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopButton.swift; sourceTree = "<group>"; };
 		D120A69E26A9DF4E0020D750 /* PushButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushButton.swift; sourceTree = "<group>"; };
 		D120A6A026A9DF680020D750 /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
-		D120A6A326A9E00B0020D750 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		D120A6A526ABCFB60020D750 /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
+		D120A6A326A9E00B0020D750 /* Main View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Main View.swift"; sourceTree = "<group>"; };
+		D120A6A526ABCFB60020D750 /* Statistics View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Statistics View.swift"; sourceTree = "<group>"; };
 		D120A6A726AD26980020D750 /* Object.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Object.swift; sourceTree = "<group>"; };
 		D120A6A926AD27480020D750 /* Condition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Condition.swift; sourceTree = "<group>"; };
 		D120A6AB26AD27D40020D750 /* Priority.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Priority.swift; sourceTree = "<group>"; };
 		D120A6AD26AD292F0020D750 /* Criterion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Criterion.swift; sourceTree = "<group>"; };
-		D14781C126B87CCF00CA0A66 /* SeasonsCheckBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonsCheckBoxView.swift; sourceTree = "<group>"; };
-		D1B4DE9F26A44149009F82E5 /* CountryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryView.swift; sourceTree = "<group>"; };
-		D1E44CAE26B919D600437F33 /* StrategyViewsDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrategyViewsDescription.swift; sourceTree = "<group>"; };
+		D14781C126B87CCF00CA0A66 /* Seasons CheckBox View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Seasons CheckBox View.swift"; sourceTree = "<group>"; };
+		D1B4DE9F26A44149009F82E5 /* Country View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Country View.swift"; sourceTree = "<group>"; };
+		D1E44CAE26B919D600437F33 /* Views Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views Factory.swift"; sourceTree = "<group>"; };
 		D1E7F934269E1B2400405788 /* WellWin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WellWin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1E7F937269E1B2400405788 /* WellWinApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WellWinApp.swift; sourceTree = "<group>"; };
 		D1E7F93B269E1B2500405788 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -113,7 +115,7 @@
 		D1E7F950269E1B2500405788 /* WellWinUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WellWinUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1E7F954269E1B2500405788 /* WellWinUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WellWinUITests.swift; sourceTree = "<group>"; };
 		D1E7F956269E1B2500405788 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D1E7F968269E1B8F00405788 /* ResultScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultScreen.swift; sourceTree = "<group>"; };
+		D1E7F968269E1B8F00405788 /* Result Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Result Screen.swift"; sourceTree = "<group>"; };
 		D1E7F973269E1C9E00405788 /* ResultData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultData.swift; sourceTree = "<group>"; };
 		D1E7F975269E1CE100405788 /* MoneyManagementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyManagementView.swift; sourceTree = "<group>"; };
 		D1E7F977269E1CF600405788 /* MoneyManagementObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyManagementObject.swift; sourceTree = "<group>"; };
@@ -131,14 +133,14 @@
 		D1E7F98F269EF26900405788 /* GoalsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsViewModel.swift; sourceTree = "<group>"; };
 		D1E7F991269EF27400405788 /* GoalsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsModel.swift; sourceTree = "<group>"; };
 		D1E7F993269EF27F00405788 /* GoalsObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsObject.swift; sourceTree = "<group>"; };
-		D1E7F997269EF5E600405788 /* StrategyScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrategyScreen.swift; sourceTree = "<group>"; };
+		D1E7F997269EF5E600405788 /* Strategy Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Strategy Screen.swift"; sourceTree = "<group>"; };
 		D1E7F9AA269F65AC00405788 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		D1E7F9AC269F65D400405788 /* URLPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLPath.swift; sourceTree = "<group>"; };
 		D1E7F9AE269F660C00405788 /* ArchiveViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveViewModel.swift; sourceTree = "<group>"; };
 		D1E7F9B0269F662F00405788 /* GamesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesViewModel.swift; sourceTree = "<group>"; };
 		D1E7F9B2269F665B00405788 /* Archive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Archive.swift; sourceTree = "<group>"; };
 		D1E7F9B4269F668500405788 /* Games.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Games.swift; sourceTree = "<group>"; };
-		D1E7F9B826A1617600405788 /* MainScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewModel.swift; sourceTree = "<group>"; };
+		D1E7F9B826A1617600405788 /* Main Screen View Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Main Screen View Model.swift"; sourceTree = "<group>"; };
 		D1E7F9BA26A1618C00405788 /* StrategyScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrategyScreenViewModel.swift; sourceTree = "<group>"; };
 		D1E7F9BC26A1628900405788 /* ResultScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultScreenViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -205,16 +207,16 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		D120A6A226A9DFEB0020D750 /* MainView */ = {
+		D120A6A226A9DFEB0020D750 /* Main View */ = {
 			isa = PBXGroup;
 			children = (
-				D120A6A326A9E00B0020D750 /* MainView.swift */,
-				D1B4DE9F26A44149009F82E5 /* CountryView.swift */,
-				D120313B26B458FB00B1908F /* SeasonsScreen.swift */,
-				D120313F26B6998000B1908F /* SeasonsContentView.swift */,
-				D14781C126B87CCF00CA0A66 /* SeasonsCheckBoxView.swift */,
+				D120A6A326A9E00B0020D750 /* Main View.swift */,
+				D1B4DE9F26A44149009F82E5 /* Country View.swift */,
+				D120313B26B458FB00B1908F /* Seasons Screen.swift */,
+				D120313F26B6998000B1908F /* Seasons Content View.swift */,
+				D14781C126B87CCF00CA0A66 /* Seasons CheckBox View.swift */,
 			);
-			path = MainView;
+			path = "Main View";
 			sourceTree = "<group>";
 		};
 		D1E7F92B269E1B2400405788 = {
@@ -242,7 +244,7 @@
 			children = (
 				D1E7F996269EF57200405788 /* App */,
 				D1E7F962269E1B3300405788 /* Screens & View */,
-				D1E7F9B626A1610900405788 /* ScreensViewModels */,
+				D1E7F9B626A1610900405788 /* Screens View Models */,
 				D120A69126A9DE590020D750 /* Navigation Controller */,
 				D1E7F96A269E1BE500405788 /* Modules */,
 				D1E7F972269E1C7800405788 /* ResultData */,
@@ -282,33 +284,34 @@
 		D1E7F962269E1B3300405788 /* Screens & View */ = {
 			isa = PBXGroup;
 			children = (
-				D120A6A226A9DFEB0020D750 /* MainView */,
-				D1E7F964269E1B4B00405788 /* StrategyScreen */,
-				D1E7F963269E1B3E00405788 /* ResultScreen */,
+				D120A6A226A9DFEB0020D750 /* Main View */,
+				D1E7F964269E1B4B00405788 /* Strategy Screen */,
+				D1E7F963269E1B3E00405788 /* Result Screen */,
 			);
 			path = "Screens & View";
 			sourceTree = "<group>";
 		};
-		D1E7F963269E1B3E00405788 /* ResultScreen */ = {
+		D1E7F963269E1B3E00405788 /* Result Screen */ = {
 			isa = PBXGroup;
 			children = (
-				D1E7F968269E1B8F00405788 /* ResultScreen.swift */,
-				D104789726A8A06B002BDC69 /* ChartsView.swift */,
-				D104789526A8777B002BDC69 /* LineChart.swift */,
+				D1E7F968269E1B8F00405788 /* Result Screen.swift */,
+				D104789726A8A06B002BDC69 /* Charts View.swift */,
+				D104789526A8777B002BDC69 /* Line Chart.swift */,
 				D104789926A93A9F002BDC69 /* Line.swift */,
-				D120A6A526ABCFB60020D750 /* StatisticsView.swift */,
-				D120313D26B5D26D00B1908F /* TabButton.swift */,
+				D120A6A526ABCFB60020D750 /* Statistics View.swift */,
+				D120313D26B5D26D00B1908F /* Tab Button.swift */,
 			);
-			path = ResultScreen;
+			path = "Result Screen";
 			sourceTree = "<group>";
 		};
-		D1E7F964269E1B4B00405788 /* StrategyScreen */ = {
+		D1E7F964269E1B4B00405788 /* Strategy Screen */ = {
 			isa = PBXGroup;
 			children = (
-				D1E7F997269EF5E600405788 /* StrategyScreen.swift */,
-				D1E44CAE26B919D600437F33 /* StrategyViewsDescription.swift */,
+				D1E7F997269EF5E600405788 /* Strategy Screen.swift */,
+				D1E44CAE26B919D600437F33 /* Views Factory.swift */,
+				D1123A5926C38DF1000A9FF1 /* Description Views.json */,
 			);
-			path = StrategyScreen;
+			path = "Strategy Screen";
 			sourceTree = "<group>";
 		};
 		D1E7F96A269E1BE500405788 /* Modules */ = {
@@ -432,14 +435,14 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		D1E7F9B626A1610900405788 /* ScreensViewModels */ = {
+		D1E7F9B626A1610900405788 /* Screens View Models */ = {
 			isa = PBXGroup;
 			children = (
-				D1E7F9B826A1617600405788 /* MainScreenViewModel.swift */,
+				D1E7F9B826A1617600405788 /* Main Screen View Model.swift */,
 				D1E7F9BA26A1618C00405788 /* StrategyScreenViewModel.swift */,
 				D1E7F9BC26A1628900405788 /* ResultScreenViewModel.swift */,
 			);
-			path = ScreensViewModels;
+			path = "Screens View Models";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -545,6 +548,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1123A5A26C38DF1000A9FF1 /* Description Views.json in Resources */,
 				D1E7F93F269E1B2500405788 /* Preview Assets.xcassets in Resources */,
 				D1E7F93C269E1B2500405788 /* Assets.xcassets in Resources */,
 			);
@@ -573,51 +577,51 @@
 			files = (
 				D1E7F990269EF26900405788 /* GoalsViewModel.swift in Sources */,
 				D1E7F98A269EF24300405788 /* RefereesModel.swift in Sources */,
-				D120314026B6998000B1908F /* SeasonsContentView.swift in Sources */,
+				D120314026B6998000B1908F /* Seasons Content View.swift in Sources */,
 				D120A69826A9DED80020D750 /* NavigationControllerViewModel.swift in Sources */,
 				D1E7F9AF269F660C00405788 /* ArchiveViewModel.swift in Sources */,
 				D120A6A126A9DF680020D750 /* NavigationBar.swift in Sources */,
-				D104789826A8A06B002BDC69 /* ChartsView.swift in Sources */,
+				D104789826A8A06B002BDC69 /* Charts View.swift in Sources */,
 				D1E7F992269EF27400405788 /* GoalsModel.swift in Sources */,
-				D120313E26B5D26D00B1908F /* TabButton.swift in Sources */,
+				D120313E26B5D26D00B1908F /* Tab Button.swift in Sources */,
 				D120A6AA26AD27480020D750 /* Condition.swift in Sources */,
 				D1E7F97C269E1D2300405788 /* MoneyManagementViewModel.swift in Sources */,
-				D120A6A426A9E00B0020D750 /* MainView.swift in Sources */,
+				D120A6A426A9E00B0020D750 /* Main View.swift in Sources */,
 				D1E7F988269EF23800405788 /* RefereesViewModel.swift in Sources */,
 				D120A69A26A9DF0A0020D750 /* NavigationControllerView.swift in Sources */,
 				D1E7F98E269EF25F00405788 /* GoalsView.swift in Sources */,
 				D1E7F9BB26A1618C00405788 /* StrategyScreenViewModel.swift in Sources */,
 				D1E7F9B3269F665B00405788 /* Archive.swift in Sources */,
-				D1E7F9B926A1617600405788 /* MainScreenViewModel.swift in Sources */,
-				D1E44CAF26B919D600437F33 /* StrategyViewsDescription.swift in Sources */,
+				D1E7F9B926A1617600405788 /* Main Screen View Model.swift in Sources */,
+				D1E44CAF26B919D600437F33 /* Views Factory.swift in Sources */,
 				D1E7F986269EF22800405788 /* RefereesView.swift in Sources */,
 				D1E7F980269EF1EE00405788 /* TeamsViewModel.swift in Sources */,
 				D1E7F982269EF1FC00405788 /* TeamsModel.swift in Sources */,
 				D1E7F974269E1C9E00405788 /* ResultData.swift in Sources */,
 				D1E7F9B5269F668500405788 /* Games.swift in Sources */,
-				D1E7F998269EF5E600405788 /* StrategyScreen.swift in Sources */,
+				D1E7F998269EF5E600405788 /* Strategy Screen.swift in Sources */,
 				D1E7F978269E1CF600405788 /* MoneyManagementObject.swift in Sources */,
 				D1E7F97E269EF1E300405788 /* TeamsView.swift in Sources */,
 				D1E7F97A269E1D0D00405788 /* MoneyManagementModel.swift in Sources */,
-				D104789626A8777B002BDC69 /* LineChart.swift in Sources */,
-				D120A6A626ABCFB60020D750 /* StatisticsView.swift in Sources */,
-				D14781C226B87CCF00CA0A66 /* SeasonsCheckBoxView.swift in Sources */,
+				D104789626A8777B002BDC69 /* Line Chart.swift in Sources */,
+				D120A6A626ABCFB60020D750 /* Statistics View.swift in Sources */,
+				D14781C226B87CCF00CA0A66 /* Seasons CheckBox View.swift in Sources */,
 				D1E7F9AD269F65D400405788 /* URLPath.swift in Sources */,
 				D120A6AC26AD27D40020D750 /* Priority.swift in Sources */,
 				D120A69D26A9DF310020D750 /* PopButton.swift in Sources */,
 				D120A6AE26AD292F0020D750 /* Criterion.swift in Sources */,
 				D1E7F976269E1CE100405788 /* MoneyManagementView.swift in Sources */,
-				D1E7F969269E1B8F00405788 /* ResultScreen.swift in Sources */,
+				D1E7F969269E1B8F00405788 /* Result Screen.swift in Sources */,
 				D1E7F98C269EF24C00405788 /* RefereesObject.swift in Sources */,
 				D1E7F994269EF27F00405788 /* GoalsObject.swift in Sources */,
-				D1B4DEA026A44149009F82E5 /* CountryView.swift in Sources */,
+				D1B4DEA026A44149009F82E5 /* Country View.swift in Sources */,
 				D120A69F26A9DF4E0020D750 /* PushButton.swift in Sources */,
 				D1E7F9BD26A1628900405788 /* ResultScreenViewModel.swift in Sources */,
 				D104789A26A93A9F002BDC69 /* Line.swift in Sources */,
 				D1E7F9B1269F662F00405788 /* GamesViewModel.swift in Sources */,
 				D1E7F938269E1B2400405788 /* WellWinApp.swift in Sources */,
 				D1E7F984269EF20800405788 /* TeamsObject.swift in Sources */,
-				D120313C26B458FB00B1908F /* SeasonsScreen.swift in Sources */,
+				D120313C26B458FB00B1908F /* Seasons Screen.swift in Sources */,
 				D1E7F9AB269F65AC00405788 /* Networking.swift in Sources */,
 				D120A6A826AD26980020D750 /* Object.swift in Sources */,
 				D120A69626A9DEB40020D750 /* NavigationControllerModel.swift in Sources */,
