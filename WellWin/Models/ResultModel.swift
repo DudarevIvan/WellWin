@@ -11,6 +11,7 @@ final class ResultModel {
    
    static var shared: ResultModel = .init()
    
+   // Chart data
    var mainChartData: Array<UnitPoint> = .init()
    var roiChartData: Array<UnitPoint> = .init()
    
