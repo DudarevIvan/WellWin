@@ -19,6 +19,16 @@ struct CountryView: View {
    
    var body: some View {
       HStack {
+         VStack(alignment: .leading) {
+            Text(country)
+               .font(.headline)
+               .foregroundColor(.white)
+            Text(league)
+               .font(.footnote)
+               .foregroundColor(.gray)
+         }
+         Spacer()
+         
          Image(country)
             .resizable()
             .scaledToFit()
@@ -26,21 +36,9 @@ struct CountryView: View {
             .clipShape(RoundedRectangle(cornerRadius: 4))
             .shadow(radius: 1)
             .padding(4)
-         VStack(alignment: .leading) {
-            Text(country)
-               .font(.headline)
-            Text(league)
-               .font(.footnote)
-               .foregroundColor(.gray)
-         }
-         Spacer()
-         Image(systemName: "chevron.forward")
-            .padding(.trailing, 4)
       }
+      .contentShape(Rectangle())
       .padding(4)
-      .foregroundColor(.primary)
-      .background(Color.white)
-      .clipShape(RoundedRectangle(cornerRadius: 6))
       .padding(.horizontal)
    }
 }

@@ -8,14 +8,15 @@
 import SwiftUI
 
 struct Referees: View {
-      
-    var body: some View {
-        Text("Referees view")
-    }
+   
+   var body: some View {
+      Text("Referees view")
+      Spacer()
+   }
 }
 
 struct RefereesView_Previews: PreviewProvider {
-    static var previews: some View {
-        Referees()
-    }
+   static var previews: some View {
+      Referees()
+   }
 }

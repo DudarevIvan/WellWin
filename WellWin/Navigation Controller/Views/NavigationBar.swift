@@ -11,7 +11,7 @@ public struct NavigationBar: View {
    
    @EnvironmentObject var viewModel: NavigationControllerViewModel
    
-   private let title: String = "WellWin"
+   private let title: String = "WellWIN"
    var isRoot: Bool
    
    public var body: some View {
@@ -20,25 +20,25 @@ public struct NavigationBar: View {
             if !isRoot {
                NavigationPopButton() {
                   HStack {
-                     Image("backBlack")
+                     Image("whiteBlack")
                         .resizable()
                         .frame(width: 26.0, height: 12.0)
                         .foregroundColor(.black)
                      Text("BACK")
                         .font(.caption)
                         .fontWeight(.bold)
-                        .foregroundColor(.black).opacity(0.8)
+                        .foregroundColor(.white)
                   }
                }
             }
             Spacer()
             if isRoot {
                Text(title)
-                  .fontWeight(.medium)
+                  .font(.headline)
                Spacer()
             }
          }
-         .foregroundColor(.black)
+         .foregroundColor(.white)
          .animation(.none)
       }
       .padding(.top, 10)

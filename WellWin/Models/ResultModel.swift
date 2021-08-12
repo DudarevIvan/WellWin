@@ -7,10 +7,9 @@
 
 import SwiftUI
 
-// MARK: Used as a model for the result screen
-final class ResultData {
+final class ResultModel {
    
-   static var shared: ResultData = .init()
+   static var shared: ResultModel = .init()
    
    var mainChartData: Array<UnitPoint> = .init()
    var roiChartData: Array<UnitPoint> = .init()

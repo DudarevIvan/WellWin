@@ -9,7 +9,7 @@ import SwiftUI
 
 final class ResultViewModel: ObservableObject {
    
-   let resultModel: ResultData = .shared
+   let data: ResultModel = .shared
    
    
 }

@@ -12,9 +12,7 @@ struct SeasonsScreen: View {
    @Binding var isShowing: Bool
    @Binding var go: Bool
    @Binding var seasons: Array<Seasons>
-   
-   //private var router: Router = .shared
-   
+      
    var body: some View {
       ZStack(alignment: .bottom) {
          if isShowing {
@@ -37,7 +35,6 @@ struct SeasonsScreen: View {
 
 struct SeasonsScreen_Previews: PreviewProvider {
    static var previews: some View {
-      //SeasonsScreen(isShowing: .constant(true))
       MainView()
    }
 }

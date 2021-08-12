@@ -8,14 +8,15 @@
 import SwiftUI
 
 struct Goals: View {
-      
-    var body: some View {
-        Text("Goals view")
-    }
+   
+   var body: some View {
+      Text("Goals view")
+      Spacer()
+   }
 }
 
 struct GoalsView_Previews: PreviewProvider {
-    static var previews: some View {
-        Goals()
-    }
+   static var previews: some View {
+      Goals()
+   }
 }

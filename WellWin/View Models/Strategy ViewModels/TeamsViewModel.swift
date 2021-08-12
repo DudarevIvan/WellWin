@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+final class TeamsViewModel: ObservableObject {
+   
+   let model: SharedModel = .shared
+   
+}

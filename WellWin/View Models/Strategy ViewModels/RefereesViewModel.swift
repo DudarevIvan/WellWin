@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+final class RefereesViewModel: ObservableObject {
+   
+   let model: SharedModel = .shared
+   
+}

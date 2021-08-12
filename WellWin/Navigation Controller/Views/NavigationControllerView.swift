@@ -29,20 +29,23 @@ public struct NavigationControllerView<Content: View>: View {
    public var body: some View {
       let isRootView = viewModel.currentScreen == nil
       return ZStack {
-         VStack(spacing: 0) {
-            NavigationBar(isRoot: isRootView)
-               .padding(.horizontal, 15)
-               .padding(.bottom)
-               .padding(.top, UIApplication.shared.windows.first?.safeAreaInsets.top)
-               .environmentObject(viewModel)
-            if isRootView {
-               content
-                  .transition(viewModel.navigationType == .push ? transitions.push : transitions.pop)
+         ZStack {
+            Color("gray")
+            VStack(spacing: 0) {
+               NavigationBar(isRoot: isRootView)
+                  .padding(.horizontal, 15)
+                  .padding(.bottom)
+                  .padding(.top, UIApplication.shared.windows.first?.safeAreaInsets.top)
                   .environmentObject(viewModel)
-            } else {
-               viewModel.currentScreen!.nextScreen
-                  .transition(viewModel.navigationType == .push ? transitions.push : transitions.pop)
-                  .environmentObject(viewModel)
+               if isRootView {
+                  content
+                     .transition(viewModel.navigationType == .push ? transitions.push : transitions.pop)
+                     .environmentObject(viewModel)
+               } else {
+                  viewModel.currentScreen!.nextScreen
+                     .transition(viewModel.navigationType == .push ? transitions.push : transitions.pop)
+                     .environmentObject(viewModel)
+               }
             }
          }
       }

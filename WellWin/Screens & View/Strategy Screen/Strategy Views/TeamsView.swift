@@ -12,6 +12,8 @@ struct Teams: View {
    @State var isSelected: Array<Bool> = Array(repeating: false, count: ArchiveViewModel.shared.archive.at!.count)
    
    private let screenWidth = UIScreen.main.bounds.size.width
+   
+   @State var teams: Int = 0
       
    let archive: Archive = ArchiveViewModel.shared.archive
    
@@ -32,12 +34,24 @@ struct Teams: View {
                Spacer()
             }
             .padding(.horizontal)
+            
+            Picker("", selection: $teams) {
+               Text("Home team")
+                  .foregroundColor(.blue)
+                  .tag(0)
+               Text("Away team")
+                  .tag(1)
+            }
+            .background(Color.gray.opacity(0.1))
+            .pickerStyle(SegmentedPickerStyle())
+            .padding(.horizontal)
+            
             //Exclude teams from bets
             //Select teams for bets
             ScrollView {
                LazyVGrid(columns: columns) {
-                  ForEach(0..<archive.at!.count) { index in
-                     Text(archive.at![index])
+                  ForEach(0..<(teams == 0 ? archive.ht!.count : archive.at!.count)) { index in
+                     Text((teams == 0 ? archive.ht : archive.at)![index])
                         .frame(maxWidth: .infinity)
                         .padding(.vertical, 10)
                         .padding(.horizontal, 10)

@@ -19,7 +19,7 @@ struct ResultScreen: View {
          Color.white
             .ignoresSafeArea()
          VStack(alignment: .center) {
-            ChartsView(mainChartData: resultViewModel.resultModel.mainChartData, roiChartData: resultViewModel.resultModel.roiChartData)
+            ChartsView(mainChartData: resultViewModel.data.mainChartData, roiChartData: resultViewModel.data.roiChartData)
             
             // Change to single view
             HStack {

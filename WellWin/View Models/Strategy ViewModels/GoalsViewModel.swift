@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+final class GoalsViewModel: ObservableObject {
+   
+   let model: SharedModel = .shared
+   
+}

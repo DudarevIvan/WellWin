@@ -57,7 +57,7 @@ struct SeasonsContentView: View {
          }, label: {
             Text("Apply")
                .bold()
-               .frame(width: screenWidth * 0.94, height: 30)
+               .frame(width: screenWidth * 0.94, height: 40)
          })
          .foregroundColor(.white)
          .background(seasonID == nil ? Color.gray : Color.blue)
