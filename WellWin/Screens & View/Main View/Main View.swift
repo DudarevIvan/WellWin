@@ -17,12 +17,18 @@ struct MainView: View {
    
    @ObservedObject var gamesViewModel: GamesViewModel = .init()
    @ObservedObject var archiveViewModel: ArchiveViewModel = ArchiveViewModel.shared
-      
+   
    var body: some View {
       ZStack {
-         Color.white
+         Color("gray")
             .ignoresSafeArea()
          VStack {
+            // Select games
+            ChooseGame()
+               .environmentObject(gamesViewModel)
+            .frame(maxWidth: .infinity)
+            .frame(height: 50)
+            
             if let countries = gamesViewModel.games.countries {
                SearchView(searchText: $search)
                   .background(Color("gray"))
@@ -40,10 +46,10 @@ struct MainView: View {
                                     self.seasons = league.seasons!
                                     self.showSeasons = true
                                  }
-                           Rectangle()
-                              .fill(Color.black.opacity(0.1))
-                              .frame(height: 2)
-                              .frame(maxWidth: .infinity)
+                              Rectangle()
+                                 .fill(Color.black.opacity(0.1))
+                                 .frame(height: 2)
+                                 .frame(maxWidth: .infinity)
                            }
                         }
                         .resignKeyboardOnDragGesture()
@@ -55,6 +61,7 @@ struct MainView: View {
                .padding(.top)
                .background(Color("gray"))
             }
+            Spacer()
          }
          .background(Color("gray"))
          NavigationLinkCustom(isActive: active && archiveViewModel.archive.country != nil, destination: StrategyScreen()) { Text("") }
@@ -69,5 +76,32 @@ struct MainView: View {
 struct CLSScreen_Previews: PreviewProvider {
    static var previews: some View {
       MainView()
+   }
+}
+
+
+struct ChooseGame: View {
+   
+   @EnvironmentObject var gamesViewModel: GamesViewModel
+   
+   var body: some View {
+      HStack(spacing: 20) {
+         ForEach(Games.allCases, id: \.self) { game in
+            VStack {
+               Image(game.rawValue.lowercased())
+                  .resizable()
+                  .renderingMode(.template)
+                  .scaledToFit()
+                  .padding(.bottom, 2)
+               Text(game.rawValue)
+                  .bold()
+                  .font(.footnote)
+            }
+            .foregroundColor(game.rawValue == gamesViewModel.endpoint ? Color("blue") : Color.black)
+            .onTapGesture {
+               gamesViewModel.endpoint = game.rawValue
+            }
+         }
+      }
    }
 }

@@ -28,22 +28,22 @@ public class Networking {
    
    
    // Fetch games(countries, leagues, seasons)
-   public func fetchGames(endPoint: GamesEndPoint) -> AnyPublisher<Games, Never> {
+   public func fetchGames(endPoint: Games) -> AnyPublisher<GamesModel, Never> {
       guard let url = urlPath.gamesURL(for: endPoint) else {
-         return Just(Games()).eraseToAnyPublisher()
+         return Just(GamesModel()).eraseToAnyPublisher()
       }
       return fetch(url)
-         .replaceError(with: Games())
+         .replaceError(with: GamesModel())
          .eraseToAnyPublisher()
    }
    
    // Fetch archive
-   public func fetchArchive(for path: String) -> AnyPublisher<Archive, Never> {
+   public func fetchArchive(for path: String) -> AnyPublisher<FootballArchiveModel, Never> {
       guard let url = urlPath.absoluteURL(for: path) else {
-         return Just(Archive()).eraseToAnyPublisher()
+         return Just(FootballArchiveModel()).eraseToAnyPublisher()
       }
       return fetch(url)
-         .replaceError(with: Archive())
+         .replaceError(with: FootballArchiveModel())
          .eraseToAnyPublisher()
    }
 }

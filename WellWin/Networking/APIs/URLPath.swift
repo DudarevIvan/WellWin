@@ -20,7 +20,7 @@ public class URLPath {
    }
    
    // Game url
-   public func gamesURL(for games: GamesEndPoint = GamesEndPoint()) -> URL? {
+   public func gamesURL(for games: Games = Games()) -> URL? {
       let url: String = games.path()
       return absoluteURL(for: url)
    }
@@ -37,8 +37,8 @@ public class URLPath {
 }
 
 
-// Path to games (EndPoints)
-public enum GamesEndPoint: String, CaseIterable {
+// Path to games (EndPoints), and choose games
+public enum Games: String, CaseIterable {
    
    case football = "Football"
    case basketball = "Basketball"
@@ -46,17 +46,17 @@ public enum GamesEndPoint: String, CaseIterable {
    case volleyball = "Volleyball"
    case hockey = "Hockey"
    
-   public init(index: Int = 1) {
-      switch index {
-         case 1:
+   public init(choose: String = "Football") {
+      switch choose {
+         case "Football":
             self = .football
-         case 2:
+         case "Basketball":
             self = .basketball
-         case 3:
+         case "Tennis":
             self = .tennis
-         case 4:
+         case "Volleyball":
             self = .volleyball
-         case 5:
+         case "Hockey":
             self = .hockey
          default:
             self = .football

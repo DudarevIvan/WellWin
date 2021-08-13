@@ -9,7 +9,5 @@ import SwiftUI
 
 final class StrategyScreenViewModel: ObservableObject {
    
-   init() {
-      
-   }
+   init() {}
 }

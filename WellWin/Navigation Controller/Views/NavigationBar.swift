@@ -11,7 +11,7 @@ public struct NavigationBar: View {
    
    @EnvironmentObject var viewModel: NavigationControllerViewModel
    
-   private let title: String = "WellWIN"
+   private let title: String = "WELLWIN"
    var isRoot: Bool
    
    public var body: some View {
@@ -26,7 +26,7 @@ public struct NavigationBar: View {
                         .foregroundColor(.black)
                      Text("BACK")
                         .font(.caption)
-                        .fontWeight(.bold)
+                        .fontWeight(.black)
                         .foregroundColor(.white)
                   }
                }
@@ -35,6 +35,8 @@ public struct NavigationBar: View {
             if isRoot {
                Text(title)
                   .font(.headline)
+                  .foregroundColor(.black)
+                  .shadow(color: Color.gray, radius: 2, x: 1, y: 1)
                Spacer()
             }
          }

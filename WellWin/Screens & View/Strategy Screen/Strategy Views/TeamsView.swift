@@ -14,8 +14,9 @@ struct Teams: View {
    private let screenWidth = UIScreen.main.bounds.size.width
    
    @State var teams: Int = 0
+   @State var teamsType: TeamsType = .Home
       
-   let archive: Archive = ArchiveViewModel.shared.archive
+   let archive: FootballArchiveModel = ArchiveViewModel.shared.archive
    
    let columns = [
       //GridItem(.flexible()),
@@ -27,13 +28,36 @@ struct Teams: View {
       ZStack {
          Color.gray.opacity(0.1)
          VStack {
+            // Title
             HStack {
                Text("Teams")
                   .bold()
                   .font(.title3)
+                  .foregroundColor(.white)
                Spacer()
             }
             .padding(.horizontal)
+            .padding(.top)
+            
+            Divider()
+            HStack {
+               Text("HT/AT")
+                  .font(.footnote)
+                  .foregroundColor(.white)
+               Spacer()
+            }
+            .padding(.horizontal)
+            Picker("", selection: $teamsType) {
+               Text("Home team")
+                  .foregroundColor(.blue)
+                  .tag(TeamsType.Home)
+               Text("Away team")
+                  .tag(TeamsType.Away)
+            }
+            .background(Color.gray.opacity(0.1))
+            .pickerStyle(SegmentedPickerStyle())
+            .padding(.horizontal)
+            Divider()
             
             Picker("", selection: $teams) {
                Text("Home team")
@@ -71,8 +95,8 @@ struct Teams: View {
    }
 }
 
-struct TeamsView_Previews: PreviewProvider {
-   static var previews: some View {
-      Teams()
-   }
+
+enum TeamsType {
+   case Home
+   case Away
 }

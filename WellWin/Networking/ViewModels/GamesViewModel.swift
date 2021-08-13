@@ -14,8 +14,8 @@ public final class GamesViewModel: ObservableObject {
    private var networking = Networking.shared
    
    // Games
-   @Published public var games: Games = .init()
-   @Published public var indexEndpoint: Int = .init(1) // Football
+   @Published public var games: GamesModel = .init()
+   @Published public var endpoint: String = .init("Football") // Football
    
    // Save Published
    private var cancellableSet: Set<AnyCancellable> = []
@@ -26,9 +26,9 @@ public final class GamesViewModel: ObservableObject {
    }
    
    public init() {
-      $indexEndpoint
-         .flatMap { [self] (indexEndpoint) -> AnyPublisher<Games, Never> in
-            networking.fetchGames(endPoint: GamesEndPoint(index: indexEndpoint))
+      $endpoint
+         .flatMap { [self] (indexEndpoint) -> AnyPublisher<GamesModel, Never> in
+            networking.fetchGames(endPoint: Games(choose: indexEndpoint))
          }
          .assign(to: \.games, on: self)
          .store(in: &self.cancellableSet)
