@@ -46,4 +46,6 @@ public class Networking {
          .replaceError(with: FootballArchiveModel())
          .eraseToAnyPublisher()
    }
+   
+   //TODO: Add error handling
 }

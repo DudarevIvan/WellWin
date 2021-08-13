@@ -34,9 +34,10 @@ public struct NavigationBar: View {
             Spacer()
             if isRoot {
                Text(title)
-                  .font(.headline)
+                  .bold()
+                  .font(.title3)
                   .foregroundColor(.black)
-                  .shadow(color: Color.gray, radius: 2, x: 1, y: 1)
+                  .shadow(color: Color("blue"), radius: 2, x: 1, y: 1)
                Spacer()
             }
          }

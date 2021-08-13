@@ -33,29 +33,5 @@ public final class ArchiveViewModel: ObservableObject {
          .store(in: &self.cancellableSet)
    }
    
-   private enum ArchiveModelType: String, CaseIterable {
-      
-      case football = "Football"
-      case basketball = "Basketball"
-      case tennis = "Tennis"
-      case volleyball = "Volleyball"
-      case hockey = "Hockey"
-      
-      public init(choose: String = "Football") {
-         switch choose {
-            case "Football":
-               self = .football
-            case "Basketball":
-               self = .basketball
-            case "Tennis":
-               self = .tennis
-            case "Volleyball":
-               self = .volleyball
-            case "Hockey":
-               self = .hockey
-            default:
-               self = .football
-         }
-      }
-   }
+   //TODO: Add archive type selection
 }

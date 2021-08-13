@@ -27,7 +27,8 @@ struct MainView: View {
             ChooseGame()
                .environmentObject(gamesViewModel)
             .frame(maxWidth: .infinity)
-            .frame(height: 50)
+            .frame(height: 20)
+               .padding(.horizontal)
             
             if let countries = gamesViewModel.games.countries {
                SearchView(searchText: $search)
@@ -86,6 +87,11 @@ struct ChooseGame: View {
    
    var body: some View {
       HStack(spacing: 20) {
+         Text("Games")
+            .bold()
+            .font(.title3)
+            .foregroundColor(.white)
+         Spacer()
          ForEach(Games.allCases, id: \.self) { game in
             VStack {
                Image(game.rawValue.lowercased())
@@ -93,9 +99,9 @@ struct ChooseGame: View {
                   .renderingMode(.template)
                   .scaledToFit()
                   .padding(.bottom, 2)
-               Text(game.rawValue)
-                  .bold()
-                  .font(.footnote)
+//               Text(game.rawValue)
+//                  .bold()
+//                  .font(.footnote)
             }
             .foregroundColor(game.rawValue == gamesViewModel.endpoint ? Color("blue") : Color.black)
             .onTapGesture {
