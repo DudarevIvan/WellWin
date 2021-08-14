@@ -24,7 +24,7 @@ struct SeasonsCheckBoxView: View {
          } else {
             Image(systemName: "record.circle")
                .font(.title3)
-               .foregroundColor(.blue)
+               .foregroundColor(Color("blue"))
          }
       }
       .contentShape(Rectangle())

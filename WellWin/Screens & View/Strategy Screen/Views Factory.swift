@@ -14,13 +14,13 @@ class ViewsFactory: ObservableObject {
    @Published var views: Array<AnyView> = .init()
    
    func getViews() {
-      let description: Array<ViewsDescription> = description()
+      let descriptions: Array<ViewsDescription> = description()
       var buffer: Array<AnyView> = .init()
       for (label, value) in archiveMirror.children {
          if Mirror(reflecting: value).children.count != 0 {
-            for item in description {
-               if item.id == label! {
-                  let view = SomeView(id: item.id, title: item.title, description: item.description, view: item.view)
+            for description in descriptions {
+               if description.id == label! {
+                  let view = SomeView(description: description)
                   buffer.append(AnyView(view))
                }
             }
@@ -45,6 +45,7 @@ struct ViewsDescription: Codable, Identifiable, Hashable {
    var id: String
    var title: String
    var description: String
+   var fields: String
    var view: String
 }
 
@@ -71,34 +72,50 @@ enum Factory: String, CaseIterable {
 
 struct SomeView: View {
    
-   let id: String
-   let title: String
-   let description: String
-   let view: String
+   let description: ViewsDescription
    
    @State var isChange: Bool = false
    @State var activeLink: Bool = false
    
    var body: some View {
-      ZStack {
-         RoundedRectangle(cornerRadius: 4).stroke()
-            .foregroundColor(.gray)
       VStack(alignment: .leading) {
-         HStack {
-            Text(title)
+         HStack(alignment: .firstTextBaseline) {
+            Text(description.title)
                .font(.headline)
-            Spacer()
-            Circle()
-               .fill(isChange ? Color.green : Color.gray.opacity(0.4))
-               .frame(width: 8)
+               .foregroundColor(.white).opacity(0.8)
+            Text(description.fields)
+               .font(.footnote)
+               .padding(.horizontal, 4)
+               .padding(.vertical, 1)
+               .background(Color.white)
+               .clipShape(RoundedRectangle(cornerRadius: 10))
+            if description.title == "Money Management" {
+               Spacer()
+               ZStack {
+                  RoundedRectangle(cornerRadius: 10)
+                     .strokeBorder()
+                     .frame(width: 80, height: 20)
+                  Text("required")
+                     .font(.footnote)
+               }
+               .foregroundColor(.yellow).opacity(0.5)
+            } else {
+               Spacer()
+            }
          }
-         Text(description)
+         Text(description.description)
+            .foregroundColor(.gray)
             .font(.footnote)
             .lineLimit(nil)
             .fixedSize(horizontal: false, vertical: true)
-      }
-         .padding(10)
-      NavigationLinkCustom(isActive: activeLink, destination: Factory.init(rawValue: view)!.matchingViews()) { Text("") }
+         
+         NavigationLinkCustom(isActive: activeLink, destination: Factory.init(rawValue: description.view)!.matchingViews()) { Text("") }
+         
+         Rectangle()
+            .fill()
+            .foregroundColor(.gray).opacity(0.3)
+            .frame(height: 1)
+            .frame(maxWidth: .infinity)
       }
       .frame(maxWidth: .infinity)
       .contentShape(Rectangle())

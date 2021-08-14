@@ -17,14 +17,12 @@ struct SearchView: View {
          HStack {
             HStack {
                Image(systemName: "magnifyingglass")
-               
+                  .foregroundColor(Color.white.opacity(0.5))
                TextField("", text: $searchText, onEditingChanged: { isEditing in
                   self.showCancelButton = true
-               }, onCommit: {
-                  print("onCommit")
-               })
-               .placeHolder(Text("search"), show: searchText.isEmpty)
-               .foregroundColor(Color.white.opacity(0.8))
+               }, onCommit: {})
+               .placeHolder(Text("Search Categories..."), show: searchText.isEmpty)
+               .foregroundColor(Color.white.opacity(0.5))
                
                Button(action: {
                   self.searchText = ""
@@ -34,15 +32,17 @@ struct SearchView: View {
             }
             .padding(EdgeInsets(top: 8, leading: 6, bottom: 8, trailing: 6))
             .foregroundColor(Color.white)
-            .background(Color("lightBlack").opacity(0.4))
+            .background(Color("lightGray").opacity(0.4))
             .cornerRadius(10.0)
             
             if showCancelButton  {
-               Button("Cancel") {
-                  UIApplication.shared.endEditing(true) // this must be placed before the other commands here
+               Button(action: {
+                  UIApplication.shared.endEditing(true)
                   self.searchText = ""
                   self.showCancelButton = false
-               }
+               }, label: {
+                  Text("Cancel")
+               })
                .foregroundColor(Color.white)
             }
          }
@@ -93,3 +93,7 @@ extension View {
       self.modifier(PlaceHolder(placeHolder:holder, show: show))
    }
 }
+
+// Example
+// ForEach(leagues.filter{$0.name!.hasPrefix(search) || search == ""}) {}
+// .resignKeyboardOnDragGesture()

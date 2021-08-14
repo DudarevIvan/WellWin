@@ -60,7 +60,7 @@ struct SeasonsContentView: View {
                .frame(width: screenWidth * 0.94, height: 40)
          })
          .foregroundColor(.white)
-         .background(seasonID == nil ? Color.gray : Color.blue)
+         .background(seasonID == nil ? Color.gray : Color("gray"))
          .cornerRadius(6)
          .padding(.horizontal, 10)
          .padding(.vertical, 10)

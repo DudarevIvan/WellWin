@@ -20,24 +20,24 @@ public struct NavigationBar: View {
             if !isRoot {
                NavigationPopButton() {
                   HStack {
-                     Image("whiteBlack")
-                        .resizable()
-                        .frame(width: 26.0, height: 12.0)
-                        .foregroundColor(.black)
-                     Text("BACK")
-                        .font(.caption)
-                        .fontWeight(.black)
-                        .foregroundColor(.white)
+                     Image(systemName: "chevron.backward")
+//                     Image("whiteBlack")
+//                        .resizable()
+//                        .frame(width: 26.0, height: 12.0)
+//                        .foregroundColor(.black)
+//                     Text("BACK")
+//                        .font(.caption)
+//                        .fontWeight(.black)
+//                        .foregroundColor(.white)
                   }
                }
             }
             Spacer()
             if isRoot {
                Text(title)
-                  .bold()
-                  .font(.title3)
-                  .foregroundColor(.black)
-                  .shadow(color: Color("blue"), radius: 2, x: 1, y: 1)
+                  .font(.headline)
+                  .fontWeight(.black)
+                  .foregroundColor(.gray)//.opacity(0.8)
                Spacer()
             }
          }

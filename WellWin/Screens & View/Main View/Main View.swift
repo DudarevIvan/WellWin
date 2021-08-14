@@ -20,51 +20,53 @@ struct MainView: View {
    
    var body: some View {
       ZStack {
-         Color("gray")
+         Color.white
             .ignoresSafeArea()
          VStack {
             // Select games
-            ChooseGame()
-               .environmentObject(gamesViewModel)
-            .frame(maxWidth: .infinity)
-            .frame(height: 20)
-               .padding(.horizontal)
-            
+            ZStack {
+               Color.gray.opacity(0.2)
+               VStack {
+                  HStack {
+                     ChooseGame()
+                        .environmentObject(gamesViewModel)
+                        .frame(maxWidth: .infinity)
+                        .frame(height: 60)
+                  }
+                  .padding(.horizontal)
+                  //Divider()
+               }
+               .offset(y: 20)
+            }
+            .frame(height: 30)
+            // Is load?
             if let countries = gamesViewModel.games.countries {
-               SearchView(searchText: $search)
-                  .background(Color("gray"))
                ScrollView(.vertical, showsIndicators: false) {
-                  
+                  // Countries
                   ForEach(countries) { country in
                      if let leagues = countries[country.id!].leagues {
-                        ForEach(leagues.filter{$0.name!.hasPrefix(search) || search == ""}) { league in
-                           if (country.name! == search && search != "") {
-                              
-                           }
+                        // Leagues
+                        ForEach(leagues) { league in
                            VStack{
-                              CountryView(country: country.name!, league: league.name!)
+                              CountryView(country: country.name!, league: league)
                                  .onTapGesture {
                                     self.seasons = league.seasons!
                                     self.showSeasons = true
                                  }
                               Rectangle()
-                                 .fill(Color.black.opacity(0.1))
-                                 .frame(height: 2)
+                                 .fill()
+                                 .foregroundColor(.gray)
                                  .frame(maxWidth: .infinity)
+                                 .frame(height: 1)
                            }
                         }
-                        .resignKeyboardOnDragGesture()
-                        .background(Color("gray"))
                      }
                   }
-                  .background(Color("gray"))
                }
                .padding(.top)
-               .background(Color("gray"))
             }
             Spacer()
          }
-         .background(Color("gray"))
          NavigationLinkCustom(isActive: active && archiveViewModel.archive.country != nil, destination: StrategyScreen()) { Text("") }
          SeasonsScreen(isShowing: $showSeasons, go: $active, seasons: $seasons)
       }
@@ -81,32 +83,29 @@ struct CLSScreen_Previews: PreviewProvider {
 }
 
 
+// Chose game(football, hockey, tennis, volleyball or basketball)
 struct ChooseGame: View {
    
    @EnvironmentObject var gamesViewModel: GamesViewModel
    
    var body: some View {
-      HStack(spacing: 20) {
-         Text("Games")
-            .bold()
-            .font(.title3)
-            .foregroundColor(.white)
-         Spacer()
+      HStack {
          ForEach(Games.allCases, id: \.self) { game in
             VStack {
                Image(game.rawValue.lowercased())
                   .resizable()
                   .renderingMode(.template)
                   .scaledToFit()
-                  .padding(.bottom, 2)
-//               Text(game.rawValue)
-//                  .bold()
-//                  .font(.footnote)
+               Text(game.rawValue)
+                  .font(.footnote)
+               //.foregroundColor(.white)
             }
-            .foregroundColor(game.rawValue == gamesViewModel.endpoint ? Color("blue") : Color.black)
+            .padding(8)
+            .foregroundColor(game.rawValue == gamesViewModel.endpoint ? Color("green2") : Color.white)
             .onTapGesture {
                gamesViewModel.endpoint = game.rawValue
             }
+            Spacer()
          }
       }
    }

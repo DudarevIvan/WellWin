@@ -10,9 +10,9 @@ import SwiftUI
 struct CountryView: View {
    
    private let country: String
-   private let league: String
+   private let league: Leagues
    
-   init(country: String, league: String) {
+   init(country: String, league: Leagues) {
       self.country = country
       self.league = league
    }
@@ -22,29 +22,31 @@ struct CountryView: View {
          VStack(alignment: .leading) {
             Text(country)
                .font(.headline)
-               .foregroundColor(.white)
-            Text(league)
-               .font(.footnote)
-               .foregroundColor(.gray)
+            HStack {
+               Text(league.name!)
+                  .font(.footnote)
+                  .foregroundColor(.gray)
+               
+               Text("\(league.numberOfGames!)")
+                  .font(.footnote)
+                  .foregroundColor(.red)
+               Spacer()
+            }
          }
          Spacer()
-         
          Image(country)
             .resizable()
             .scaledToFit()
-            .frame(width: 34)
-            .clipShape(RoundedRectangle(cornerRadius: 4))
+            .frame(width: 36)
+            .clipShape(Circle())
+            //.clipShape(RoundedRectangle(cornerRadius: 4))
             .shadow(radius: 1)
-            .padding(4)
+            //.padding(2)
       }
+      .foregroundColor(.black.opacity(0.8))
       .contentShape(Rectangle())
       .padding(4)
-      .padding(.horizontal)
-   }
-}
-
-struct CountryView_Previews: PreviewProvider {
-   static var previews: some View {
-      CountryView(country: "England", league: "Liga One")
+      .padding(.horizontal, 6)
+      .background(Color.white)
    }
 }
