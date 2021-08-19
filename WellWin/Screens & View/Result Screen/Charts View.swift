@@ -10,7 +10,6 @@ import SwiftUI
 struct ChartsView: View {
    
    var mainChartData: Array<UnitPoint> = .init()
-   var roiChartData: Array<UnitPoint> = .init()
    
    var body: some View {
       ZStack {

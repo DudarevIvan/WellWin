@@ -11,8 +11,8 @@ final class ResultViewModel: ObservableObject {
    
    private let data: ResultModel = .shared
    
-   public var statisticData: (Int, Int, Int, Int) {
-      (data.games, data.bets, data.winBets, data.lostBets)
+   public var statisticData: Dictionary<String, Int> {
+      data.statistic
    }
    
    public var chartData: Array<UnitPoint> {

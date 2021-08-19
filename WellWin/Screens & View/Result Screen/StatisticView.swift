@@ -9,7 +9,7 @@ import SwiftUI
 
 struct StatisticView: View {
    
-   let statisticData: (Int, Int, Int, Int)
+   let statisticData: Dictionary<String, Int>
    
    private let columns = [
       GridItem(.fixed(UIScreen.main.bounds.size.width / 2 - 26), spacing: 16),
@@ -24,61 +24,23 @@ struct StatisticView: View {
                .fontWeight(.bold)
             Spacer()
          }
-         LazyVGrid(columns: columns) {
-            ForEach(0..<Array<Int>.init(tuple: statisticData)!.count, id: \.self) { item in
-               Text("\(statisticData.0)")
-//                  .frame(maxWidth: .infinity)
-//                  .padding(.vertical, 10)
-//                  .padding(.horizontal, 10)
-//                  .background(isSelected == index ? Color("blue") : Color.white)
-//                  .foregroundColor(isSelected == index ? Color.white : Color.black)
-//                  .cornerRadius(7.0)
-//                  .shadow(color: .gray, radius: 2, x: 1, y: 1)
-//                  .onTapGesture {
-//                     isSelected = index
-//                  }
+         ZStack {
+            line
+            VStack(spacing: 20) {
+               LazyVGrid(columns: columns, spacing: 20) {
+                  ForEach(statisticData.keys.sorted(by: { $0.count > $1.count }), id: \.self) { key in
+                     VStack {
+                        Text("\(key)")
+                           .font(.headline)
+                        Text("\(statisticData[key]!)")
+                           .bold()
+                           .font(.title3)
+                           .foregroundColor(key == "Loss" ? .red.opacity(0.9) : (key == "Win" ? Color("green") : .primary))
+                     }
+                  }
+               }
             }
          }
-//         line
-//            .overlay (
-//               HStack {
-//                  VStack(alignment: .center) {
-//                     VStack(alignment: .center) {
-//                        Text("Total games")
-//                           .foregroundColor(.gray)
-//                        Text("\(statisticData.0)")
-//                           .bold()
-//                     }
-//                     Spacer()
-//                     VStack(alignment: .center) {
-//                        Text("Bets")
-//                           .foregroundColor(.gray)
-//                        Text("\(statisticData.1)")
-//                           .bold()
-//                     }
-//                  }
-//                  .padding(.leading, 40)
-//                  Spacer()
-//                  VStack(alignment: .center) {
-//                     VStack(alignment: .center) {
-//                        Text("Win")
-//                           .foregroundColor(.gray)
-//                        Text("\(statisticData.2)")
-//                           .bold()
-//                     }
-//                     Spacer()
-//                     VStack(alignment: .center) {
-//                        Text("Loss")
-//                           .foregroundColor(.gray)
-//                        Text("\(statisticData.3)")
-//                           .bold()
-//                     }
-//                  }
-//                  .padding(.trailing, 60)
-//               }
-//               .font(.subheadline)
-//            )
-//         Spacer()
       }
    }
    
@@ -107,11 +69,5 @@ struct StatisticView: View {
          .foregroundColor(.gray).opacity(0.4)
          .frame(maxWidth: .infinity)
          .frame(height: 1)
-   }
-}
-
-struct StatisticView_Previews: PreviewProvider {
-   static var previews: some View {
-      StatisticView(statisticData: (1233, 23, 12, 34))
    }
 }

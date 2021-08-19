@@ -9,7 +9,13 @@ import SwiftUI
 
 struct WinView: View {
    
-   let data: (Int, Int, Int, Int)
+   
+   let winData: Dictionary<String, Int>
+   
+   private let columns = [
+      GridItem(.fixed(UIScreen.main.bounds.size.width / 2 - 26), spacing: 16),
+      GridItem(.fixed(UIScreen.main.bounds.size.width / 2 - 26), spacing: 16)
+   ]
    
    var body: some View {
       VStack {
@@ -20,47 +26,24 @@ struct WinView: View {
             Spacer()
          }
          ScrollView(.vertical, showsIndicators: false) {
-            line
-               .overlay (
-                  HStack {
-                     VStack(alignment: .center) {
-                        VStack(alignment: .center) {
-                           Text("Total games")
-                              .foregroundColor(.gray)
-                           Text("\(data.0)")
+            ZStack {
+               line
+               VStack(spacing: 20) {
+                  LazyVGrid(columns: columns, spacing: 20) {
+                     ForEach(winData.keys.sorted(by: { $0.count > $1.count }), id: \.self) { key in
+                        VStack {
+                           Text("\(key)")
+                              .font(.headline)
+                           Text("\(winData[key]!)")
                               .bold()
-                        }
-                        Spacer()
-                        VStack(alignment: .center) {
-                           Text("Bets")
-                              .foregroundColor(.gray)
-                           Text("\(data.1)")
-                              .bold()
+                              .font(.title3)
+                              .foregroundColor(key == "Loss" ? .red.opacity(0.9) : (key == "Win" ? Color("green") : .primary))
                         }
                      }
-                     .padding(.leading, 40)
-                     Spacer()
-                     VStack(alignment: .center) {
-                        VStack(alignment: .center) {
-                           Text("Win")
-                              .foregroundColor(.gray)
-                           Text("\(data.2)")
-                              .bold()
-                        }
-                        Spacer()
-                        VStack(alignment: .center) {
-                           Text("Loss")
-                              .foregroundColor(.gray)
-                           Text("\(data.3)")
-                              .bold()
-                        }
-                     }
-                     .padding(.trailing, 60)
                   }
-                  .font(.subheadline)
-               )
+               }
+            }
          }
-         .frame(maxHeight: .infinity)
       }
    }
    

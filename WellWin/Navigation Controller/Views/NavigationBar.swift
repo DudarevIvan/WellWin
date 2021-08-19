@@ -26,11 +26,10 @@ public struct NavigationBar: View {
                }
             }
             if isRoot {
-               Text(title)
-                  .font(Font.system(size: 20, weight: .bold, design: .rounded))
-                  .foregroundColor(.white)
-                  .padding(.horizontal, 10)
-               Spacer()
+               Image("logo")
+                  .resizable()
+                  .scaledToFit()
+                  .frame(height: 24)
             }
          }
          .animation(.none)

@@ -19,21 +19,13 @@ final class ResultModel {
    public var bankroll: Double = 1200.4
    // Profit change
    public var bankrollChange: Double = -142.0
+   
    // Statistic
-   public var games: Int = 217
-   public var bets: Int = 154
-   public var winBets: Int = 31
-   public var lostBets: Int = 129
+   public var statistic: Dictionary<String, Int> = ["Total games": 127, "Bets": 23, "Win": 214,"Loss": 7]
    // Win
-   public var gamesWin: Int = 217
-   public var betsWin: Int = 154
-   public var winBetsWin: Int = 31
-   public var lostBetsWin: Int = 129
+   public var win: Dictionary<String, Array<Int>> = ["#": [1], "Date": [23], "Teams": [214], "Result": [7]]
    // Loss
-   public var gamesLoss: Int = 217
-   public var betsLoss: Int = 154
-   public var winBetsLoss: Int = 31
-   public var lostBetsLoss: Int = 129
+   public var loss: Dictionary<String, Int> = ["Total games": 127, "Bets": 23, "Win": 214,"Loss": 7]
    
    private init() {
       for i in 0..<50 {

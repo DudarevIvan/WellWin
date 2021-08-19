@@ -49,6 +49,7 @@ struct ViewsDescription: Codable, Identifiable, Hashable {
    var view: String
 }
 
+
 enum Factory: String, CaseIterable {
    
    case MoneyManagementView
@@ -66,10 +67,13 @@ enum Factory: String, CaseIterable {
             return AnyView(Referees())
          case .GoalsView:
             return AnyView(Goals())
+         // TODO: Add more views
       }
    }
 }
 
+
+// Base view (description view)
 struct SomeView: View {
    
    let description: ViewsDescription

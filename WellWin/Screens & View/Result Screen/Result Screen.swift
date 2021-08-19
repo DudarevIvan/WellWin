@@ -27,7 +27,7 @@ struct ResultScreen: View {
                   
                   Text(String(format: "%.2f", resultViewModel.bankrollChange))
                      .font(.footnote)
-                     .foregroundColor(Color("green2"))
+                     .foregroundColor(Color.white)
                      .background(Color("green"))
                      .clipShape(RoundedRectangle(cornerRadius: 4))
                }
@@ -59,7 +59,7 @@ struct ResultScreen: View {
                   StatisticView(statisticData: resultViewModel.statisticData)
                      .padding(.horizontal)
                case 1:
-                  WinView(data: resultViewModel.statisticData)
+                  WinView(winData: resultViewModel.statisticData)
                      .padding(.horizontal)
                case 2:
                   LossView()

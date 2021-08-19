@@ -37,10 +37,8 @@ struct CountryView: View {
          Image(country)
             .resizable()
             .scaledToFit()
-            .frame(width: 40)
-            //.aspectRatio(contentMode: .fit)
-            .clipShape(Circle())
-         //.shadow(radius: 1)
+            .frame(height: 26)
+            .clipShape(RoundedRectangle(cornerRadius: 6))
       }
       .foregroundColor(.white.opacity(0.7))
       .contentShape(Rectangle())
