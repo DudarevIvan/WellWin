@@ -13,7 +13,7 @@ struct SeasonsContentView: View {
    @Binding var isShowing: Bool
    @Binding var go: Bool
    
-   @ObservedObject var archiveViewModel: ArchiveViewModel = ArchiveViewModel.shared
+   var archiveViewModel: ArchiveViewModel = ArchiveViewModel.shared
    
    @State var seasonID: Int?
    

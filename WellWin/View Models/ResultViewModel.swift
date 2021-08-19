@@ -15,6 +15,10 @@ final class ResultViewModel: ObservableObject {
       data.statistic
    }
    
+   public var winData: Dictionary<String, Array<String>> {
+      data.win
+   }
+   
    public var chartData: Array<UnitPoint> {
       data.chartData
    }

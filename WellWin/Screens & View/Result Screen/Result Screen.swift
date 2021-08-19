@@ -59,7 +59,7 @@ struct ResultScreen: View {
                   StatisticView(statisticData: resultViewModel.statisticData)
                      .padding(.horizontal)
                case 1:
-                  WinView(winData: resultViewModel.statisticData)
+                  WinView(winData: resultViewModel.winData)
                      .padding(.horizontal)
                case 2:
                   LossView()

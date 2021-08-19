@@ -10,11 +10,13 @@ import SwiftUI
 struct WinView: View {
    
    
-   let winData: Dictionary<String, Int>
+   let winData: Dictionary<String, Array<String>>
    
    private let columns = [
-      GridItem(.fixed(UIScreen.main.bounds.size.width / 2 - 26), spacing: 16),
-      GridItem(.fixed(UIScreen.main.bounds.size.width / 2 - 26), spacing: 16)
+      GridItem(.fixed(UIScreen.main.bounds.size.width / 4 - 20), spacing: 0),
+      GridItem(.fixed(UIScreen.main.bounds.size.width / 4 - 26), spacing: 30),
+      GridItem(.fixed(UIScreen.main.bounds.size.width / 4 - 26), spacing: 30),
+      GridItem(.fixed(UIScreen.main.bounds.size.width / 4 - 26), spacing: 30)
    ]
    
    var body: some View {
@@ -30,14 +32,37 @@ struct WinView: View {
                line
                VStack(spacing: 20) {
                   LazyVGrid(columns: columns, spacing: 20) {
-                     ForEach(winData.keys.sorted(by: { $0.count > $1.count }), id: \.self) { key in
+                     ForEach(winData.keys.sorted(by: { $0.count < $1.count }), id: \.self) { key in
                         VStack {
                            Text("\(key)")
                               .font(.headline)
-                           Text("\(winData[key]!)")
-                              .bold()
-                              .font(.title3)
-                              .foregroundColor(key == "Loss" ? .red.opacity(0.9) : (key == "Win" ? Color("green") : .primary))
+                           if key == "#" {
+                              ForEach(winData[key]!, id: \.self) { data in
+                                 Text(data)
+                                    .font(.footnote)
+                                    .padding(.vertical, 5)
+                              }
+                           } else if key == "Date" {
+                              ForEach(winData[key]!, id: \.self) { data in
+                                 Text(data)
+                                    .font(.footnote)
+                                    .padding(.vertical, 5)
+                              }
+                           } else if key == "Teams" {
+                              ForEach(winData[key]!, id: \.self) { data in
+                                 Text(data)
+                                    .font(.footnote)
+                                    
+                                    .fixedSize(horizontal: false, vertical: true)
+                                    .padding(.vertical, 5)
+                              }
+                           } else if key == "Result" {
+                              ForEach(winData[key]!, id: \.self) { data in
+                                 Text(data)
+                                    .font(.footnote)
+                                    .padding(.vertical, 5)
+                              }
+                           }
                         }
                      }
                   }
