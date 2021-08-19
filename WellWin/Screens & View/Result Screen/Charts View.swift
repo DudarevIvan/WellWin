@@ -15,14 +15,6 @@ struct ChartsView: View {
    var body: some View {
       ZStack {
          VStack(spacing: 0) {
-            HStack(spacing: 40) {
-               Spacer()
-               DataLabel(label: "PROFIT", data: "20")
-                  .foregroundColor(Color("blue"))
-               DataLabel(label: "ROI", data: "20")
-                  .foregroundColor(Color("green2"))
-            }
-            .padding(.horizontal)
             ZStack {
                VStack(spacing: 40) {
                   ForEach(0..<5) { line in
@@ -32,8 +24,7 @@ struct ChartsView: View {
                         .foregroundColor(Color("lightGray"))
                   }
                }
-               LineChart(data: roiChartData, lineColor: .orange)
-               LineChart(data: mainChartData, lineColor: .blue)
+               LineChart(data: mainChartData, lineColor: Color("green"))
             }
             .padding([.leading, .top, .leading])
             .padding(.bottom, 4)
@@ -52,28 +43,6 @@ struct ChartsView: View {
             .foregroundColor(Color("lightGray"))
             .padding(.horizontal)
             .font(.caption)
-         }
-      }
-   }
-}
-
-struct DataLabel: View {
-   
-   let label: String
-   let data: String
-   
-   var body: some View {
-      HStack {
-         RoundedRectangle(cornerRadius: 10)
-            .fill()
-            .frame(width: 5, height: 40)
-         VStack(alignment: .leading) {
-            Text(label)
-               .font(.headline)
-            Text(data)
-               .foregroundColor(.black.opacity(0.7))
-               .bold()
-               .font(.title2)
          }
       }
    }

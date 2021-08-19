@@ -87,6 +87,7 @@ struct SomeView: View {
                .font(.footnote)
                .padding(.horizontal, 4)
                .padding(.vertical, 1)
+               .foregroundColor(.black.opacity(0.7))
                .background(Color.white)
                .clipShape(RoundedRectangle(cornerRadius: 10))
             if description.title == "Money Management" {

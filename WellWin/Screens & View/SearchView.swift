@@ -93,7 +93,6 @@ extension View {
       self.modifier(PlaceHolder(placeHolder:holder, show: show))
    }
 }
-
 // Example
 // ForEach(leagues.filter{$0.name!.hasPrefix(search) || search == ""}) {}
 // .resignKeyboardOnDragGesture()

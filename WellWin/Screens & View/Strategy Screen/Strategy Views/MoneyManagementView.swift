@@ -9,6 +9,8 @@ import SwiftUI
 
 struct MoneyManagement: View {
    
+   @ObservedObject var viewModel: MoneyManagementViewModel = .init()
+   
    @State private var moneyManagementType: Int = 0
    
    let columns = [
@@ -17,74 +19,81 @@ struct MoneyManagement: View {
    ]
    
    @State var percentage: String = .init()
-   @State var isSelected: Int = 0
+   @State var bettingModels: Int = 0
    
-   private let betValue: Array<Int> = [
-      50,
-      100,
-      150,
-      200,
-      250,
-      300,
-      350,
-      400,
-      450,
-      500,
-      750,
-      1000,
-      1500,
-      2000,
-      2500,
-      3000,
-      3500,
-      4000,
-      4500,
-      5000
-   ]
+   // Bankroll
+   let bankrollStep = 100
+   let bankrollRange = 1000...500000
    
    var body: some View {
-      VStack {
-         HStack {
-            Text("Betting models")
-               .bold()
-               .font(.headline)
+      ZStack {
+         Color("gray")
+            .ignoresSafeArea()
+         VStack {
+            // Bankroll
+            HStack {
+               Text("Bankroll")
+                  .font(.headline)
+                  .foregroundColor(.white).opacity(0.8)
+               Spacer()
+            }
+            .foregroundColor(.white)
+            .padding(.horizontal)
+            Stepper(value: $viewModel.bankroll,
+                    in: bankrollRange,
+                    step: bankrollStep) {
+               Text("\(viewModel.bankroll)")
+                  .font(.headline)
+            }
+            .padding(3)
+            .background(Color("lightGray"))
+            .clipShape(RoundedRectangle(cornerRadius: 8))
+            .padding(.horizontal)
+            Rectangle()
+               .frame(maxWidth: .infinity)
+               .frame(height: 1)
+               .foregroundColor(.gray).opacity(0.3)
+               .padding(.horizontal)
+            
+            // Beting models
+            HStack {
+               Text("Betting models")
+                  .font(.headline)
+                  .foregroundColor(.white).opacity(0.8)
+               Spacer()
+            }
+            .foregroundColor(.white)
+            .padding(.horizontal)
+            .padding(.top)
+            
+            Picker(selection: $bettingModels, label: Text("")) {
+               Text("Flat")
+                  .tag(0)
+               Text("Percentage")
+                  .tag(1)
+               Text("Kelly crit.")
+                  .tag(2)
+               Text("Custom")
+                  .tag(3)
+            }
+            .pickerStyle(SegmentedPickerStyle())
+            .padding(.horizontal)
+            
+            switch bettingModels {
+               case 0:
+                  Flat()
+                     .padding()
+               case 1:
+                  Text("")
+               case 2:
+                  Text("")
+               case 3:
+                  Text("")
+               default:
+                  Text("")
+            }
             Spacer()
          }
-         .padding()
-         Picker("", selection: $moneyManagementType) {
-            Text("Flat betting model")
-               .foregroundColor(.blue)
-               .tag(0)
-            Text("Percentage model")
-               .tag(1)
-         }
-         .background(Color.gray.opacity(0.1))
-         .pickerStyle(SegmentedPickerStyle())
-         .padding(.horizontal)
-         
-         if moneyManagementType == 0 {
-            LazyVGrid(columns: columns) {
-               ForEach(0..<betValue.count, id: \.self) { index in
-                  Text("\(betValue[index])")
-                     .frame(maxWidth: .infinity)
-                     .padding(.vertical, 10)
-                     .padding(.horizontal, 10)
-                     .background(isSelected == index ? Color("blue") : Color.white)
-                     .foregroundColor(isSelected == index ? Color.white : Color.black)
-                     .cornerRadius(7.0)
-                     .shadow(color: .gray, radius: 2, x: 1, y: 1)
-                     .onTapGesture {
-                        isSelected = index
-                     }
-               }
-            }
-            .padding()
-         } else {
-            TextField("% of my balance", text: $percentage)
-               .textFieldStyle(RoundedBorderTextFieldStyle())
-               .padding()
-         }
-         Spacer()
       }
    }
 }
@@ -92,5 +101,32 @@ struct MoneyManagement: View {
 struct MoneyManagementView_Previews: PreviewProvider {
    static var previews: some View {
       MoneyManagement()
+   }
+}
+
+
+struct Flat: View {
+   
+   @State private var value = 0
+   let step = 100
+   let range = 100...50000
+   
+   var body: some View {
+      VStack {
+         HStack {
+            Text("Bet")
+               .font(.headline)
+            Spacer()
+         }
+         Stepper(value: $value,
+                 in: range,
+                 step: step) {
+            Text("\(value)")
+               .font(.headline)
+         }
+         .padding(3)
+         .background(Color("lightGray"))
+         .clipShape(RoundedRectangle(cornerRadius: 8))
+      }
    }
 }

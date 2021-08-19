@@ -37,6 +37,7 @@ public struct NavigationControllerView<Content: View>: View {
                   .padding(.bottom)
                   .padding(.top, UIApplication.shared.windows.first?.safeAreaInsets.top)
                   .environmentObject(viewModel)
+                  .background(Color("gray"))
                if isRootView {
                   content
                      .transition(viewModel.navigationType == .push ? transitions.push : transitions.pop)
@@ -49,7 +50,6 @@ public struct NavigationControllerView<Content: View>: View {
             }
          }
       }
-      .ignoresSafeArea(.all, edges: .top)
-      .background(Color.white)
+      .ignoresSafeArea(.all)
    }
 }

@@ -20,11 +20,11 @@ struct SeasonsCheckBoxView: View {
          if chosenSeason != season.id {
             Image(systemName: "circle")
                .font(.title3)
-               .foregroundColor(.black)
+               .foregroundColor(Color("gray"))
          } else {
             Image(systemName: "record.circle")
                .font(.title3)
-               .foregroundColor(Color("blue"))
+               .foregroundColor(Color.black)
          }
       }
       .contentShape(Rectangle())

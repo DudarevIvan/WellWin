@@ -11,37 +11,68 @@ struct ResultScreen: View {
    
    @ObservedObject var resultViewModel: ResultViewModel = .init()
    @State private var selectedTab: String = "Statistics"
-   // TabButton animation
-   @Namespace var animation
+   @State private var preview: Int = 0
+   private let previewItems: Array<String> = ["Statistics", "Win", "Loss"]
    
    var body: some View {
       ZStack {
-         Color.white
+         Color("gray")
             .ignoresSafeArea()
          VStack(alignment: .center) {
-            ChartsView(mainChartData: resultViewModel.data.mainChartData, roiChartData: resultViewModel.data.roiChartData)
-            
-            // Change to single view
             HStack {
-               TabButton(isSelected: $selectedTab, animation: animation, text: "Statistics")
-               TabButton(isSelected: $selectedTab, animation: animation, text: "Win")
-                  .offset(x: -16)
-                  .frame(maxWidth: .infinity)
-               TabButton(isSelected: $selectedTab, animation: animation, text: "Loss")
+               VStack(alignment: .trailing) {
+                  Text(String(format: "%.2f", resultViewModel.bankroll))
+                     .font(.title)
+                     .fontWeight(.heavy)
+                  
+                  Text(String(format: "%.2f", resultViewModel.bankrollChange))
+                     .font(.footnote)
+                     .foregroundColor(Color("green2"))
+                     .background(Color("green"))
+                     .clipShape(RoundedRectangle(cornerRadius: 4))
+               }
+               Spacer()
+               ZStack {
+                  RoundedRectangle(cornerRadius: 6).stroke()
+                  Text("ROI \(String(format: "%.1f", resultViewModel.roi))%")
+                     .bold()
+               }
+               .frame(width: 110, height: 24)
+               .foregroundColor(.yellow).opacity(0.8)
+               .offset(y: -9)
             }
-            .font(.subheadline.bold())
-            .frame(height: 20, alignment: .bottom)
+            .padding()
+            ChartsView(mainChartData: resultViewModel.chartData)
+            Picker(selection: $preview, label: Text("")) {
+               Text("Statistics")
+                  .tag(0)
+               Text("Win")
+                  .tag(1)
+               Text("Loss")
+                  .tag(2)
+            }
+            .pickerStyle(SegmentedPickerStyle())
             .padding()
             // Change
-            ScrollView(.vertical, showsIndicators: false) {
-               ForEach(0..<6) { index in
-                  StatisticsView()
-               }
+            switch preview {
+               case 0:
+                  StatisticView(statisticData: resultViewModel.statisticData)
+                     .padding(.horizontal)
+               case 1:
+                  WinView(data: resultViewModel.statisticData)
+                     .padding(.horizontal)
+               case 2:
+                  LossView()
+                     .padding(.horizontal)
+               default:
+                  EmptyView()
+                  
             }
+            Spacer()
          }
          .padding(.top)
       }
-      .navigationBarBackButtonHidden(true)
+      .ignoresSafeArea()
    }
 }
 

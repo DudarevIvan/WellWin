@@ -61,18 +61,3 @@ struct LineChart: View {
       }
    }
 }
-
-
-struct LineChart_Previews: PreviewProvider {
-   static var previews: some View {
-//      LineChart(data: [UnitPoint(x: 2, y: 4),
-//                       UnitPoint(x: 5, y: 8),
-//                       UnitPoint(x: 6, y: -4),
-//                       UnitPoint(x: 9, y: -8),
-//                       UnitPoint(x: 11, y: -4),
-//                       UnitPoint(x: 19, y: 8),
-//      ], lineColor: Color("green"))
-      ResultScreen()
-   }
-}
-

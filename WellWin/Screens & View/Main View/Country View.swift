@@ -20,33 +20,32 @@ struct CountryView: View {
    var body: some View {
       HStack {
          VStack(alignment: .leading) {
-            Text(country)
-               .font(.headline)
             HStack {
-               Text(league.name!)
-                  .font(.footnote)
-                  .foregroundColor(.gray)
+               Text(country)
+                  .font(Font.system(size: 18, weight: .semibold, design: .rounded))
+                  .foregroundColor(.white)
                
                Text("\(league.numberOfGames!)")
-                  .font(.footnote)
-                  .foregroundColor(.red)
+                  .font(Font.system(size: 13, weight: .bold, design: .rounded))
+                  .foregroundColor(Color("green"))
                Spacer()
             }
+            Text(league.name!)
+               .font(Font.system(size: 18, weight: .semibold, design: .rounded))
          }
          Spacer()
          Image(country)
             .resizable()
             .scaledToFit()
-            .frame(width: 36)
+            .frame(width: 40)
+            //.aspectRatio(contentMode: .fit)
             .clipShape(Circle())
-            //.clipShape(RoundedRectangle(cornerRadius: 4))
-            .shadow(radius: 1)
-            //.padding(2)
+         //.shadow(radius: 1)
       }
-      .foregroundColor(.black.opacity(0.8))
+      .foregroundColor(.white.opacity(0.7))
       .contentShape(Rectangle())
-      .padding(4)
+      .padding(2)
       .padding(.horizontal, 6)
-      .background(Color.white)
+      .background(Color("gray"))
    }
 }

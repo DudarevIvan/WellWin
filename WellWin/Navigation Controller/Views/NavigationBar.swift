@@ -16,32 +16,23 @@ public struct NavigationBar: View {
    
    public var body: some View {
       VStack(alignment: .leading) {
-         HStack(alignment: .center) {
+         HStack {
             if !isRoot {
                NavigationPopButton() {
                   HStack {
                      Image(systemName: "chevron.backward")
-//                     Image("whiteBlack")
-//                        .resizable()
-//                        .frame(width: 26.0, height: 12.0)
-//                        .foregroundColor(.black)
-//                     Text("BACK")
-//                        .font(.caption)
-//                        .fontWeight(.black)
-//                        .foregroundColor(.white)
+                     Spacer()
                   }
                }
             }
-            Spacer()
             if isRoot {
                Text(title)
-                  .font(.headline)
-                  .fontWeight(.black)
-                  .foregroundColor(.gray)//.opacity(0.8)
+                  .font(Font.system(size: 20, weight: .bold, design: .rounded))
+                  .foregroundColor(.white)
+                  .padding(.horizontal, 10)
                Spacer()
             }
          }
-         .foregroundColor(.white)
          .animation(.none)
       }
       .padding(.top, 10)

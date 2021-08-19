@@ -11,4 +11,6 @@ final class MoneyManagementViewModel: ObservableObject {
    
    let model: SharedModel = .shared
    
+   @Published var bankroll: Int = 1000
+   
 }

@@ -23,28 +23,31 @@ struct SeasonsContentView: View {
    private let screenHeight = UIScreen.main.bounds.size.height
    
    var body: some View {
-      VStack {
-         
-         ZStack {
-            Capsule()
-               .frame(width: 50, height: 5)
-         }
-         .frame(height: 20)
-         .frame(maxWidth: .infinity)
-         .foregroundColor(.black.opacity(0.2))
-         
+      VStack {         
          HStack {
             Text("Seasons")
                .font(.title2)
                .fontWeight(.bold)
             Spacer()
+            Button(action: {
+               isShowing = false
+            }, label: {
+               Image(systemName: "multiply")
+                  .resizable()
+                  .scaledToFit()
+                  .frame(width: 16)
+                  .offset(x: -2, y: 2)
+                  .foregroundColor(Color("gray"))
+            })
          }
          .padding(.horizontal)
+         .padding(.trailing, 2)
+         .padding(.top)
                   
          ScrollView(.vertical, showsIndicators: false) {
             ForEach(seasons) { season in
                SeasonsCheckBoxView(chosenSeason: $seasonID, season: season)
-                  .padding(.vertical, 6)
+                  .padding(.vertical, 4)
             }
             .padding(.horizontal)
          }
@@ -60,8 +63,9 @@ struct SeasonsContentView: View {
                .frame(width: screenWidth * 0.94, height: 40)
          })
          .foregroundColor(.white)
-         .background(seasonID == nil ? Color.gray : Color("gray"))
+         .background(seasonID == nil ? Color.gray.opacity(0.5) : Color.black.opacity(0.7))
          .cornerRadius(6)
+         .shadow(radius: seasonID == nil ? 0 : 8)
          .padding(.horizontal, 10)
          .padding(.vertical, 10)
          .padding(.bottom, 20)

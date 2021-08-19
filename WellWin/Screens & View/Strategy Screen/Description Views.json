@@ -27,5 +27,19 @@
         "description": "Anything related to the score of the match. Game score, time of goals scored, number of goals by period and much more.",
         "fields": "341",
         "view": "GoalsView"
+    },
+    {
+       "id": "ht1x2FtOpening",
+       "title": "Odds",
+       "description": "Anything related to the score of the match. Game score, time of goals scored, number of goals by period and much more.",
+       "fields": "78",
+       "view": "GoalsView"
+    },
+    {
+       "id": "yellowCardHt",
+       "title": "Foul",
+       "description": "Anything related to the score of the match. Game score, time of goals scored, number of goals by period and much more.",
+       "fields": "112",
+       "view": "GoalsView"
     }
 ]

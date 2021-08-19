@@ -12,8 +12,8 @@ struct WellWinApp: App {
       
    var body: some Scene {
       WindowGroup {
-         NavigationControllerView({MainView()}, .none)
-            .preferredColorScheme(.light)
+         NavigationControllerView({MainView()}, .custom(.identity))
+            .preferredColorScheme(.dark)
       }
    }
 }

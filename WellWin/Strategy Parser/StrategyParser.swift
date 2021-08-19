@@ -5,7 +5,7 @@
 //  Created by Ivan Dudarev on 8/14/21.
 //
 
-import Foundation
+import SwiftUI
 
 final class StrategyParser {
    
@@ -14,4 +14,8 @@ final class StrategyParser {
    private let resultModel: ResultModel = .shared
    
    private init() {}
+   
+   func result() -> Bool {
+      true
+   }
 }

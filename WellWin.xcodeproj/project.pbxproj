@@ -18,7 +18,6 @@
 		D1123A5C26C426AB000A9FF1 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1123A5B26C426AB000A9FF1 /* SearchView.swift */; };
 		D1123A5E26C59A6C000A9FF1 /* SharedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1123A5D26C59A6C000A9FF1 /* SharedModel.swift */; };
 		D120313C26B458FB00B1908F /* Seasons Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D120313B26B458FB00B1908F /* Seasons Screen.swift */; };
-		D120313E26B5D26D00B1908F /* Tab Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = D120313D26B5D26D00B1908F /* Tab Button.swift */; };
 		D120314026B6998000B1908F /* Seasons Content View.swift in Sources */ = {isa = PBXBuildFile; fileRef = D120313F26B6998000B1908F /* Seasons Content View.swift */; };
 		D120A69626A9DEB40020D750 /* NavigationControllerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D120A69526A9DEB40020D750 /* NavigationControllerModel.swift */; };
 		D120A69826A9DED80020D750 /* NavigationControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D120A69726A9DED80020D750 /* NavigationControllerViewModel.swift */; };
@@ -27,12 +26,15 @@
 		D120A69F26A9DF4E0020D750 /* PushButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D120A69E26A9DF4E0020D750 /* PushButton.swift */; };
 		D120A6A126A9DF680020D750 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D120A6A026A9DF680020D750 /* NavigationBar.swift */; };
 		D120A6A426A9E00B0020D750 /* Main View.swift in Sources */ = {isa = PBXBuildFile; fileRef = D120A6A326A9E00B0020D750 /* Main View.swift */; };
-		D120A6A626ABCFB60020D750 /* Statistics View.swift in Sources */ = {isa = PBXBuildFile; fileRef = D120A6A526ABCFB60020D750 /* Statistics View.swift */; };
 		D120A6AA26AD27480020D750 /* Condition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D120A6A926AD27480020D750 /* Condition.swift */; };
 		D120A6AC26AD27D40020D750 /* Priority.swift in Sources */ = {isa = PBXBuildFile; fileRef = D120A6AB26AD27D40020D750 /* Priority.swift */; };
 		D120A6AE26AD292F0020D750 /* Criterion.swift in Sources */ = {isa = PBXBuildFile; fileRef = D120A6AD26AD292F0020D750 /* Criterion.swift */; };
 		D14781C226B87CCF00CA0A66 /* Seasons CheckBox View.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14781C126B87CCF00CA0A66 /* Seasons CheckBox View.swift */; };
 		D17D970226C80ECC00BB7C47 /* StrategyParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17D970126C80ECC00BB7C47 /* StrategyParser.swift */; };
+		D17D970426C8CD3000BB7C47 /* StatisticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17D970326C8CD3000BB7C47 /* StatisticView.swift */; };
+		D17D970626C8CD5500BB7C47 /* WinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17D970526C8CD5500BB7C47 /* WinView.swift */; };
+		D17D970826C8CD6D00BB7C47 /* LossView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17D970726C8CD6D00BB7C47 /* LossView.swift */; };
+		D17D970B26C91BE800BB7C47 /* Array+Tuple.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17D970A26C91BE800BB7C47 /* Array+Tuple.swift */; };
 		D1B4DEA026A44149009F82E5 /* Country View.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B4DE9F26A44149009F82E5 /* Country View.swift */; };
 		D1E44CAF26B919D600437F33 /* Views Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E44CAE26B919D600437F33 /* Views Factory.swift */; };
 		D1E7F938269E1B2400405788 /* WellWinApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F937269E1B2400405788 /* WellWinApp.swift */; };
@@ -90,7 +92,6 @@
 		D1123A5B26C426AB000A9FF1 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		D1123A5D26C59A6C000A9FF1 /* SharedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedModel.swift; sourceTree = "<group>"; };
 		D120313B26B458FB00B1908F /* Seasons Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Seasons Screen.swift"; sourceTree = "<group>"; };
-		D120313D26B5D26D00B1908F /* Tab Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tab Button.swift"; sourceTree = "<group>"; };
 		D120313F26B6998000B1908F /* Seasons Content View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Seasons Content View.swift"; sourceTree = "<group>"; };
 		D120A69526A9DEB40020D750 /* NavigationControllerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerModel.swift; sourceTree = "<group>"; };
 		D120A69726A9DED80020D750 /* NavigationControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerViewModel.swift; sourceTree = "<group>"; };
@@ -99,12 +100,15 @@
 		D120A69E26A9DF4E0020D750 /* PushButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushButton.swift; sourceTree = "<group>"; };
 		D120A6A026A9DF680020D750 /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 		D120A6A326A9E00B0020D750 /* Main View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Main View.swift"; sourceTree = "<group>"; };
-		D120A6A526ABCFB60020D750 /* Statistics View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Statistics View.swift"; sourceTree = "<group>"; };
 		D120A6A926AD27480020D750 /* Condition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Condition.swift; sourceTree = "<group>"; };
 		D120A6AB26AD27D40020D750 /* Priority.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Priority.swift; sourceTree = "<group>"; };
 		D120A6AD26AD292F0020D750 /* Criterion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Criterion.swift; sourceTree = "<group>"; };
 		D14781C126B87CCF00CA0A66 /* Seasons CheckBox View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Seasons CheckBox View.swift"; sourceTree = "<group>"; };
 		D17D970126C80ECC00BB7C47 /* StrategyParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrategyParser.swift; sourceTree = "<group>"; };
+		D17D970326C8CD3000BB7C47 /* StatisticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticView.swift; sourceTree = "<group>"; };
+		D17D970526C8CD5500BB7C47 /* WinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinView.swift; sourceTree = "<group>"; };
+		D17D970726C8CD6D00BB7C47 /* LossView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LossView.swift; sourceTree = "<group>"; };
+		D17D970A26C91BE800BB7C47 /* Array+Tuple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Tuple.swift"; sourceTree = "<group>"; };
 		D1B4DE9F26A44149009F82E5 /* Country View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Country View.swift"; sourceTree = "<group>"; };
 		D1E44CAE26B919D600437F33 /* Views Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views Factory.swift"; sourceTree = "<group>"; };
 		D1E7F934269E1B2400405788 /* WellWin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WellWin.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -209,7 +213,6 @@
 				D120313B26B458FB00B1908F /* Seasons Screen.swift */,
 				D120313F26B6998000B1908F /* Seasons Content View.swift */,
 				D14781C126B87CCF00CA0A66 /* Seasons CheckBox View.swift */,
-				D1123A5B26C426AB000A9FF1 /* SearchView.swift */,
 			);
 			path = "Main View";
 			sourceTree = "<group>";
@@ -220,6 +223,14 @@
 				D17D970126C80ECC00BB7C47 /* StrategyParser.swift */,
 			);
 			path = "Strategy Parser";
+			sourceTree = "<group>";
+		};
+		D17D970926C91BC800BB7C47 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D17D970A26C91BE800BB7C47 /* Array+Tuple.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		D1E7F92B269E1B2400405788 = {
@@ -246,6 +257,7 @@
 			isa = PBXGroup;
 			children = (
 				D1E7F996269EF57200405788 /* App */,
+				D17D970926C91BC800BB7C47 /* Extensions */,
 				D1E7F962269E1B3300405788 /* Screens & View */,
 				D1E7F9B626A1610900405788 /* View Models */,
 				D1E7F972269E1C7800405788 /* Models */,
@@ -288,6 +300,7 @@
 		D1E7F962269E1B3300405788 /* Screens & View */ = {
 			isa = PBXGroup;
 			children = (
+				D1123A5B26C426AB000A9FF1 /* SearchView.swift */,
 				D120A6A226A9DFEB0020D750 /* Main View */,
 				D1E7F964269E1B4B00405788 /* Strategy Screen */,
 				D1E7F963269E1B3E00405788 /* Result Screen */,
@@ -302,8 +315,9 @@
 				D104789726A8A06B002BDC69 /* Charts View.swift */,
 				D104789526A8777B002BDC69 /* Line Chart.swift */,
 				D104789926A93A9F002BDC69 /* Line.swift */,
-				D120A6A526ABCFB60020D750 /* Statistics View.swift */,
-				D120313D26B5D26D00B1908F /* Tab Button.swift */,
+				D17D970326C8CD3000BB7C47 /* StatisticView.swift */,
+				D17D970526C8CD5500BB7C47 /* WinView.swift */,
+				D17D970726C8CD6D00BB7C47 /* LossView.swift */,
 			);
 			path = "Result Screen";
 			sourceTree = "<group>";
@@ -559,13 +573,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1E7F990269EF26900405788 /* GoalsViewModel.swift in Sources */,
+				D17D970426C8CD3000BB7C47 /* StatisticView.swift in Sources */,
 				D120314026B6998000B1908F /* Seasons Content View.swift in Sources */,
 				D120A69826A9DED80020D750 /* NavigationControllerViewModel.swift in Sources */,
 				D1E7F9AF269F660C00405788 /* ArchiveViewModel.swift in Sources */,
 				D17D970226C80ECC00BB7C47 /* StrategyParser.swift in Sources */,
 				D120A6A126A9DF680020D750 /* NavigationBar.swift in Sources */,
 				D104789826A8A06B002BDC69 /* Charts View.swift in Sources */,
-				D120313E26B5D26D00B1908F /* Tab Button.swift in Sources */,
 				D120A6AA26AD27480020D750 /* Condition.swift in Sources */,
 				D1E7F97C269E1D2300405788 /* MoneyManagementViewModel.swift in Sources */,
 				D120A6A426A9E00B0020D750 /* Main View.swift in Sources */,
@@ -573,6 +587,7 @@
 				D1E7F988269EF23800405788 /* RefereesViewModel.swift in Sources */,
 				D120A69A26A9DF0A0020D750 /* NavigationControllerView.swift in Sources */,
 				D1E7F98E269EF25F00405788 /* GoalsView.swift in Sources */,
+				D17D970B26C91BE800BB7C47 /* Array+Tuple.swift in Sources */,
 				D1E7F9BB26A1618C00405788 /* StrategyViewModel.swift in Sources */,
 				D1123A5E26C59A6C000A9FF1 /* SharedModel.swift in Sources */,
 				D105EBA526C65EAB00D47DFC /* HockeyArchiveViewModel.swift in Sources */,
@@ -585,7 +600,7 @@
 				D1E7F998269EF5E600405788 /* Strategy Screen.swift in Sources */,
 				D1E7F97E269EF1E300405788 /* TeamsView.swift in Sources */,
 				D104789626A8777B002BDC69 /* Line Chart.swift in Sources */,
-				D120A6A626ABCFB60020D750 /* Statistics View.swift in Sources */,
+				D17D970626C8CD5500BB7C47 /* WinView.swift in Sources */,
 				D14781C226B87CCF00CA0A66 /* Seasons CheckBox View.swift in Sources */,
 				D1E7F9AD269F65D400405788 /* URLPath.swift in Sources */,
 				D120A6AC26AD27D40020D750 /* Priority.swift in Sources */,
@@ -601,6 +616,7 @@
 				D104789A26A93A9F002BDC69 /* Line.swift in Sources */,
 				D1E7F9B1269F662F00405788 /* GamesViewModel.swift in Sources */,
 				D1E7F938269E1B2400405788 /* WellWinApp.swift in Sources */,
+				D17D970826C8CD6D00BB7C47 /* LossView.swift in Sources */,
 				D120313C26B458FB00B1908F /* Seasons Screen.swift in Sources */,
 				D1E7F9AB269F65AC00405788 /* Networking.swift in Sources */,
 				D120A69626A9DEB40020D750 /* NavigationControllerModel.swift in Sources */,

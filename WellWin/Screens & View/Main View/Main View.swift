@@ -20,25 +20,25 @@ struct MainView: View {
    
    var body: some View {
       ZStack {
-         Color.white
-            .ignoresSafeArea()
+         Color("gray")
+            .edgesIgnoringSafeArea(.all)
          VStack {
-            // Select games
-            ZStack {
-               Color.gray.opacity(0.2)
-               VStack {
-                  HStack {
-                     ChooseGame()
-                        .environmentObject(gamesViewModel)
-                        .frame(maxWidth: .infinity)
-                        .frame(height: 60)
-                  }
-                  .padding(.horizontal)
-                  //Divider()
-               }
-               .offset(y: 20)
-            }
-            .frame(height: 30)
+//            // Select games
+//            ZStack {
+//               Color.gray.opacity(0.2)
+//               VStack {
+//                  HStack {
+//                     ChooseGame()
+//                        .environmentObject(gamesViewModel)
+//                        .frame(maxWidth: .infinity)
+//                        .frame(height: 60)
+//                  }
+//                  .padding(.horizontal)
+//                  //Divider()
+//               }
+//               .offset(y: 20)
+//            }
+//            .frame(height: 30)
             // Is load?
             if let countries = gamesViewModel.games.countries {
                ScrollView(.vertical, showsIndicators: false) {
@@ -55,10 +55,11 @@ struct MainView: View {
                                  }
                               Rectangle()
                                  .fill()
-                                 .foregroundColor(.gray)
+                                 .foregroundColor(.gray.opacity(0.3))
                                  .frame(maxWidth: .infinity)
                                  .frame(height: 1)
                            }
+                           .padding(.horizontal)
                         }
                      }
                   }
@@ -98,7 +99,6 @@ struct ChooseGame: View {
                   .scaledToFit()
                Text(game.rawValue)
                   .font(.footnote)
-               //.foregroundColor(.white)
             }
             .padding(8)
             .foregroundColor(game.rawValue == gamesViewModel.endpoint ? Color("green2") : Color.white)

@@ -10,9 +10,9 @@ import SwiftUI
 struct StrategyScreen: View {
    
    @State var archiveViewModel: ArchiveViewModel = .shared
-   
    @State var search: String = ""
-   
+   @State var watchResult: Bool = false
+   @State var parseStrategy: Bool = true
    @ObservedObject var viewsFactory: ViewsFactory = .init()
    
    private let screenWidth = UIScreen.main.bounds.size.width
@@ -22,14 +22,6 @@ struct StrategyScreen: View {
          Color("gray")
             .ignoresSafeArea()
          VStack {
-            HStack {
-               Text("Strategy")
-                  .fontWeight(.bold)
-                  .font(.title)
-               Spacer()
-            }
-            .foregroundColor(.white)
-            .padding(.horizontal)
             SearchView(searchText: $search)
                .padding(.vertical, 10)
             Rectangle()
@@ -51,26 +43,29 @@ struct StrategyScreen: View {
             }
             Spacer()
             // Result
-            Button(action: {
-               
-            }, label: {
-               ZStack {
-                  RoundedRectangle(cornerRadius: 10).stroke()
-                  Text("RESULT")
-                     .bold()
-               }
-               .frame(width: screenWidth * 0.4, height: 30)
-            })
-            .foregroundColor(.white.opacity(0.6))
-            .padding(.bottom, 30)
-            //.disabled(seasonID == nil ? true : false)
-            //            NavigationLinkCustom(destination: ResultScreen()) {
-            //               Text("Result")
-            //                  .foregroundColor(Color("green"))
-            //                  .padding()
-            //            }
+            HStack {
+               Spacer()
+               Button(action: {
+                  watchResult = StrategyParser.shared.result()
+               }, label: {
+                  ZStack {
+                     RoundedRectangle(cornerRadius: 8).stroke()
+                     Text("RESULT")
+                        .bold()
+                  }
+                  .frame(width: screenWidth * 0.3, height: 30)
+               })
+               .foregroundColor(parseStrategy ? .white.opacity(0.6) : .white.opacity(0.1))
+               .padding(.bottom, 30)
+               .disabled(parseStrategy ? false : true)
+            }
+            .padding(.trailing)
+         }
+         NavigationLinkCustom(isActive: watchResult, destination: ResultScreen()) {
+            Text("")
          }
       }
+      .ignoresSafeArea(.all)
       .resignKeyboardOnDragGesture()
       .onAppear() {
          viewsFactory.getViews()
