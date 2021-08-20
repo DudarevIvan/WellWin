@@ -13,10 +13,10 @@ struct WinView: View {
    let winData: Dictionary<String, Array<String>>
    
    private let columns = [
-      GridItem(.fixed(UIScreen.main.bounds.size.width / 4 - 20), spacing: 0),
-      GridItem(.fixed(UIScreen.main.bounds.size.width / 4 - 26), spacing: 30),
-      GridItem(.fixed(UIScreen.main.bounds.size.width / 4 - 26), spacing: 30),
-      GridItem(.fixed(UIScreen.main.bounds.size.width / 4 - 26), spacing: 30)
+      GridItem(.fixed(UIScreen.main.bounds.size.width / 10), spacing: 0),
+      GridItem(.fixed(UIScreen.main.bounds.size.width / 4 - 10), spacing: 10),
+      GridItem(.fixed(UIScreen.main.bounds.size.width / 4 - 10), spacing: 10),
+      GridItem(.fixed(UIScreen.main.bounds.size.width / 4 - 10), spacing: 10)
    ]
    
    var body: some View {
@@ -52,7 +52,7 @@ struct WinView: View {
                               ForEach(winData[key]!, id: \.self) { data in
                                  Text(data)
                                     .font(.footnote)
-                                    
+                                    .lineLimit(nil)
                                     .fixedSize(horizontal: false, vertical: true)
                                     .padding(.vertical, 5)
                               }
