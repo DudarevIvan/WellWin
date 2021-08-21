@@ -39,18 +39,6 @@ final class ResultModel {
    public var loss: Dictionary<String, Int> = ["Total games": 127, "Bets": 23, "Win": 214,"Loss": 7]
    
    private init() {
-      get()
-   }
-   
-   func get() {
-//      var win: Dictionary<String, Array<String>> = ["#": [], "Date": [], "Teams": [], "Result": []]
-//      for item in 0..<archiveViewModel.archive.ht!.count {
-//         win["#"]?.append(String(item))
-//         win["Date"]?.append(archiveViewModel.archive.data![item])
-//         win["Teams"]?.append("\(archiveViewModel.archive.ht![item])" + " - " + "\(archiveViewModel.archive.at![item])")
-//         win["Result"]?.append(String(item))
-//      }
-//      self.win = win
       for i in 0..<50 {
          self.chartData.append(UnitPoint(x: CGFloat(i), y: CGFloat.random(in: -25.0..<40.0)))
       }
